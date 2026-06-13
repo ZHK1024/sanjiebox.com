@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sanjiebox.com/sitemap.xml

@@ -1,0 +1,703 @@
+<!DOCTYPE html><html lang="zh-CN"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>游戏倒计时 - 梦幻西游工具站</title><meta name="description" content="梦幻西游倒计时工具，集中管理打坐、灵光宝匣、帮派资材、师门任务等各类冷却与周期性事件的倒计时，支持本地存储持久化、按按钮掩码控制操作，并统一显示剩余时间与刷新进度。"><link rel="canonical" href="https://sanjiebox.com/tools/time-counter"><meta property="og:title" content="游戏倒计时 - 梦幻西游工具站"><meta property="og:description" content="梦幻西游倒计时工具，集中管理打坐、灵光宝匣、帮派资材、师门任务等各类冷却与周期性事件的倒计时，支持本地存储持久化、按按钮掩码控制操作，并统一显示剩余时间与刷新进度。"><meta property="og:url" content="https://sanjiebox.com/tools/time-counter"><meta property="og:type" content="website"><script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebPage","name":"游戏倒计时 - 梦幻西游工具站","description":"梦幻西游倒计时工具，集中管理打坐、灵光宝匣、帮派资材、师门任务等各类冷却与周期性事件的倒计时，支持本地存储持久化、按按钮掩码控制操作，并统一显示剩余时间与刷新进度。","url":"https://sanjiebox.com/tools/time-counter"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://sanjiebox.com/"},{"@type":"ListItem","position":2,"name":"工具","item":"https://sanjiebox.com/tools"},{"@type":"ListItem","position":3,"name":"游戏倒计时工具","item":"https://sanjiebox.com/tools/time-counter"}]}]</script><link rel="stylesheet" href="/_astro/_slug_.DzQtqR8O.css">
+<style>.card[data-astro-cid-dohjnao5]{display:block;padding:var(--space-5);color:var(--color-text);background:var(--color-surface);border:var(--border-width) solid var(--color-border);border-radius:var(--radius-card);box-shadow:0 4px 14px #2f34410a;transition:border-color var(--transition-fast),box-shadow var(--transition-fast)}.card[data-astro-cid-dohjnao5]:hover{border-color:#dde2eb;text-decoration:none;box-shadow:0 8px 18px #2f34410f}
+.tool-card[data-astro-cid-g5sewvjw]{display:grid;grid-template-columns:60px minmax(0,1fr);gap:var(--space-4);align-items:center}.tool-card[data-astro-cid-g5sewvjw] h3[data-astro-cid-g5sewvjw]{margin:0;overflow:hidden;font-size:var(--text-base);font-weight:700;line-height:1.5;text-overflow:ellipsis;white-space:nowrap}.tool-card[data-astro-cid-g5sewvjw] p[data-astro-cid-g5sewvjw]{margin:0;color:var(--color-text-secondary);font-size:var(--text-sm);line-height:1.6;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.tool-card__media[data-astro-cid-g5sewvjw]{display:flex;align-items:center;justify-content:center;width:60px;height:60px;overflow:hidden;background:var(--color-surface-muted);border:var(--border-width) solid var(--color-border);border-radius:var(--radius-card)}.tool-card__media[data-astro-cid-g5sewvjw] img[data-astro-cid-g5sewvjw]{display:block;width:60px;height:60px;object-fit:cover}.tool-card__media--placeholder[data-astro-cid-g5sewvjw] span[data-astro-cid-g5sewvjw]{color:var(--color-text-secondary);font-size:18px;font-weight:700;letter-spacing:.08em}.tool-card__body[data-astro-cid-g5sewvjw]{display:grid;gap:var(--space-2);min-width:0}@media(max-width:720px){.tool-card[data-astro-cid-g5sewvjw]{grid-template-columns:60px minmax(0,1fr)}}
+.article-card[data-astro-cid-di2nlc57] h3[data-astro-cid-di2nlc57]{margin-bottom:var(--space-2)}.article-card[data-astro-cid-di2nlc57] p[data-astro-cid-di2nlc57]{color:var(--color-text-secondary);font-size:var(--text-sm)}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.D1P_NJFz.css"></head> <body> <header class="site-header" data-astro-cid-3ef6ksr2> <div class="container container--default" data-astro-cid-d6puh33w>  <div class="site-header__inner" data-astro-cid-3ef6ksr2> <a class="site-header__logo" href="/" aria-label="三界工具箱首页" data-astro-cid-3ef6ksr2> <img src="/_astro/logo.5anzccCg.png" alt="三界工具箱" width="220" height="54" data-astro-cid-3ef6ksr2> </a> <nav aria-label="主导航" data-astro-cid-3ef6ksr2> <ul data-astro-cid-3ef6ksr2> <li data-nav-item="首页" data-astro-cid-3ef6ksr2> <a href="/" data-active="false" data-astro-cid-3ef6ksr2> 首页 </a> </li><li data-nav-item="工具" data-astro-cid-3ef6ksr2> <a href="/tools" aria-current="page" data-active="true" data-astro-cid-3ef6ksr2> 工具 </a> </li><li data-nav-item="攻略" data-astro-cid-3ef6ksr2> <a href="/articles" data-active="false" data-astro-cid-3ef6ksr2> 攻略 </a> </li><li data-nav-item="百科" data-astro-cid-3ef6ksr2> <a href="/wiki" data-active="false" data-astro-cid-3ef6ksr2> 百科 </a> </li><li data-nav-item="最新更新" data-astro-cid-3ef6ksr2> <a href="/updates" data-active="false" data-astro-cid-3ef6ksr2> 最新更新 </a> </li> </ul> </nav> </div>  </div>  </header>  <div class="container container--default" data-astro-cid-d6puh33w> <nav class="breadcrumb" aria-label="面包屑" data-astro-cid-qaanghzh><ol data-astro-cid-qaanghzh><li data-astro-cid-qaanghzh><a href="/" data-astro-cid-qaanghzh>首页</a></li><li data-astro-cid-qaanghzh><a href="/tools" data-astro-cid-qaanghzh>工具</a></li><li data-astro-cid-qaanghzh><span aria-current="page" data-astro-cid-qaanghzh>游戏倒计时工具</span></li></ol></nav> </div>  <main id="content">  <div class="container container--default" data-astro-cid-d6puh33w>  <section class="section section--default section--no-top-margin" data-astro-cid-sh445jdo>   <article class="tool-page flow" data-astro-cid-hof4g4vy> <header data-astro-cid-hof4g4vy> <h1 data-astro-cid-hof4g4vy>游戏倒计时工具</h1> <p data-astro-cid-hof4g4vy>统一管理游戏中各类冷却、刷新和周期性事件的倒计时工具，支持冷却、间隔、每日和每周四种计时类型，结束后统一显示 00:00:00。</p> </header> <section class="tool-page__main" aria-label="工具主体" data-astro-cid-hof4g4vy> <div data-time-counter> <script type="application/json" data-defs>[{"name":"剧情技能","timers":[{"id":"dazuo","name":"打坐","description":"冷却 3 分钟","icon":"/_astro/dazuo.Da1KRydp.png","buttonMask":5,"type":"cooldown","needInit":false,"params":{"duration":180}},{"id":"tiaoxi","name":"调息","description":"冷却 3 分钟","icon":"/_astro/tiaoxi.CF_wca27.png","buttonMask":5,"type":"cooldown","needInit":false,"params":{"duration":180}}]},{"name":"师门技能","timers":[{"id":"sanhuajuding","name":"三花聚顶","description":"冷却 2 分钟","icon":null,"buttonMask":5,"type":"cooldown","needInit":false,"params":{"duration":120}}]},{"name":"法宝","timers":[{"id":"lingguang","name":"灵光宝匣","description":"冷却 30 分钟","icon":"/_astro/lingguangbaoxia.Bp2blQni.png","buttonMask":5,"type":"cooldown","needInit":false,"params":{"duration":1800}}]},{"name":"帮派","timers":[{"id":"bangpai-zicai","name":"帮派资材","description":"每小时刷新","icon":null,"buttonMask":3,"type":"interval","needInit":true,"params":{"interval":3600}}]},{"name":"自定义","timers":[]}]</script> <div hidden data-action-masks="{&#34;delete&#34;:1,&#34;edit&#34;:2,&#34;restart&#34;:4}"></div> <div hidden data-rotate-icon-url="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='currentColor'%20stroke-width='1.25'%20stroke-linecap='round'%20stroke-linejoin='round'%20class='lucide%20lucide-rotate-ccw-icon%20lucide-rotate-ccw'%3e%3cpath%20d='M3%2012a9%209%200%201%200%209-9%209.75%209.75%200%200%200-6.74%202.74L3%208'/%3e%3cpath%20d='M3%203v5h5'/%3e%3c/svg%3e"></div> <div class="time-counter__panels"> <div class="time-counter__panel"> <section class="time-counter__active" data-active-section hidden aria-label="我的倒计时"> <div class="time-counter__active-header"> <h2>我的倒计时</h2> <button type="button" class="tc-btn tc-btn--sm" data-open-mini hidden>小窗口显示</button> </div> <div class="time-counter__grid" data-active-list></div> <p class="time-counter__empty" data-empty-state>还没有倒计时，从下方分类中添加</p> </section> </div> <div class="time-counter__panel"> <section class="time-counter__categories" aria-label="计时器分类"> <div class="tc-category"> <h3>剧情技能</h3> <div class="time-counter__grid" data-category="剧情技能"> <button type="button" class="tc-cat-card" data-timer-id="dazuo" aria-label="添加打坐"> <span class="tc-cat-card__icon" aria-hidden="true"> <img src="/_astro/dazuo.Da1KRydp.png" alt="" width="50" height="50" loading="lazy"> </span> <span class="tc-cat-card__info"> <span class="tc-cat-card__name">打坐</span> <span class="tc-cat-card__desc">冷却 3 分钟</span> </span> </button><button type="button" class="tc-cat-card" data-timer-id="tiaoxi" aria-label="添加调息"> <span class="tc-cat-card__icon" aria-hidden="true"> <img src="/_astro/tiaoxi.CF_wca27.png" alt="" width="50" height="50" loading="lazy"> </span> <span class="tc-cat-card__info"> <span class="tc-cat-card__name">调息</span> <span class="tc-cat-card__desc">冷却 3 分钟</span> </span> </button> </div> </div><div class="tc-category"> <h3>师门技能</h3> <div class="time-counter__grid" data-category="师门技能"> <button type="button" class="tc-cat-card" data-timer-id="sanhuajuding" aria-label="添加三花聚顶"> <span class="tc-cat-card__icon" aria-hidden="true"> <span class="tc-cat-card__icon-placeholder" data-placeholder="三"></span> </span> <span class="tc-cat-card__info"> <span class="tc-cat-card__name">三花聚顶</span> <span class="tc-cat-card__desc">冷却 2 分钟</span> </span> </button> </div> </div><div class="tc-category"> <h3>法宝</h3> <div class="time-counter__grid" data-category="法宝"> <button type="button" class="tc-cat-card" data-timer-id="lingguang" aria-label="添加灵光宝匣"> <span class="tc-cat-card__icon" aria-hidden="true"> <img src="/_astro/lingguangbaoxia.Bp2blQni.png" alt="" width="50" height="50" loading="lazy"> </span> <span class="tc-cat-card__info"> <span class="tc-cat-card__name">灵光宝匣</span> <span class="tc-cat-card__desc">冷却 30 分钟</span> </span> </button> </div> </div><div class="tc-category"> <h3>帮派</h3> <div class="time-counter__grid" data-category="帮派"> <button type="button" class="tc-cat-card" data-timer-id="bangpai-zicai" aria-label="添加帮派资材"> <span class="tc-cat-card__icon" aria-hidden="true"> <span class="tc-cat-card__icon-placeholder" data-placeholder="帮"></span> </span> <span class="tc-cat-card__info"> <span class="tc-cat-card__name">帮派资材</span> <span class="tc-cat-card__desc">每小时刷新</span> </span> </button> </div> </div><div class="tc-category"> <h3>自定义</h3> <div class="time-counter__grid" data-category="自定义">  </div> </div> </section> </div> </div> <aside class="tc-dialog-overlay" data-dialog-overlay role="dialog" aria-modal="true" aria-label="计时器对话框"> <div class="tc-dialog"> <h3 class="tc-dialog__title" data-dialog-title></h3> <p class="tc-dialog__desc" data-dialog-desc></p> <div class="tc-dialog__body" data-dialog-body></div> <div class="tc-dialog__actions"> <button type="button" class="tc-dialog__btn" data-dialog-cancel>取消</button> <button type="button" class="tc-dialog__btn tc-dialog__btn--primary" data-dialog-confirm>确认</button> </div> </div> </aside> </div> <script>
+  (() => {
+    const root = document.querySelector('[data-time-counter]');
+    if (!root) return;
+
+    // --- Load definitions ---
+    const defsEl = root.querySelector('[data-defs]');
+    const definitions = JSON.parse(defsEl.textContent || '[]');
+    const allTimers = definitions.flatMap(cat => cat.timers);
+    const actionMasks = JSON.parse(root.querySelector('[data-action-masks]')?.dataset.actionMasks || '{}');
+    const rotateIconUrl = root.querySelector('[data-rotate-icon-url]')?.dataset.rotateIconUrl || '';
+
+    // --- DOM refs ---
+    const activeSection = root.querySelector('[data-active-section]');
+    const activeList = root.querySelector('[data-active-list]');
+    const emptyState = root.querySelector('[data-empty-state]');
+    const openMiniBtn = root.querySelector('[data-open-mini]');
+    const dialogOverlay = root.querySelector('[data-dialog-overlay]');
+    const dialogTitle = root.querySelector('[data-dialog-title]');
+    const dialogDesc = root.querySelector('[data-dialog-desc]');
+    const dialogBody = root.querySelector('[data-dialog-body]');
+    const dialogConfirm = root.querySelector('[data-dialog-confirm]');
+    const dialogCancel = root.querySelector('[data-dialog-cancel]');
+
+    // --- State ---
+    const STORAGE_KEY = 'mhxy_timer';
+    let userTimers = [];
+    let pendingTimerDef = null; // timer definition being configured in dialog
+    let editTimerIndex = -1;
+    let dialogMode = 'init';
+    let pendingDeleteIndex = -1;
+
+    // --- Helpers ---
+    function pad(n) {
+      return String(n).padStart(2, '0');
+    }
+
+    function formatTime(ms) {
+      const totalSeconds = Math.max(0, Math.ceil(ms / 1000));
+      const hours = Math.floor(totalSeconds / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+      return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds);
+    }
+
+    function formatCountdownTime(ms) {
+      return formatTime(Math.max(0, ms - 1000));
+    }
+
+    function formatDateTime(value) {
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return '';
+      return [
+        date.getFullYear(),
+        pad(date.getMonth() + 1),
+        pad(date.getDate()),
+      ].join('-') + ' ' + [pad(date.getHours()), pad(date.getMinutes())].join(':');
+    }
+
+    function getNextHourlyRefreshTime(hour, minute, nowMs) {
+      const now = new Date(nowMs);
+      const sameDayTarget = new Date(now);
+      sameDayTarget.setHours(hour, minute, 0, 0);
+
+      if (sameDayTarget > now) {
+        return sameDayTarget.getTime();
+      }
+
+      const currentHourTarget = new Date(now);
+      currentHourTarget.setHours(now.getHours(), minute, 0, 0);
+      if (currentHourTarget > now) {
+        return currentHourTarget.getTime();
+      }
+
+      const nextHourTarget = new Date(now);
+      nextHourTarget.setHours(now.getHours() + 1, minute, 0, 0);
+      return nextHourTarget.getTime();
+    }
+
+    // --- Timer math ---
+    function getNextDailyPoint(points, now) {
+      const nowDate = new Date(now);
+      const todayStr = nowDate.getFullYear() + '-' + pad(nowDate.getMonth() + 1) + '-' + pad(nowDate.getDate());
+
+      for (const point of points) {
+        const pt = new Date(todayStr + 'T' + point + ':00');
+        if (pt > nowDate) return pt.getTime();
+      }
+
+      // All passed — first point tomorrow
+      const tomorrow = new Date(nowDate);
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      const tomStr = tomorrow.getFullYear() + '-' + pad(tomorrow.getMonth() + 1) + '-' + pad(tomorrow.getDate());
+      const firstPoint = points[0];
+      return new Date(tomStr + 'T' + firstPoint + ':00').getTime();
+    }
+
+    function getNextWeeklyEvent(points, now) {
+      const nowDate = new Date(now);
+      const currentWeekday = nowDate.getDay();
+      let earliest = Infinity;
+
+      for (const p of points) {
+        let daysUntil = (p.weekday - currentWeekday + 7) % 7;
+        const target = new Date(nowDate);
+        target.setDate(target.getDate() + daysUntil);
+        const [h, m] = p.time.split(':').map(Number);
+        target.setHours(h, m, 0, 0);
+
+        if (target <= nowDate) {
+          target.setDate(target.getDate() + 7);
+        }
+
+        if (target.getTime() < earliest) {
+          earliest = target.getTime();
+        }
+      }
+
+      return earliest;
+    }
+
+    function getNextEvent(timer, now) {
+      switch (timer.type) {
+        case 'cooldown': {
+          const end = timer.startTime + timer.params.duration * 1000;
+          const remaining = end - now;
+          return { remaining: Math.max(0, remaining), ready: remaining <= 0 && timer.startTime > 0 };
+        }
+        case 'interval': {
+          const interval = timer.params.interval * 1000;
+          if (now < timer.startTime) {
+            return { remaining: timer.startTime - now, ready: false };
+          }
+          const passed = Math.floor((now - timer.startTime) / interval);
+          const next = timer.startTime + (passed + 1) * interval;
+          const remaining = next - now;
+          return { remaining: Math.max(0, remaining), ready: remaining <= 0 };
+        }
+        case 'dailyPoints': {
+          const next = getNextDailyPoint(timer.params.points, now);
+          const remaining = next - now;
+          return { remaining: Math.max(0, remaining), ready: remaining <= 0 };
+        }
+        case 'weekly': {
+          const next = getNextWeeklyEvent(timer.params.points, now);
+          const remaining = next - now;
+          return { remaining: Math.max(0, remaining), ready: remaining <= 0 };
+        }
+        default:
+          return { remaining: 0, ready: true };
+      }
+    }
+
+    // --- Storage ---
+    function loadTimers() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        const timers = raw ? JSON.parse(raw) : [];
+        return timers.map((timer) => {
+          const def = findDefById(timer.id);
+          return {
+            ...timer,
+            icon: def?.icon ?? timer.icon ?? null,
+            buttonMask: def?.buttonMask ?? timer.buttonMask ?? 0,
+          };
+        });
+      } catch {
+        return [];
+      }
+    }
+
+    function saveTimers() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(userTimers));
+    }
+
+    function findDefById(id) {
+      return allTimers.find(t => t.id === id) || null;
+    }
+
+    function resolveTimerIcon(timer) {
+      const def = findDefById(timer.id);
+      return def?.icon ?? timer.icon ?? null;
+    }
+
+    function resolveTimerButtonMask(timer) {
+      const def = findDefById(timer.id);
+      return def?.buttonMask ?? timer.buttonMask ?? 0;
+    }
+
+    function isButtonEnabled(timer, action) {
+      return (resolveTimerButtonMask(timer) & action) === action;
+    }
+
+    // --- Render active timers ---
+    function renderActiveTimers() {
+      if (userTimers.length === 0) {
+        activeSection.hidden = false;
+        emptyState.hidden = false;
+        activeList.innerHTML = '';
+        openMiniBtn.hidden = true;
+        return;
+      }
+      activeSection.hidden = false;
+      emptyState.hidden = true;
+      openMiniBtn.hidden = false;
+
+      activeList.innerHTML = userTimers.map((timer, index) => {
+        const event = getNextEvent(timer, Date.now());
+        const isReady = timer.type === 'cooldown' && event.ready;
+        const timeDisplay = formatCountdownTime(event.remaining);
+        const canRestart = isButtonEnabled(timer, actionMasks.restart || 0);
+        const canEdit = isButtonEnabled(timer, actionMasks.edit || 0);
+        return `
+          <div class="tc-card" data-active-id="${timer.id}" data-active-index="${index}">
+            <div class="tc-card__icon" aria-hidden="true">${getTimerIconHtml(timer)}</div>
+            <div class="tc-card__body">
+              <div class="tc-card__title">${escapeHtml(timer.name)}</div>
+              <div class="tc-card__time ${isReady ? 'tc-card__time--ready' : ''}" data-time>${timeDisplay}</div>
+              <div class="tc-card__actions">
+                <button type="button" class="tc-btn tc-btn--sm" data-action="restart" ${canRestart ? '' : 'disabled'}>重新开始</button>
+                <button type="button" class="tc-btn tc-btn--sm" data-action="edit" ${canEdit ? '' : 'disabled'}>编辑</button>
+                <button type="button" class="tc-btn tc-btn--sm tc-btn--danger" data-action="delete">删除</button>
+              </div>
+            </div>
+          </div>`;
+      }).join('');
+    }
+
+    function escapeHtml(s) {
+      const d = document.createElement('div');
+      d.textContent = s;
+      return d.innerHTML;
+    }
+
+    function getTimerIconHtml(timer, size = 50, className = 'tc-icon') {
+      const icon = resolveTimerIcon(timer);
+      if (icon) {
+        return `<img class="${className}__img" src="${escapeHtml(icon)}" alt="" width="${size}" height="${size}" loading="lazy" />`;
+      }
+
+      const fallbackChar = escapeHtml((timer.name || '?').trim().charAt(0) || '?');
+      return `<span class="${className}__placeholder" data-fallback="${fallbackChar}" aria-hidden="true"></span>`;
+    }
+
+    function getMiniWindowMarkup(timer, index) {
+      const event = getNextEvent(timer, Date.now());
+      const isReady = timer.type === 'cooldown' && event.ready;
+      const timeDisplay = formatCountdownTime(event.remaining);
+      const canRestart = isButtonEnabled(timer, actionMasks.restart || 0);
+
+      return `<div class="mw-item ${isReady ? 'mw-item--ready' : ''}" data-mw-item data-mw-index="${index}" data-ready="${isReady ? 'true' : 'false'}" data-can-restart="${canRestart ? 'true' : 'false'}">
+        <span class="mw-icon" aria-hidden="true">${getTimerIconHtml(timer, 50, 'mw-icon')}</span>
+        <span class="mw-content">
+          <span class="mw-name">${escapeHtml(timer.name)}</span>
+          <span class="mw-time ${isReady ? 'mw-ready' : ''}" data-mw-time>${timeDisplay}</span>
+        </span>
+        ${canRestart ? `<button type="button" class="mw-restart" data-mw-force-restart aria-label="重头开始 ${escapeHtml(timer.name)}"><img class="mw-restart__icon" src="${rotateIconUrl}" alt="" width="16" height="16" /></button>` : ''}
+      </div>`;
+    }
+
+    function updateMiniWindowDisplay(doc) {
+      if (!doc) return;
+
+      const items = doc.querySelectorAll('[data-mw-item]');
+      if (!items.length) return;
+
+      const now = Date.now();
+      userTimers.forEach((timer, index) => {
+        const item = items[index];
+        if (!item) return;
+
+        const event = getNextEvent(timer, now);
+        const isReady = timer.type === 'cooldown' && event.ready;
+        const timeEl = item.querySelector('[data-mw-time]');
+        if (!timeEl) return;
+
+        timeEl.textContent = formatCountdownTime(event.remaining);
+        timeEl.className = isReady ? 'mw-time mw-ready' : 'mw-time';
+        item.className = `mw-item ${isReady ? 'mw-item--ready' : ''}`;
+        item.dataset.ready = isReady ? 'true' : 'false';
+        item.dataset.canRestart = isButtonEnabled(timer, actionMasks.restart || 0) ? 'true' : 'false';
+      });
+    }
+
+    function bindMiniWindowInteractions(win) {
+      const doc = win.document;
+      doc.addEventListener('click', (e) => {
+        const item = e.target.closest('[data-mw-item]');
+        if (!item) return;
+
+        const index = Number(item.dataset.mwIndex);
+        const forceButton = e.target.closest('[data-mw-force-restart]');
+        const isReady = item.dataset.ready === 'true';
+        const canRestart = item.dataset.canRestart === 'true';
+
+        if (!canRestart || (!forceButton && !isReady)) return;
+
+        restartTimerByIndex(index);
+        updateMiniWindowDisplay(doc);
+      });
+    }
+
+    // --- Scheduler update ---
+    function updateTimerDisplays() {
+      if (!activeList) return;
+      const now = Date.now();
+
+      userTimers.forEach((timer, index) => {
+        const card = activeList.querySelector(`[data-active-index="${index}"]`);
+        if (!card) return;
+
+        const event = getNextEvent(timer, now);
+        const timeEl = card.querySelector('[data-time]');
+        if (!timeEl) return;
+
+        timeEl.textContent = formatCountdownTime(event.remaining);
+        timeEl.className = timer.type === 'cooldown' && event.ready ? 'tc-card__time tc-card__time--ready' : 'tc-card__time';
+      });
+    }
+
+    // --- Add / Remove / Restart / Edit ---
+    function addTimer(timerDef, startTime) {
+      const userTimer = {
+        id: timerDef.id,
+        name: timerDef.name,
+        description: timerDef.description,
+        icon: timerDef.icon,
+        buttonMask: timerDef.buttonMask,
+        type: timerDef.type,
+        needInit: timerDef.needInit,
+        params: JSON.parse(JSON.stringify(timerDef.params)),
+        startTime: startTime || Date.now(),
+      };
+      userTimers.push(userTimer);
+      saveTimers();
+      renderActiveTimers();
+    }
+
+    function removeTimer(index) {
+      userTimers.splice(index, 1);
+      saveTimers();
+      renderActiveTimers();
+    }
+
+    function restartTimer(index) {
+      const timer = userTimers[index];
+      if (!timer) return;
+
+      if (timer.type === 'cooldown') {
+        timer.startTime = Date.now();
+      } else if (timer.type === 'interval') {
+        timer.startTime = Date.now();
+      } else {
+        // For scheduled types, just re-base to now
+        timer.startTime = Date.now();
+      }
+      saveTimers();
+      renderActiveTimers();
+    }
+
+    function restartTimerByIndex(index) {
+      const timer = userTimers[index];
+      if (!timer) return;
+
+      timer.startTime = Date.now();
+      saveTimers();
+      renderActiveTimers();
+    }
+
+    // --- Dialog ---
+    function showDialog(timerDef, editIndex) {
+      dialogMode = 'init';
+      pendingTimerDef = timerDef;
+      pendingDeleteIndex = -1;
+      editTimerIndex = editIndex;
+      dialogTitle.textContent = timerDef.name;
+      dialogDesc.textContent = timerDef.description;
+      dialogConfirm.textContent = '确认';
+      dialogConfirm.classList.remove('tc-dialog__btn--danger');
+
+      let bodyHtml = '';
+      if (timerDef.type === 'interval') {
+        const timer = editIndex >= 0 ? userTimers[editIndex] : null;
+        const nextRefreshText = timer ? formatDateTime(Date.now() + getNextEvent(timer, Date.now()).remaining) : '';
+        bodyHtml =
+          '<label class="tc-dialog__field"><span>第一次刷新时间</span><input type="time" data-dialog-input-time /></label>' +
+          (nextRefreshText ? `<p class="tc-dialog__info">下一次刷新时间：${nextRefreshText}</p>` : '<p class="tc-dialog__info">设置后会按每小时固定分钟刷新。</p>');
+      } else {
+        bodyHtml = '<p class="tc-dialog__info">该计时器无需额外设置，确认后直接开始。</p>';
+      }
+      dialogBody.innerHTML = bodyHtml;
+      dialogOverlay.classList.add('tc-dialog-overlay--open');
+    }
+
+    function showDeleteConfirm(index) {
+      const timer = userTimers[index];
+      if (!timer) return;
+
+      dialogMode = 'delete';
+      pendingTimerDef = null;
+      pendingDeleteIndex = index;
+      editTimerIndex = -1;
+      dialogTitle.textContent = '删除计时器';
+      dialogDesc.textContent = timer.name;
+      dialogConfirm.textContent = '删除';
+      dialogConfirm.classList.add('tc-dialog__btn--danger');
+      dialogBody.innerHTML = '<p class="tc-dialog__info">删除后将从“我的倒计时”列表中移除，且无法恢复。是否继续？</p>';
+      dialogOverlay.classList.add('tc-dialog-overlay--open');
+    }
+
+    function hideDialog() {
+      dialogOverlay.classList.remove('tc-dialog-overlay--open');
+      dialogMode = 'init';
+      pendingTimerDef = null;
+      editTimerIndex = -1;
+      pendingDeleteIndex = -1;
+      dialogConfirm.textContent = '确认';
+      dialogConfirm.classList.remove('tc-dialog__btn--danger');
+    }
+
+    function confirmDialog() {
+      if (dialogMode === 'delete') {
+        if (pendingDeleteIndex >= 0) {
+          removeTimer(pendingDeleteIndex);
+        }
+        hideDialog();
+        return;
+      }
+
+      const timeInput = dialogBody.querySelector('[data-dialog-input-time]');
+      let startTime = Date.now();
+
+      if (timeInput && timeInput.value) {
+        const [h, m] = timeInput.value.split(':').map(Number);
+        if (pendingTimerDef?.type === 'interval') {
+          startTime = getNextHourlyRefreshTime(h, m, Date.now());
+        } else {
+          const now = new Date();
+          const dt = new Date(now.getFullYear(), now.getMonth(), now.getDate(), h, m, 0, 0);
+          if (dt <= now) {
+            dt.setDate(dt.getDate() + 1);
+          }
+          startTime = dt.getTime();
+        }
+      }
+
+      if (editTimerIndex >= 0) {
+        const timer = userTimers[editTimerIndex];
+        if (timer) {
+          timer.startTime = startTime;
+          saveTimers();
+          renderActiveTimers();
+        }
+      } else if (pendingTimerDef) {
+        addTimer(pendingTimerDef, startTime);
+      }
+
+      hideDialog();
+    }
+
+    dialogConfirm.addEventListener('click', confirmDialog);
+    dialogCancel.addEventListener('click', hideDialog);
+    dialogOverlay.addEventListener('click', (e) => {
+      if (e.target === dialogOverlay) hideDialog();
+    });
+
+    // --- Handle category clicks ---
+    root.addEventListener('click', (e) => {
+      const catCard = e.target.closest('[data-timer-id]');
+      if (!catCard) return;
+
+      const timerId = catCard.dataset.timerId;
+      const timerDef = findDefById(timerId);
+      if (!timerDef) return;
+
+      // Check if already in active list
+      const existing = userTimers.find(t => t.id === timerId);
+      if (existing) return;
+
+      if (timerDef.needInit) {
+        showDialog(timerDef, -1);
+      } else {
+        addTimer(timerDef, Date.now());
+      }
+    });
+
+    // --- Handle active timer actions (event delegation) ---
+    activeList.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-action]');
+      if (!btn) return;
+
+      const card = btn.closest('[data-active-index]');
+      if (!card) return;
+
+      const index = parseInt(card.dataset.activeIndex, 10);
+      const action = btn.dataset.action;
+      const timer = userTimers[index];
+      if (!timer) return;
+
+      switch (action) {
+        case 'restart':
+          if (!isButtonEnabled(timer, actionMasks.restart || 0)) return;
+          restartTimer(index);
+          break;
+        case 'delete':
+          showDeleteConfirm(index);
+          break;
+        case 'edit': {
+          if (!isButtonEnabled(timer, actionMasks.edit || 0)) return;
+          if (timer.needInit) {
+            showDialog(timer, index);
+          }
+          break;
+        }
+      }
+    });
+
+    // --- Mini window (PiP / popup) ---
+    let miniWindow = null;
+
+    function openMiniWindow() {
+      if (miniWindow && !miniWindow.closed) {
+        miniWindow.focus();
+        updateMiniWindowDisplay(miniWindow.document);
+        return;
+      }
+
+      const timersHtml = userTimers.map((timer, index) => getMiniWindowMarkup(timer, index)).join('');
+
+      const style = `
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:-apple-system,BlinkMacSystemFont,sans-serif; background:#111; color:#eee; padding:12px; }
+        .mw-list { display:grid; gap:8px; }
+        .mw-item { display:grid; grid-template-columns:auto 1fr auto; gap:10px; align-items:center; min-height:72px; padding:12px 12px; background:#1e1e1e; border-radius:8px; cursor:pointer; }
+        .mw-item--ready { box-shadow: inset 0 0 0 1px rgba(129, 199, 132, 0.35); }
+        .mw-icon { display:inline-flex; width:50px; height:50px; align-items:center; justify-content:center; flex-shrink:0; border-radius:6px; overflow:hidden; }
+        .mw-icon__img { display:block; width:50px; height:50px; object-fit:cover; border-radius:6px; }
+        .mw-icon__placeholder {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 50px;
+          height: 50px;
+          background: rgba(255,255,255,0.08);
+          border-radius: 6px;
+          color: #eee;
+          font-size: 18px;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+        .mw-icon__placeholder::before {
+          content: attr(data-fallback);
+          line-height: 1;
+        }
+        .mw-content { display:grid; gap:4px; min-width:0; }
+        .mw-name { font-size:14px; line-height:1.2; }
+        .mw-time { font-size:16px; font-weight:700; font-variant-numeric:tabular-nums; color:#4fc3f7; }
+        .mw-ready { color:#81c784; }
+        .mw-restart {
+          display:inline-flex;
+          align-items:center;
+          justify-content:center;
+          width:28px;
+          height:28px;
+          padding:0;
+          border:1px solid rgba(255,255,255,0.14);
+          background:transparent;
+          color:#eee;
+          cursor:pointer;
+        }
+        .mw-restart__icon {
+          display:block;
+          width:16px;
+          height:16px;
+          object-fit:contain;
+          filter: brightness(0) invert(1);
+        }
+      `;
+
+      const supportsPiP = 'documentPictureInPicture' in window;
+
+      if (supportsPiP) {
+        window.documentPictureInPicture.requestWindow({
+          width: 340,
+          height: 520,
+        }).then(pip => {
+          miniWindow = pip;
+          pip.document.write(`<!DOCTYPE html><html><head><meta charset="utf-8"><style>${style}</style></head><body><div class="mw-list">${timersHtml}</div></body></html>`);
+          pip.document.close();
+          bindMiniWindowInteractions(pip);
+          updateMiniWindowDisplay(pip.document);
+
+          // Sync display every second
+          const pipTimer = pip.setInterval(() => {
+            updateMiniWindowDisplay(pip.document);
+          }, 1000);
+
+          pip.addEventListener('pagehide', () => {
+            pip.clearInterval(pipTimer);
+            miniWindow = null;
+          });
+        }).catch(() => {});
+      } else {
+        miniWindow = window.open('', '', 'width=320,height=420,scrollbars=yes');
+        if (!miniWindow) return;
+        miniWindow.document.write(`<!DOCTYPE html><html><head><meta charset="utf-8"><style>${style}</style></head><body><div class="mw-list">${timersHtml}</div></body></html>`);
+        miniWindow.document.close();
+        bindMiniWindowInteractions(miniWindow);
+        updateMiniWindowDisplay(miniWindow.document);
+
+        const popupTimer = miniWindow.setInterval(() => {
+          updateMiniWindowDisplay(miniWindow.document);
+        }, 1000);
+
+        const checkClosed = miniWindow.setInterval(() => {
+          if (miniWindow.closed) {
+            miniWindow.clearInterval(popupTimer);
+            miniWindow.clearInterval(checkClosed);
+            miniWindow = null;
+          }
+        }, 1000);
+      }
+    }
+
+    openMiniBtn.addEventListener('click', openMiniWindow);
+
+    // --- Scheduler (single 1s interval) ---
+    let schedulerId = 0;
+
+    function startScheduler() {
+      if (schedulerId) return;
+      schedulerId = window.setInterval(updateTimerDisplays, 1000);
+    }
+
+    // --- Init ---
+    userTimers = loadTimers();
+    renderActiveTimers();
+    if (userTimers.length > 0) {
+      startScheduler();
+    }
+
+    // Watch for changes that require scheduler
+    const origAddTimer = addTimer;
+    addTimer = function () {
+      origAddTimer.apply(this, arguments);
+      startScheduler();
+    };
+  })();
+</script>  </section> <section class="tool-guide content" aria-label="使用说明" data-astro-cid-hof4g4vy> <div class="tool-guide__card" data-astro-cid-hof4g4vy> <h2 id="工具说明">工具说明</h2>
+<p>梦幻西游倒计时工具是一款面向游戏内各类冷却、刷新、周期性事件的集中计时工具。你只需在分类列表中点击需要的计时器，即可将其添加到自己的倒计时列表，所有计时器由统一的调度器管理，实时刷新剩余时间。</p>
+<h2 id="倒计时类型">倒计时类型</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>类型</th><th>说明</th><th>示例</th></tr></thead><tbody><tr><td>冷却（Cooldown）</td><td>固定时长倒计时，结束后显示 00:00:00</td><td>打坐、灵光宝匣</td></tr><tr><td>周期刷新（Interval）</td><td>按固定间隔循环，需要设置第一次刷新时间</td><td>帮派资材</td></tr><tr><td>每日（DailyPoints）</td><td>每天固定时间点，到期后自动更新到下一个时间点</td><td>师门、剑陵魔影</td></tr><tr><td>每周（Weekly）</td><td>每周固定时间，到期后自动更新到下一周相同时间</td><td>帮派迷宫</td></tr></tbody></table>
+<h2 id="使用方法">使用方法</h2>
+<ol>
+<li>在下方分类中找到需要的计时器，点击卡片即可添加到”我的倒计时”列表</li>
+<li>如果计时器需要初始化参数（如周期刷新需设置第一次时间），会弹出设置窗口</li>
+<li>添加成功后，倒计时会自动开始并每秒刷新</li>
+<li>每张计时器卡片会根据配置显示可用操作，支持重新开始、编辑（仅需要初始化的类型）、删除</li>
+<li>所有计时器数据自动保存在浏览器的本地存储中，关闭页面后重新打开不会丢失</li>
+</ol>
+<h2 id="注意事项">注意事项</h2>
+<ul>
+<li>倒计时数据仅保存在当前浏览器的本地存储中，清除浏览器缓存会丢失数据</li>
+<li>冷却类型倒计时结束后显示 00:00:00，点击”重新开始”即可重新计时</li>
+<li>每日/每周类型计时器会在超过时间后自动更新到下一次时间</li>
+<li>周期刷新类型计时器在设置第一次时间后，会自动按间隔循环计算</li>
+</ul> </div> </section> </article>  </section>   </div>   </main> <footer class="site-footer" data-astro-cid-sz7xmlte> <div class="container container--default" data-astro-cid-d6puh33w>  <div class="site-footer__grid" data-astro-cid-sz7xmlte> <section data-astro-cid-sz7xmlte> <h2 data-astro-cid-sz7xmlte>三界工具箱</h2> <p data-astro-cid-sz7xmlte>面向梦幻西游玩家的内容驱动工具站。</p> </section> <section data-astro-cid-sz7xmlte> <h2 data-astro-cid-sz7xmlte>分类导航</h2> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="/tools" data-astro-cid-sz7xmlte>工具</a></li> <li class="is-hidden" data-astro-cid-sz7xmlte><a href="/articles" data-astro-cid-sz7xmlte>攻略</a></li> <li class="is-hidden" data-astro-cid-sz7xmlte><a href="/wiki" data-astro-cid-sz7xmlte>百科</a></li> </ul> </section> <section data-astro-cid-sz7xmlte> <h2 data-astro-cid-sz7xmlte>站点信息</h2> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="/privacy" data-astro-cid-sz7xmlte>隐私政策</a></li> <li data-astro-cid-sz7xmlte><a href="/terms" data-astro-cid-sz7xmlte>服务协议</a></li> </ul> </section> <section class="site-footer__contact" data-astro-cid-sz7xmlte> <h2 data-astro-cid-sz7xmlte>联系我们</h2> <a class="site-footer__contact-link" href="mailto:support@sanjiebox.com" data-astro-cid-sz7xmlte> <span class="site-footer__contact-icon" aria-hidden="true" data-astro-cid-sz7xmlte><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></span> <span data-astro-cid-sz7xmlte>support@sanjiebox.com</span> </a> </section> </div> <p class="site-footer__copyright" data-astro-cid-sz7xmlte>Copyright © 三界工具箱</p>  </div>  </footer>  </body></html> 
