@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /privacy
+Disallow: /terms
 Sitemap: https://sanjiebox.com/sitemap.xml
