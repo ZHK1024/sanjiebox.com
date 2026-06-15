@@ -1,0 +1,989 @@
+<!DOCTYPE html><html lang="zh-CN"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>梦幻西游套装计算器 - 三界工具箱</title><meta name="description" content="梦幻西游套装计算器，输入角色等级后快速查看包括魔力套，敏捷套，力量套，体质套，耐力套，全部变身套的三件与五件套属性加成、变身几率和变身卡附加效果，支持按套装类型筛选与本地保存设置。"><link rel="canonical" href="https://sanjiebox.com/tools/taozhaung-calculator"><meta property="og:title" content="梦幻西游套装计算器 - 三界工具箱"><meta property="og:description" content="梦幻西游套装计算器，输入角色等级后快速查看包括魔力套，敏捷套，力量套，体质套，耐力套，全部变身套的三件与五件套属性加成、变身几率和变身卡附加效果，支持按套装类型筛选与本地保存设置。"><meta property="og:url" content="https://sanjiebox.com/tools/taozhaung-calculator"><meta property="og:type" content="website"><script async src="https://www.googletagmanager.com/gtag/js?id=G-RRVFJXD5E5"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RRVFJXD5E5');
+    </script><script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebPage","name":"梦幻西游套装计算器 - 三界工具箱","description":"梦幻西游套装计算器，输入角色等级后快速查看包括魔力套，敏捷套，力量套，体质套，耐力套，全部变身套的三件与五件套属性加成、变身几率和变身卡附加效果，支持按套装类型筛选与本地保存设置。","url":"https://sanjiebox.com/tools/taozhaung-calculator"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://sanjiebox.com/"},{"@type":"ListItem","position":2,"name":"工具","item":"https://sanjiebox.com/tools"},{"@type":"ListItem","position":3,"name":"套装计算器","item":"https://sanjiebox.com/tools/taozhaung-calculator"}]}]</script><link rel="stylesheet" href="/_astro/_slug_.C-CnKHSV.css">
+<style>.section[data-astro-cid-sh445jdo]{margin-block:var(--space-10)}.section--no-top-margin[data-astro-cid-sh445jdo]{margin-top:0}.section--content[data-astro-cid-sh445jdo]{max-width:var(--content-max)}.section__header[data-astro-cid-sh445jdo]{margin-bottom:var(--space-6)}.section__header[data-astro-cid-sh445jdo] p[data-astro-cid-sh445jdo]{color:var(--color-text-secondary);margin:var(--space-0)}
+.card[data-astro-cid-dohjnao5]{display:block;padding:var(--space-5);color:var(--color-text);background:var(--color-surface);border:var(--border-width) solid var(--color-border);border-radius:var(--radius-card);box-shadow:0 4px 14px #2f34410a;transition:border-color var(--transition-fast),box-shadow var(--transition-fast)}.card[data-astro-cid-dohjnao5]:hover{border-color:#dde2eb;text-decoration:none;box-shadow:0 8px 18px #2f34410f}
+.article-card[data-astro-cid-di2nlc57] h3[data-astro-cid-di2nlc57]{margin-bottom:var(--space-2)}.article-card[data-astro-cid-di2nlc57] p[data-astro-cid-di2nlc57]{color:var(--color-text-secondary);font-size:var(--text-sm)}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.DuPxvqX8.css">
+<style>.tool-card[data-astro-cid-g5sewvjw]{display:grid;grid-template-columns:60px minmax(0,1fr);gap:var(--space-4);align-items:center}.tool-card[data-astro-cid-g5sewvjw] h3[data-astro-cid-g5sewvjw]{margin:0;overflow:hidden;font-size:var(--text-base);font-weight:700;line-height:1.5;text-overflow:ellipsis;white-space:nowrap}.tool-card[data-astro-cid-g5sewvjw] p[data-astro-cid-g5sewvjw]{margin:0;color:var(--color-text-secondary);font-size:var(--text-sm);line-height:1.6;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.tool-card__media[data-astro-cid-g5sewvjw]{display:flex;align-items:center;justify-content:center;width:60px;height:60px;overflow:hidden;background:var(--color-surface-muted);border:var(--border-width) solid var(--color-border);border-radius:var(--radius-card)}.tool-card__media[data-astro-cid-g5sewvjw] img[data-astro-cid-g5sewvjw]{display:block;width:60px;height:60px;object-fit:cover}.tool-card__media--placeholder[data-astro-cid-g5sewvjw] span[data-astro-cid-g5sewvjw]{color:var(--color-text-secondary);font-size:18px;font-weight:700;letter-spacing:.08em}.tool-card__body[data-astro-cid-g5sewvjw]{display:grid;gap:var(--space-2);min-width:0}@media(max-width:720px){.tool-card[data-astro-cid-g5sewvjw]{grid-template-columns:60px minmax(0,1fr)}}
+</style></head> <body> <header class="site-header" data-astro-cid-3ef6ksr2> <div class="container container--default" data-astro-cid-d6puh33w>  <div class="site-header__inner" data-astro-cid-3ef6ksr2> <a class="site-header__logo" href="/" aria-label="三界工具箱首页" data-astro-cid-3ef6ksr2> <img src="/_astro/logo.5anzccCg.png" alt="三界工具箱" width="220" height="54" data-astro-cid-3ef6ksr2> </a> <nav aria-label="主导航" data-astro-cid-3ef6ksr2> <ul data-astro-cid-3ef6ksr2> <li data-nav-item="首页" data-astro-cid-3ef6ksr2> <a href="/" data-active="false" data-astro-cid-3ef6ksr2> 首页 </a> </li><li data-nav-item="工具" data-astro-cid-3ef6ksr2> <a href="/tools" aria-current="page" data-active="true" data-astro-cid-3ef6ksr2> 工具 </a> </li><li data-nav-item="攻略" data-astro-cid-3ef6ksr2> <a href="/articles" data-active="false" data-astro-cid-3ef6ksr2> 攻略 </a> </li><li data-nav-item="百科" data-astro-cid-3ef6ksr2> <a href="/wiki" data-active="false" data-astro-cid-3ef6ksr2> 百科 </a> </li><li data-nav-item="最新更新" data-astro-cid-3ef6ksr2> <a href="/updates" data-active="false" data-astro-cid-3ef6ksr2> 最新更新 </a> </li> </ul> </nav> </div>  </div>  </header>  <div class="container container--default" data-astro-cid-d6puh33w> <nav class="breadcrumb" aria-label="面包屑" data-astro-cid-qaanghzh><ol data-astro-cid-qaanghzh><li data-astro-cid-qaanghzh><a href="/" data-astro-cid-qaanghzh>首页</a></li><li data-astro-cid-qaanghzh><a href="/tools" data-astro-cid-qaanghzh>工具</a></li><li data-astro-cid-qaanghzh><span aria-current="page" data-astro-cid-qaanghzh>套装计算器</span></li></ol></nav> </div>  <main id="content">  <div class="container container--default" data-astro-cid-d6puh33w>  <section class="section section--default section--no-top-margin" data-astro-cid-sh445jdo>   <article class="tool-page flow" data-astro-cid-hof4g4vy> <header data-astro-cid-hof4g4vy> <h1 data-astro-cid-hof4g4vy>套装计算器</h1> <p data-astro-cid-hof4g4vy>输入角色等级并筛选套装类型，实时计算各类变身套的 3/4 件与五件套属性加成、变身几率和变身卡效果。</p> </header> <section class="tool-page__main" aria-label="工具主体" data-astro-cid-hof4g4vy> <div class="taozhaung-tool" data-taozhaung-tool data-defaults="{&#34;level&#34;:175,&#34;type&#34;:&#34;magic&#34;}" data-suits="[{&#34;id&#34;:&#34;magic&#34;,&#34;label&#34;:&#34;魔力套&#34;,&#34;attribute&#34;:&#34;魔力&#34;,&#34;items&#34;:[[&#34;巨蛙&#34;,6,5,6,10,&#34;33%&#34;,&#34;100%&#34;,&#34;-&#34;],[&#34;花妖&#34;,6,5,6,10,&#34;17%&#34;,&#34;50%&#34;,&#34;慧根&#34;],[&#34;小龙女&#34;,6,5,6,10,&#34;10%&#34;,&#34;30%&#34;,&#34;驱鬼，-5%伤害力&#34;],[&#34;蜘蛛精&#34;,5,10,5,15,&#34;8%&#34;,&#34;25%&#34;,&#34;毒，-10%防御&#34;],[&#34;蝴蝶仙子&#34;,5,10,5,15,&#34;7%&#34;,&#34;20%&#34;,&#34;魔之心，-10%防御&#34;],[&#34;古代瑞兽&#34;,5,10,5,15,&#34;7%&#34;,&#34;20%&#34;,&#34;反震，-10%气血&#34;],[&#34;雨师&#34;,4,10,4,15,&#34;5%&#34;,&#34;15%&#34;,&#34;灵力+20&#34;],[&#34;蛟龙&#34;,4,10,4,15,&#34;5%&#34;,&#34;15%&#34;,&#34;随机出现永恒、感知&#34;],[&#34;如意仙子&#34;,4,10,4,15,&#34;3%&#34;,&#34;10%&#34;,&#34;速度+8%、灵力+20&#34;],[&#34;星灵仙子&#34;,4,10,4,15,&#34;3%&#34;,&#34;10%&#34;,&#34;慧根，灵力+10&#34;],[&#34;净瓶女娲&#34;,4,10,4,15,&#34;3%&#34;,&#34;10%&#34;,&#34;高级永恒，-5%防御&#34;],[&#34;灵符女娲&#34;,4,10,4,15,&#34;3%&#34;,&#34;10%&#34;,&#34;魔之心&#34;],[&#34;灵鹤&#34;,4,15,4,25,&#34;3%&#34;,&#34;10%&#34;,&#34;高级魔之心，-10%防御&#34;],[&#34;炎魔神&#34;,4,15,4,25,&#34;3%&#34;,&#34;10%&#34;,&#34;高级魔之心，-15%气血&#34;],[&#34;葫芦宝贝&#34;,4,15,4,25,&#34;3%&#34;,&#34;10%&#34;,&#34;慧根，气血+5%&#34;],[&#34;混沌兽&#34;,3,5,3,15,&#34;3%&#34;,&#34;10%&#34;,&#34;高级魔之心，-12%气血&#34;],[&#34;蜃气妖&#34;,3,5,3,15,&#34;3%&#34;,&#34;10%&#34;,&#34;魔之心，防御+30&#34;],[&#34;长眉灵猴&#34;,3,5,3,15,&#34;3%&#34;,&#34;10%&#34;,&#34;法术暴击，-10%气血&#34;]]},{&#34;id&#34;:&#34;power&#34;,&#34;label&#34;:&#34;力量套&#34;,&#34;attribute&#34;:&#34;力量&#34;,&#34;items&#34;:[[&#34;海毛虫&#34;,6,5,6,10,&#34;33%&#34;,&#34;100%&#34;,&#34;-&#34;],[&#34;强盗&#34;,6,5,6,10,&#34;33%&#34;,&#34;100%&#34;,&#34;-&#34;],[&#34;蛤蟆精&#34;,6,5,6,10,&#34;17%&#34;,&#34;50%&#34;,&#34;毒，-15%防御&#34;],[&#34;老虎&#34;,6,5,6,10,&#34;17%&#34;,&#34;50%&#34;,&#34;强力，-10%速度&#34;],[&#34;马面&#34;,5,10,5,15,&#34;8%&#34;,&#34;25%&#34;,&#34;必杀，-8%伤害力&#34;],[&#34;地狱战神&#34;,5,10,5,15,&#34;5%&#34;,&#34;15%&#34;,&#34;连击，-5%气血&#34;],[&#34;天将&#34;,5,10,5,15,&#34;5%&#34;,&#34;15%&#34;,&#34;强力，-8%灵力&#34;],[&#34;巡游天神&#34;,4,10,4,15,&#34;3%&#34;,&#34;10%&#34;,&#34;必杀，-20%速度&#34;],[&#34;鬼将&#34;,4,10,4,15,&#34;3%&#34;,&#34;10%&#34;,&#34;高级必杀，-10%伤害力&#34;],[&#34;噬天虎&#34;,4,15,4,25,&#34;3%&#34;,&#34;10%&#34;,&#34;高级强力，-10%速度&#34;],[&#34;夜罗刹&#34;,4,15,4,25,&#34;3%&#34;,&#34;10%&#34;,&#34;高级夜战，+5%速度&#34;],[&#34;狂豹（人形）&#34;,4,15,4,25,&#34;3%&#34;,&#34;10%&#34;,&#34;高级飞行，+5%速度&#34;],[&#34;修罗傀儡鬼&#34;,3,5,3,15,&#34;3%&#34;,&#34;10%&#34;,&#34;夜战，气血+150&#34;],[&#34;巨力神猿&#34;,3,5,3,15,&#34;3%&#34;,&#34;10%&#34;,&#34;高级强力，-5%灵力&#34;]]},{&#34;id&#34;:&#34;agility&#34;,&#34;label&#34;:&#34;敏捷套&#34;,&#34;attribute&#34;:&#34;敏捷&#34;,&#34;items&#34;:[[&#34;赌徒&#34;,6,5,6,10,&#34;33%&#34;,&#34;100%&#34;,&#34;-&#34;],[&#34;大蝙蝠&#34;,6,5,6,10,&#34;33%&#34;,&#34;100%&#34;,&#34;-&#34;],[&#34;狐狸精&#34;,6,5,6,10,&#34;17%&#34;,&#34;50%&#34;,&#34;感知，-5%气血&#34;],[&#34;骷髅怪&#34;,6,5,6,10,&#34;17%&#34;,&#34;50%&#34;,&#34;夜战，-20%气血&#34;],[&#34;狼&#34;,6,5,6,10,&#34;10%&#34;,&#34;30%&#34;,&#34;偷袭，-10%气血&#34;],[&#34;虾兵&#34;,6,5,6,10,&#34;10%&#34;,&#34;30%&#34;,&#34;必杀，-10%伤害力&#34;],[&#34;兔子怪&#34;,5,10,5,15,&#34;8%&#34;,&#34;25%&#34;,&#34;敏捷，-10%气血&#34;],[&#34;雷鸟人&#34;,5,10,5,15,&#34;7%&#34;,&#34;20%&#34;,&#34;飞行，-10%气血&#34;],[&#34;风伯&#34;,5,10,5,15,&#34;5%&#34;,&#34;15%&#34;,&#34;敏捷，-5%防御&#34;],[&#34;凤凰&#34;,4,10,4,15,&#34;5%&#34;,&#34;15%&#34;,&#34;飞行&#34;],[&#34;吸血鬼&#34;,4,10,4,15,&#34;3%&#34;,&#34;10%&#34;,&#34;偷袭，-5%速度&#34;],[&#34;幽灵&#34;,4,10,4,15,&#34;3%&#34;,&#34;10%&#34;,&#34;高级夜战&#34;],[&#34;画魂&#34;,4,15,4,25,&#34;3%&#34;,&#34;10%&#34;,&#34;高级幸运&#34;],[&#34;雾中仙&#34;,4,15,4,25,&#34;3%&#34;,&#34;10%&#34;,&#34;高级敏捷，-10%防御&#34;],[&#34;机关鸟&#34;,4,15,4,25,&#34;3%&#34;,&#34;10%&#34;,&#34;高级再生，-5%防御&#34;],[&#34;巴蛇&#34;,4,15,4,25,&#34;3%&#34;,&#34;10%&#34;,&#34;高级毒&#34;],[&#34;猫灵（人形）&#34;,4,15,4,25,&#34;3%&#34;,&#34;10%&#34;,&#34;敏捷，速度+10&#34;],[&#34;修罗傀儡妖&#34;,3,5,3,15,&#34;3%&#34;,&#34;10%&#34;,&#34;必杀&#34;]]},{&#34;id&#34;:&#34;constitution&#34;,&#34;label&#34;:&#34;体质套&#34;,&#34;attribute&#34;:&#34;体质&#34;,&#34;items&#34;:[[&#34;大海龟&#34;,6,5,6,10,&#34;33%&#34;,&#34;100%&#34;,&#34;-&#34;],[&#34;树怪&#34;,6,5,6,10,&#34;33%&#34;,&#34;100%&#34;,&#34;-&#34;],[&#34;山贼&#34;,6,5,6,10,&#34;33%&#34;,&#34;100%&#34;,&#34;-&#34;],[&#34;野猪&#34;,6,5,6,10,&#34;33%&#34;,&#34;100%&#34;,&#34;-&#34;],[&#34;黑熊&#34;,6,5,6,10,&#34;17%&#34;,&#34;50%&#34;,&#34;防御，-5%灵力&#34;],[&#34;野鬼&#34;,6,5,6,10,&#34;10%&#34;,&#34;30%&#34;,&#34;夜战，-5%灵力&#34;],[&#34;僵尸&#34;,5,10,5,15,&#34;8%&#34;,&#34;25%&#34;,&#34;弱点雷，+10%气血&#34;],[&#34;龟丞相&#34;,5,10,5,15,&#34;8%&#34;,&#34;25%&#34;,&#34;气血+7%、防御+10&#34;],[&#34;黑熊精&#34;,5,10,5,15,&#34;8%&#34;,&#34;25%&#34;,&#34;反震，-10%防御&#34;],[&#34;白熊&#34;,5,10,5,15,&#34;7%&#34;,&#34;20%&#34;,&#34;迟钝&#34;],[&#34;黑山老妖&#34;,5,10,5,15,&#34;7%&#34;,&#34;20%&#34;,&#34;偷袭，-10%速度&#34;],[&#34;踏云兽&#34;,4,15,4,25,&#34;3%&#34;,&#34;10%&#34;,&#34;+10%气血&#34;],[&#34;机关兽&#34;,4,15,4,25,&#34;3%&#34;,&#34;10%&#34;,&#34;+10%速度&#34;],[&#34;大力金刚&#34;,4,15,4,25,&#34;3%&#34;,&#34;10%&#34;,&#34;高级防御，-5%灵力&#34;],[&#34;金身罗汉&#34;,3,5,3,15,&#34;3%&#34;,&#34;10%&#34;,&#34;+10%气血，+50魔法&#34;],[&#34;藤蔓妖花&#34;,3,5,3,15,&#34;3%&#34;,&#34;10%&#34;,&#34;毒，命中+100&#34;]]},{&#34;id&#34;:&#34;endurance&#34;,&#34;label&#34;:&#34;耐力套&#34;,&#34;attribute&#34;:&#34;耐力&#34;,&#34;items&#34;:[[&#34;护卫&#34;,6,5,6,10,&#34;33%&#34;,&#34;100%&#34;,&#34;-&#34;],[&#34;羊头怪&#34;,6,5,6,10,&#34;17%&#34;,&#34;50%&#34;,&#34;幸运，-10%气血&#34;],[&#34;蟹将&#34;,6,5,6,10,&#34;10%&#34;,&#34;30%&#34;,&#34;连击，-12%速度&#34;],[&#34;牛妖&#34;,6,5,6,10,&#34;10%&#34;,&#34;30%&#34;,&#34;反击，-5%防御&#34;],[&#34;牛头&#34;,5,10,5,15,&#34;8%&#34;,&#34;25%&#34;,&#34;招架&#34;],[&#34;天兵&#34;,5,10,5,15,&#34;5%&#34;,&#34;15%&#34;,&#34;防御&#34;],[&#34;芙蓉仙子&#34;,4,10,4,15,&#34;3%&#34;,&#34;10%&#34;,&#34;再生，防御-30&#34;],[&#34;律法女娲&#34;,4,10,4,15,&#34;3%&#34;,&#34;10%&#34;,&#34;高级反击，-10%速度&#34;],[&#34;龙龟&#34;,4,15,4,25,&#34;3%&#34;,&#34;10%&#34;,&#34;随机两种龙龟变身卡效果&#34;],[&#34;幽萤娃娃&#34;,4,15,4,25,&#34;3%&#34;,&#34;10%&#34;,&#34;防御，+5%速度&#34;],[&#34;连弩车&#34;,4,15,4,25,&#34;3%&#34;,&#34;10%&#34;,&#34;高级强力，-10%气血&#34;],[&#34;红萼仙子&#34;,4,15,4,25,&#34;3%&#34;,&#34;10%&#34;,&#34;速度+5%、气血+5%&#34;],[&#34;蝎子精&#34;,3,5,3,15,&#34;3%&#34;,&#34;10%&#34;,&#34;高级反震，-10%气血&#34;],[&#34;曼珠沙华&#34;,3,5,3,15,&#34;3%&#34;,&#34;10%&#34;,&#34;高级敏捷，-9%防御&#34;]]}]" data-astro-cid-64oawdat> <section class="taozhaung-card" aria-label="套装计算器" data-astro-cid-64oawdat> <div class="taozhaung-card__header" data-astro-cid-64oawdat> <div data-astro-cid-64oawdat> <h2 data-astro-cid-64oawdat>套装属性与变身效果</h2> </div> </div> <div class="taozhaung-card__body" data-astro-cid-64oawdat> <div class="taozhaung-form" data-astro-cid-64oawdat> <section class="taozhaung-field-card taozhaung-field-card--full" aria-label="角色等级" data-astro-cid-64oawdat> <label class="taozhaung-field taozhaung-field--stacked" data-astro-cid-64oawdat> <span class="taozhaung-field__heading" data-astro-cid-64oawdat> <span class="taozhaung-field__label" data-astro-cid-64oawdat>角色等级</span> <span class="taozhaung-presets" aria-label="常用角色等级" data-astro-cid-64oawdat> <a href="#" class="taozhaung-preset-link" data-preset-target="level" data-value="69" data-astro-cid-64oawdat>69</a> <span class="taozhaung-presets__sep" data-astro-cid-64oawdat>|</span> <a href="#" class="taozhaung-preset-link" data-preset-target="level" data-value="70" data-astro-cid-64oawdat>70</a> <span class="taozhaung-presets__sep" data-astro-cid-64oawdat>|</span> <a href="#" class="taozhaung-preset-link" data-preset-target="level" data-value="80" data-astro-cid-64oawdat>80</a> <span class="taozhaung-presets__sep" data-astro-cid-64oawdat>|</span> <a href="#" class="taozhaung-preset-link" data-preset-target="level" data-value="89" data-astro-cid-64oawdat>89</a> <span class="taozhaung-presets__sep" data-astro-cid-64oawdat>|</span> <a href="#" class="taozhaung-preset-link" data-preset-target="level" data-value="109" data-astro-cid-64oawdat>109</a> <span class="taozhaung-presets__sep" data-astro-cid-64oawdat>|</span> <a href="#" class="taozhaung-preset-link" data-preset-target="level" data-value="115" data-astro-cid-64oawdat>115</a> <span class="taozhaung-presets__sep" data-astro-cid-64oawdat>|</span> <a href="#" class="taozhaung-preset-link" data-preset-target="level" data-value="129" data-astro-cid-64oawdat>129</a> <span class="taozhaung-presets__sep" data-astro-cid-64oawdat>|</span> <a href="#" class="taozhaung-preset-link" data-preset-target="level" data-value="144" data-astro-cid-64oawdat>144</a> <span class="taozhaung-presets__sep" data-astro-cid-64oawdat>|</span> <a href="#" class="taozhaung-preset-link" data-preset-target="level" data-value="159" data-astro-cid-64oawdat>159</a> <span class="taozhaung-presets__sep" data-astro-cid-64oawdat>|</span> <a href="#" class="taozhaung-preset-link" data-preset-target="level" data-value="175" data-astro-cid-64oawdat>175</a> </span> </span> <span class="taozhaung-input taozhaung-input--full" data-astro-cid-64oawdat> <input type="number" min="1" max="175" step="1" inputmode="numeric" data-field="level" data-min="1" data-max="175" data-fallback="1" data-astro-cid-64oawdat> <span class="taozhaung-input__unit" data-astro-cid-64oawdat>级</span> </span> </label> </section> <section class="taozhaung-field-card taozhaung-field-card--full" aria-label="套装类型" data-astro-cid-64oawdat> <div class="taozhaung-field taozhaung-field--stacked" data-astro-cid-64oawdat> <span class="taozhaung-field__heading" data-astro-cid-64oawdat> <span class="taozhaung-field__label" data-astro-cid-64oawdat>套装类型</span> </span> <div class="taozhaung-filter-list" role="group" aria-label="套装类型筛选" data-astro-cid-64oawdat> <button type="button" class="taozhaung-filter-button" data-filter="type" data-value="magic" data-astro-cid-64oawdat>魔力套</button> <button type="button" class="taozhaung-filter-button" data-filter="type" data-value="power" data-astro-cid-64oawdat>力量套</button> <button type="button" class="taozhaung-filter-button" data-filter="type" data-value="agility" data-astro-cid-64oawdat>敏捷套</button> <button type="button" class="taozhaung-filter-button" data-filter="type" data-value="constitution" data-astro-cid-64oawdat>体质套</button> <button type="button" class="taozhaung-filter-button" data-filter="type" data-value="endurance" data-astro-cid-64oawdat>耐力套</button> </div> </div> </section> </div> <div class="taozhaung-results" data-results data-astro-cid-64oawdat></div> </div> </section> </div> <script>
+  (() => {
+    const root = document.querySelector('[data-taozhaung-tool]');
+    if (!root) return;
+
+    const STORAGE_KEY = 'mhxy_taozhaung_calculator';
+    const defaults = JSON.parse(root.dataset.defaults || '{}');
+    const suitGroups = JSON.parse(root.dataset.suits || '[]');
+    const inputs = {
+      level: root.querySelector('[data-field="level"]'),
+    };
+    const presetButtons = Array.from(root.querySelectorAll('[data-preset-target]'));
+    const filterButtons = Array.from(root.querySelectorAll('[data-filter="type"]'));
+    const resultsContainer = root.querySelector('[data-results]');
+
+    function clampInt(value, min, max, fallback) {
+      if (value === '' || value == null) return fallback;
+      const numeric = Number(value);
+      if (!Number.isFinite(numeric)) return fallback;
+      return Math.min(max, Math.max(min, Math.floor(numeric)));
+    }
+
+    function hasGroup(type) {
+      return suitGroups.some((group) => group.id === type);
+    }
+
+    function normalizeState(raw) {
+      return {
+        level: clampInt(raw?.level, 1, 175, 1),
+        type: hasGroup(raw?.type) ? raw.type : 'magic',
+      };
+    }
+
+    function loadState() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return normalizeState(defaults);
+        return normalizeState(JSON.parse(raw));
+      } catch {
+        return normalizeState(defaults);
+      }
+    }
+
+    function saveState(state) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function bindWheelLock(input) {
+      if (!input) return;
+      input.addEventListener('wheel', () => {
+        if (document.activeElement === input) {
+          input.blur();
+        }
+      });
+    }
+
+    function validateAndNormalizeLevel() {
+      const input = inputs.level;
+      if (!input) return 1;
+
+      const min = Number(input.dataset.min || '1');
+      const max = Number(input.dataset.max || '175');
+      const fallback = Number(input.dataset.fallback || '1');
+      const raw = input.value.trim();
+
+      if (raw === '' || raw === '0') {
+        input.value = String(fallback);
+        input.setCustomValidity('');
+        return fallback;
+      }
+
+      const numeric = Number(raw);
+      if (!Number.isFinite(numeric) || numeric < min || numeric > max) {
+        input.setCustomValidity(`请输入 ${min} - ${max} 之间的整数`);
+        input.reportValidity();
+      } else {
+        input.setCustomValidity('');
+      }
+
+      const normalized = clampInt(raw, min, max, fallback);
+      input.value = String(normalized);
+      input.setCustomValidity('');
+      return normalized;
+    }
+
+    function calculateGroup(group, level) {
+      return group.items
+        .map(([name, threeDivisor, threeOffset, fiveDivisor, fiveOffset, threeRate, fiveRate, effect]) => ({
+          name,
+          attribute: group.attribute,
+          threeValue: Math.floor(level / threeDivisor) + threeOffset,
+          fiveValue: Math.floor(level / fiveDivisor) + fiveOffset,
+          threeRate,
+          fiveRate,
+          effect,
+        }))
+        .sort((left, right) => {
+          if (right.threeValue !== left.threeValue) return right.threeValue - left.threeValue;
+          if (right.fiveValue !== left.fiveValue) return right.fiveValue - left.fiveValue;
+          return left.name.localeCompare(right.name, 'zh-Hans-CN');
+        });
+    }
+
+    function buildTable(rows) {
+      const section = document.createElement('section');
+      section.className = 'taozhaung-result-group';
+
+      section.innerHTML = `
+        <div class="taozhaung-table-wrap">
+          <table class="taozhaung-table">
+            <thead>
+              <tr>
+                <th>套装名称</th>
+                <th>3/4件套属性加成</th>
+                <th>五件套属性加成</th>
+                <th>3/4件套变身几率</th>
+                <th>五件套变身几率</th>
+                <th>变身卡效果</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${rows.map((row) => `
+                <tr>
+                  <th scope="row">${row.name}</th>
+                  <td>${row.threeValue}</td>
+                  <td>${row.fiveValue}</td>
+                  <td>${row.threeRate}</td>
+                  <td>${row.fiveRate}</td>
+                  <td>${row.effect}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+
+      return section;
+    }
+
+    function render(state) {
+      inputs.level.value = String(state.level);
+      filterButtons.forEach((button) => {
+        const isActive = button.dataset.value === state.type;
+        button.dataset.active = isActive ? 'true' : 'false';
+        button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      });
+
+      const groups = suitGroups.filter((group) => group.id === state.type);
+
+      resultsContainer.innerHTML = '';
+
+      groups.forEach((group) => {
+        const rows = calculateGroup(group, state.level);
+        resultsContainer.append(buildTable(rows));
+      });
+    }
+
+    let state = loadState();
+    render(state);
+
+    bindWheelLock(inputs.level);
+
+    presetButtons.forEach((button) => {
+      button.addEventListener('click', (event) => {
+        event.preventDefault();
+        const value = button.dataset.value;
+        if (!value || !inputs.level) return;
+
+        inputs.level.value = value;
+        state = normalizeState({
+          level: inputs.level.value,
+          type: state.type,
+        });
+        saveState(state);
+        render(state);
+      });
+    });
+
+    inputs.level.addEventListener('input', () => {
+      const nextState = normalizeState({
+        level: inputs.level.value === '' ? '' : inputs.level.value,
+        type: state.type,
+      });
+      render(nextState);
+    });
+
+    inputs.level.addEventListener('blur', () => {
+      validateAndNormalizeLevel();
+      state = normalizeState({
+        level: inputs.level.value,
+        type: state.type,
+      });
+      saveState(state);
+      render(state);
+    });
+
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        state = normalizeState({
+          level: inputs.level.value,
+          type: button.dataset.value,
+        });
+        saveState(state);
+        render(state);
+      });
+    });
+  })();
+</script>  </section> <section class="tool-guide content" aria-label="使用说明" data-astro-cid-hof4g4vy> <div class="tool-guide__card" data-astro-cid-hof4g4vy> <h2 id="工具说明">工具说明</h2>
+<p>套装计算器用于根据角色等级计算各类变身套的属性加成数值，并对不同套装类型的变身几率和变身卡效果进行统一展示。</p>
+<h2 id="需求描述">需求描述</h2>
+<h3 id="功能概述">功能概述</h3>
+<p>玩家输入当前角色等级，选择套装类型（默认为”全部”），工具根据等级实时计算所有匹配套装的属性加成具体数值，并展示变身几率和变身卡附加效果。</p>
+<h3 id="用户输入">用户输入</h3>
+<p>输入分 2 行</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>输入项</th><th>说明</th><th>格式</th><th>备注</th></tr></thead><tbody><tr><td>角色等级</td><td>参与所有套装的属性加成计算</td><td>整数，范围 1 ~ 175, 默认 175</td><td>满级为175级, 增加 69,70,80,89,109,115,129,144,159,175 常见等级</td></tr><tr><td>套装类型</td><td>筛选展示指定类型的套装</td><td>选择套装类型，默认”全部”</td><td>平铺选项：全部、魔力套、力量套、敏捷套、体质套、耐力套</td></tr></tbody></table>
+<p>当用户输入了 <code>角色等级</code> <code>套装类型</code> 之后需要本地化用户的输入, 下次再进入直接显示历史设置.</p>
+<h3 id="结果输出">结果输出</h3>
+<p>选择后展示以下信息：</p>
+<ul>
+<li><strong>3/4件套属性加成</strong>：根据当前等级按公式计算后的具体数值</li>
+<li><strong>五件套属性加成</strong>：根据当前等级按公式计算后的具体数值</li>
+<li><strong>3/4件套变身几率</strong>：触发变身的概率百分比</li>
+<li><strong>五件套变身几率</strong>：触发变身的概率百分比</li>
+<li><strong>变身卡效果</strong>：变身状态下获得的附加效果（含负面效果）</li>
+</ul>
+<p>当选择 <code>全部</code> 时候输出结果分别显示一个表格.</p>
+<h3 id="排序规则">排序规则</h3>
+<ul>
+<li>选择具体类型时：按属性加成数值从高到低排序</li>
+<li>选择”全部”时：按类型分组，各组内按属性加成排序</li>
+</ul>
+<h3 id="校验规则">校验规则</h3>
+<ul>
+<li>等级为 0 或空值时，按 1 级计算并回显为 1</li>
+<li>所有除法运算严格向下取整（floor）</li>
+</ul>
+<p>下方数据表为工具使用的原始数据，供计算时引用。</p>
+<h2 id="变身套装汇总">变身套装汇总</h2>
+<h3 id="魔力套">魔力套</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>套装名称</th><th>3/4件套属性算法</th><th>五件套属性算法</th><th>3/4件套变身几率</th><th>五件套变身几率</th><th>变身卡效果</th></tr></thead><tbody><tr><td>巨蛙</td><td>人物等级/6+5</td><td>人物等级/6+10</td><td>33%</td><td>100%</td><td>-</td></tr><tr><td>花妖</td><td>人物等级/6+5</td><td>人物等级/6+10</td><td>17%</td><td>50%</td><td>慧根</td></tr><tr><td>小龙女</td><td>人物等级/6+5</td><td>人物等级/6+10</td><td>10%</td><td>30%</td><td>驱鬼，-5%伤害力</td></tr><tr><td>蜘蛛精</td><td>人物等级/5+10</td><td>人物等级/5+15</td><td>8%</td><td>25%</td><td>毒，-10%防御</td></tr><tr><td>蝴蝶仙子</td><td>人物等级/5+10</td><td>人物等级/5+15</td><td>7%</td><td>20%</td><td>魔之心，-10%防御</td></tr><tr><td>古代瑞兽</td><td>人物等级/5+10</td><td>人物等级/5+15</td><td>7%</td><td>20%</td><td>反震，-10%气血</td></tr><tr><td>雨师</td><td>人物等级/4+10</td><td>人物等级/4+15</td><td>5%</td><td>15%</td><td>灵力+20</td></tr><tr><td>蛟龙</td><td>人物等级/4+10</td><td>人物等级/4+15</td><td>5%</td><td>15%</td><td>随机出现永恒、感知</td></tr><tr><td>如意仙子</td><td>人物等级/4+10</td><td>人物等级/4+15</td><td>3%</td><td>10%</td><td>速度+8%、灵力+20</td></tr><tr><td>星灵仙子</td><td>人物等级/4+10</td><td>人物等级/4+15</td><td>3%</td><td>10%</td><td>慧根，灵力+10</td></tr><tr><td>净瓶女娲</td><td>人物等级/4+10</td><td>人物等级/4+15</td><td>3%</td><td>10%</td><td>高级永恒，-5%防御</td></tr><tr><td>灵符女娲</td><td>人物等级/4+10</td><td>人物等级/4+15</td><td>3%</td><td>10%</td><td>魔之心</td></tr><tr><td>灵鹤</td><td>人物等级/4+15</td><td>人物等级/4+25</td><td>3%</td><td>10%</td><td>高级魔之心，-10%防御</td></tr><tr><td>炎魔神</td><td>人物等级/4+15</td><td>人物等级/4+25</td><td>3%</td><td>10%</td><td>高级魔之心，-15%气血</td></tr><tr><td>葫芦宝贝</td><td>人物等级/4+15</td><td>人物等级/4+25</td><td>3%</td><td>10%</td><td>慧根，气血+5%</td></tr><tr><td>混沌兽</td><td>人物等级/3+5</td><td>人物等级/3+15</td><td>3%</td><td>10%</td><td>高级魔之心，-12%气血</td></tr><tr><td>蜃气妖</td><td>人物等级/3+5</td><td>人物等级/3+15</td><td>3%</td><td>10%</td><td>魔之心，防御+30</td></tr><tr><td>长眉灵猴</td><td>人物等级/3+5</td><td>人物等级/3+15</td><td>3%</td><td>10%</td><td>法术暴击，-10%气血</td></tr></tbody></table>
+<h3 id="力量套">力量套</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>套装名称</th><th>3/4件套属性算法</th><th>五件套属性算法</th><th>3/4件套变身几率</th><th>五件套变身几率</th><th>变身卡效果</th></tr></thead><tbody><tr><td>海毛虫</td><td>人物等级/6+5</td><td>人物等级/6+10</td><td>33%</td><td>100%</td><td>-</td></tr><tr><td>强盗</td><td>人物等级/6+5</td><td>人物等级/6+10</td><td>33%</td><td>100%</td><td>-</td></tr><tr><td>蛤蟆精</td><td>人物等级/6+5</td><td>人物等级/6+10</td><td>17%</td><td>50%</td><td>毒，-15%防御</td></tr><tr><td>老虎</td><td>人物等级/6+5</td><td>人物等级/6+10</td><td>17%</td><td>50%</td><td>强力，-10%速度</td></tr><tr><td>马面</td><td>人物等级/5+10</td><td>人物等级/5+15</td><td>8%</td><td>25%</td><td>必杀，-8%伤害力</td></tr><tr><td>地狱战神</td><td>人物等级/5+10</td><td>人物等级/5+15</td><td>5%</td><td>15%</td><td>连击，-5%气血</td></tr><tr><td>天将</td><td>人物等级/5+10</td><td>人物等级/5+15</td><td>5%</td><td>15%</td><td>强力，-8%灵力</td></tr><tr><td>巡游天神</td><td>人物等级/4+10</td><td>人物等级/4+15</td><td>3%</td><td>10%</td><td>必杀，-20%速度</td></tr><tr><td>鬼将</td><td>人物等级/4+10</td><td>人物等级/4+15</td><td>3%</td><td>10%</td><td>高级必杀，-10%伤害力</td></tr><tr><td>噬天虎</td><td>人物等级/4+15</td><td>人物等级/4+25</td><td>3%</td><td>10%</td><td>高级强力，-10%速度</td></tr><tr><td>夜罗刹</td><td>人物等级/4+15</td><td>人物等级/4+25</td><td>3%</td><td>10%</td><td>高级夜战，+5%速度</td></tr><tr><td>狂豹（人形）</td><td>人物等级/4+15</td><td>人物等级/4+25</td><td>3%</td><td>10%</td><td>高级飞行，+5%速度</td></tr><tr><td>修罗傀儡鬼</td><td>人物等级/3+5</td><td>人物等级/3+15</td><td>3%</td><td>10%</td><td>夜战，气血+150</td></tr><tr><td>巨力神猿</td><td>人物等级/3+5</td><td>人物等级/3+15</td><td>3%</td><td>10%</td><td>高级强力，-5%灵力</td></tr></tbody></table>
+<h3 id="敏捷套">敏捷套</h3>
+<h1 id="梦幻西游-敏捷变身术套装汇总表">梦幻西游 敏捷变身术套装汇总表</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>套装名称</th><th>3/4件套属性算法</th><th>五件套属性算法</th><th>3/4件套变身几率</th><th>五件套变身几率</th><th>变身卡效果</th></tr></thead><tbody><tr><td>赌徒</td><td>人物等级/6+5</td><td>人物等级/6+10</td><td>33%</td><td>100%</td><td>-</td></tr><tr><td>大蝙蝠</td><td>人物等级/6+5</td><td>人物等级/6+10</td><td>33%</td><td>100%</td><td>-</td></tr><tr><td>狐狸精</td><td>人物等级/6+5</td><td>人物等级/6+10</td><td>17%</td><td>50%</td><td>感知，-5%气血</td></tr><tr><td>骷髅怪</td><td>人物等级/6+5</td><td>人物等级/6+10</td><td>17%</td><td>50%</td><td>夜战，-20%气血</td></tr><tr><td>狼</td><td>人物等级/6+5</td><td>人物等级/6+10</td><td>10%</td><td>30%</td><td>偷袭，-10%气血</td></tr><tr><td>虾兵</td><td>人物等级/6+5</td><td>人物等级/6+10</td><td>10%</td><td>30%</td><td>必杀，-10%伤害力</td></tr><tr><td>兔子怪</td><td>人物等级/5+10</td><td>人物等级/5+15</td><td>8%</td><td>25%</td><td>敏捷，-10%气血</td></tr><tr><td>雷鸟人</td><td>人物等级/5+10</td><td>人物等级/5+15</td><td>7%</td><td>20%</td><td>飞行，-10%气血</td></tr><tr><td>风伯</td><td>人物等级/5+10</td><td>人物等级/5+15</td><td>5%</td><td>15%</td><td>敏捷，-5%防御</td></tr><tr><td>凤凰</td><td>人物等级/4+10</td><td>人物等级/4+15</td><td>5%</td><td>15%</td><td>飞行</td></tr><tr><td>吸血鬼</td><td>人物等级/4+10</td><td>人物等级/4+15</td><td>3%</td><td>10%</td><td>偷袭，-5%速度</td></tr><tr><td>幽灵</td><td>人物等级/4+10</td><td>人物等级/4+15</td><td>3%</td><td>10%</td><td>高级夜战</td></tr><tr><td>画魂</td><td>人物等级/4+15</td><td>人物等级/4+25</td><td>3%</td><td>10%</td><td>高级幸运</td></tr><tr><td>雾中仙</td><td>人物等级/4+15</td><td>人物等级/4+25</td><td>3%</td><td>10%</td><td>高级敏捷，-10%防御</td></tr><tr><td>机关鸟</td><td>人物等级/4+15</td><td>人物等级/4+25</td><td>3%</td><td>10%</td><td>高级再生，-5%防御</td></tr><tr><td>巴蛇</td><td>人物等级/4+15</td><td>人物等级/4+25</td><td>3%</td><td>10%</td><td>高级毒</td></tr><tr><td>猫灵（人形）</td><td>人物等级/4+15</td><td>人物等级/4+25</td><td>3%</td><td>10%</td><td>敏捷，速度+10</td></tr><tr><td>修罗傀儡妖</td><td>人物等级/3+5</td><td>人物等级/3+15</td><td>3%</td><td>10%</td><td>必杀</td></tr></tbody></table>
+<h3 id="体质套">体质套</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>套装名称</th><th>3/4件套属性算法</th><th>五件套属性算法</th><th>3/4件套变身几率</th><th>五件套变身几率</th><th>变身卡效果</th></tr></thead><tbody><tr><td>大海龟</td><td>人物等级/6+5</td><td>人物等级/6+10</td><td>33%</td><td>100%</td><td>-</td></tr><tr><td>树怪</td><td>人物等级/6+5</td><td>人物等级/6+10</td><td>33%</td><td>100%</td><td>-</td></tr><tr><td>山贼</td><td>人物等级/6+5</td><td>人物等级/6+10</td><td>33%</td><td>100%</td><td>-</td></tr><tr><td>野猪</td><td>人物等级/6+5</td><td>人物等级/6+10</td><td>33%</td><td>100%</td><td>-</td></tr><tr><td>黑熊</td><td>人物等级/6+5</td><td>人物等级/6+10</td><td>17%</td><td>50%</td><td>防御，-5%灵力</td></tr><tr><td>野鬼</td><td>人物等级/6+5</td><td>人物等级/6+10</td><td>10%</td><td>30%</td><td>夜战，-5%灵力</td></tr><tr><td>僵尸</td><td>人物等级/5+10</td><td>人物等级/5+15</td><td>8%</td><td>25%</td><td>弱点雷，+10%气血</td></tr><tr><td>龟丞相</td><td>人物等级/5+10</td><td>人物等级/5+15</td><td>8%</td><td>25%</td><td>气血+7%、防御+10</td></tr><tr><td>黑熊精</td><td>人物等级/5+10</td><td>人物等级/5+15</td><td>8%</td><td>25%</td><td>反震，-10%防御</td></tr><tr><td>白熊</td><td>人物等级/5+10</td><td>人物等级/5+15</td><td>7%</td><td>20%</td><td>迟钝</td></tr><tr><td>黑山老妖</td><td>人物等级/5+10</td><td>人物等级/5+15</td><td>7%</td><td>20%</td><td>偷袭，-10%速度</td></tr><tr><td>踏云兽</td><td>人物等级/4+15</td><td>人物等级/4+25</td><td>3%</td><td>10%</td><td>+10%气血</td></tr><tr><td>机关兽</td><td>人物等级/4+15</td><td>人物等级/4+25</td><td>3%</td><td>10%</td><td>+10%速度</td></tr><tr><td>大力金刚</td><td>人物等级/4+15</td><td>人物等级/4+25</td><td>3%</td><td>10%</td><td>高级防御，-5%灵力</td></tr><tr><td>金身罗汉</td><td>人物等级/3+5</td><td>人物等级/3+15</td><td>3%</td><td>10%</td><td>+10%气血，+50魔法</td></tr><tr><td>藤蔓妖花</td><td>人物等级/3+5</td><td>人物等级/3+15</td><td>3%</td><td>10%</td><td>毒，命中+100</td></tr></tbody></table>
+<h3 id="耐力套">耐力套</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>套装名称</th><th>3/4件套属性算法</th><th>五件套属性算法</th><th>3/4件套变身几率</th><th>五件套变身几率</th><th>变身卡效果</th></tr></thead><tbody><tr><td>护卫</td><td>人物等级/6+5</td><td>人物等级/6+10</td><td>33%</td><td>100%</td><td>-</td></tr><tr><td>羊头怪</td><td>人物等级/6+5</td><td>人物等级/6+10</td><td>17%</td><td>50%</td><td>幸运，-10%气血</td></tr><tr><td>蟹将</td><td>人物等级/6+5</td><td>人物等级/6+10</td><td>10%</td><td>30%</td><td>连击，-12%速度</td></tr><tr><td>牛妖</td><td>人物等级/6+5</td><td>人物等级/6+10</td><td>10%</td><td>30%</td><td>反击，-5%防御</td></tr><tr><td>牛头</td><td>人物等级/5+10</td><td>人物等级/5+15</td><td>8%</td><td>25%</td><td>招架</td></tr><tr><td>天兵</td><td>人物等级/5+10</td><td>人物等级/5+15</td><td>5%</td><td>15%</td><td>防御</td></tr><tr><td>芙蓉仙子</td><td>人物等级/4+10</td><td>人物等级/4+15</td><td>3%</td><td>10%</td><td>再生，防御-30</td></tr><tr><td>律法女娲</td><td>人物等级/4+10</td><td>人物等级/4+15</td><td>3%</td><td>10%</td><td>高级反击，-10%速度</td></tr><tr><td>龙龟</td><td>人物等级/4+15</td><td>人物等级/4+25</td><td>3%</td><td>10%</td><td>随机两种龙龟变身卡效果</td></tr><tr><td>幽萤娃娃</td><td>人物等级/4+15</td><td>人物等级/4+25</td><td>3%</td><td>10%</td><td>防御，+5%速度</td></tr><tr><td>连弩车</td><td>人物等级/4+15</td><td>人物等级/4+25</td><td>3%</td><td>10%</td><td>高级强力，-10%气血</td></tr><tr><td>红萼仙子</td><td>人物等级/4+15</td><td>人物等级/4+25</td><td>3%</td><td>10%</td><td>速度+5%、气血+5%</td></tr><tr><td>蝎子精</td><td>人物等级/3+5</td><td>人物等级/3+15</td><td>3%</td><td>10%</td><td>高级反震，-10%气血</td></tr><tr><td>曼珠沙华</td><td>人物等级/3+5</td><td>人物等级/3+15</td><td>3%</td><td>10%</td><td>高级敏捷，-9%防御</td></tr></tbody></table> </div> </section> </article>  </section>   </div>   </main> <footer class="site-footer" data-astro-cid-sz7xmlte> <div class="container container--default" data-astro-cid-d6puh33w>  <div class="site-footer__grid" data-astro-cid-sz7xmlte> <section data-astro-cid-sz7xmlte> <h2 data-astro-cid-sz7xmlte>三界工具箱</h2> <p data-astro-cid-sz7xmlte>面向梦幻西游玩家的内容驱动工具站。</p> </section> <section data-astro-cid-sz7xmlte> <h2 data-astro-cid-sz7xmlte>分类导航</h2> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="/tools" data-astro-cid-sz7xmlte>工具</a></li> <li class="is-hidden" data-astro-cid-sz7xmlte><a href="/articles" data-astro-cid-sz7xmlte>攻略</a></li> <li class="is-hidden" data-astro-cid-sz7xmlte><a href="/wiki" data-astro-cid-sz7xmlte>百科</a></li> </ul> </section> <section data-astro-cid-sz7xmlte> <h2 data-astro-cid-sz7xmlte>站点信息</h2> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="/privacy" data-astro-cid-sz7xmlte>隐私政策</a></li> <li data-astro-cid-sz7xmlte><a href="/terms" data-astro-cid-sz7xmlte>服务协议</a></li> </ul> </section> <section class="site-footer__contact" data-astro-cid-sz7xmlte> <h2 data-astro-cid-sz7xmlte>联系我们</h2> <a class="site-footer__contact-link" href="mailto:support@sanjiebox.com" data-astro-cid-sz7xmlte> <span class="site-footer__contact-icon" aria-hidden="true" data-astro-cid-sz7xmlte><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></span> <span data-astro-cid-sz7xmlte>support@sanjiebox.com</span> </a> </section> </div> <p class="site-footer__copyright" data-astro-cid-sz7xmlte>Copyright © 三界工具箱</p>  </div>  </footer>  </body></html> 
