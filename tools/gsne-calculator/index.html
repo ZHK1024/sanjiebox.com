@@ -1,0 +1,363 @@
+<!DOCTYPE html><html lang="zh-CN"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>女儿村固伤计算器 - 三界工具箱</title><meta name="description" content="梦幻西游女儿村固伤计算器，输入人物等级、秒的技能、暗器技能、敏捷、法修、阵法和各类附加伤害后，快速查看点秒、副秒和当前目标数总秒伤，按原始 HTML 公式还原计算逻辑。"><link rel="canonical" href="https://sanjiebox.com/tools/gsne-calculator"><meta property="og:title" content="女儿村固伤计算器 - 三界工具箱"><meta property="og:description" content="梦幻西游女儿村固伤计算器，输入人物等级、秒的技能、暗器技能、敏捷、法修、阵法和各类附加伤害后，快速查看点秒、副秒和当前目标数总秒伤，按原始 HTML 公式还原计算逻辑。"><meta property="og:url" content="https://sanjiebox.com/tools/gsne-calculator"><meta property="og:type" content="website"><script async src="https://www.googletagmanager.com/gtag/js?id=G-RRVFJXD5E5"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RRVFJXD5E5');
+    </script><script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebPage","name":"女儿村固伤计算器 - 三界工具箱","description":"梦幻西游女儿村固伤计算器，输入人物等级、秒的技能、暗器技能、敏捷、法修、阵法和各类附加伤害后，快速查看点秒、副秒和当前目标数总秒伤，按原始 HTML 公式还原计算逻辑。","url":"https://sanjiebox.com/tools/gsne-calculator"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://sanjiebox.com/"},{"@type":"ListItem","position":2,"name":"工具","item":"https://sanjiebox.com/tools"},{"@type":"ListItem","position":3,"name":"女儿村固伤计算器","item":"https://sanjiebox.com/tools/gsne-calculator"}]}]</script><link rel="stylesheet" href="/_astro/_slug_.CZ-fjp7m.css">
+<style>.section[data-astro-cid-sh445jdo]{margin-block:var(--space-10)}.section--no-top-margin[data-astro-cid-sh445jdo]{margin-top:0}.section--content[data-astro-cid-sh445jdo]{max-width:var(--content-max)}.section__header[data-astro-cid-sh445jdo]{margin-bottom:var(--space-6)}.section__header[data-astro-cid-sh445jdo] p[data-astro-cid-sh445jdo]{color:var(--color-text-secondary);margin:var(--space-0)}
+.card[data-astro-cid-dohjnao5]{display:block;padding:var(--space-5);color:var(--color-text);background:var(--color-surface);border:var(--border-width) solid var(--color-border);border-radius:var(--radius-card);box-shadow:0 4px 14px #2f34410a;transition:border-color var(--transition-fast),box-shadow var(--transition-fast)}.card[data-astro-cid-dohjnao5]:hover{border-color:#dde2eb;text-decoration:none;box-shadow:0 8px 18px #2f34410f}
+.article-card[data-astro-cid-di2nlc57] h3[data-astro-cid-di2nlc57]{margin-bottom:var(--space-2)}.article-card[data-astro-cid-di2nlc57] p[data-astro-cid-di2nlc57]{color:var(--color-text-secondary);font-size:var(--text-sm)}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.D6q9sTbI.css">
+<style>.tool-card[data-astro-cid-g5sewvjw]{display:grid;grid-template-columns:60px minmax(0,1fr);gap:var(--space-4);align-items:center}.tool-card[data-astro-cid-g5sewvjw] h3[data-astro-cid-g5sewvjw]{margin:0;overflow:hidden;font-size:var(--text-base);font-weight:700;line-height:1.5;text-overflow:ellipsis;white-space:nowrap}.tool-card[data-astro-cid-g5sewvjw] p[data-astro-cid-g5sewvjw]{margin:0;color:var(--color-text-secondary);font-size:var(--text-sm);line-height:1.6;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.tool-card__media[data-astro-cid-g5sewvjw]{display:flex;align-items:center;justify-content:center;width:60px;height:60px;overflow:hidden;background:var(--color-surface-muted);border:var(--border-width) solid var(--color-border);border-radius:var(--radius-card)}.tool-card__media[data-astro-cid-g5sewvjw] img[data-astro-cid-g5sewvjw]{display:block;width:60px;height:60px;object-fit:cover}.tool-card__media--placeholder[data-astro-cid-g5sewvjw] span[data-astro-cid-g5sewvjw]{color:var(--color-text-secondary);font-size:18px;font-weight:700;letter-spacing:.08em}.tool-card__body[data-astro-cid-g5sewvjw]{display:grid;gap:var(--space-2);min-width:0}@media(max-width:720px){.tool-card[data-astro-cid-g5sewvjw]{grid-template-columns:60px minmax(0,1fr)}}
+</style></head> <body> <header class="site-header" data-astro-cid-3ef6ksr2> <div class="container container--default" data-astro-cid-d6puh33w>  <div class="site-header__inner" data-astro-cid-3ef6ksr2> <a class="site-header__logo" href="/" aria-label="三界工具箱首页" data-astro-cid-3ef6ksr2> <img src="/_astro/logo.5anzccCg.png" alt="三界工具箱" width="220" height="54" data-astro-cid-3ef6ksr2> </a> <nav aria-label="主导航" data-astro-cid-3ef6ksr2> <ul data-astro-cid-3ef6ksr2> <li data-nav-item="首页" data-astro-cid-3ef6ksr2> <a href="/" data-active="false" data-astro-cid-3ef6ksr2> 首页 </a> </li><li data-nav-item="工具" data-astro-cid-3ef6ksr2> <a href="/tools" aria-current="page" data-active="true" data-astro-cid-3ef6ksr2> 工具 </a> </li><li data-nav-item="攻略" data-astro-cid-3ef6ksr2> <a href="/articles" data-active="false" data-astro-cid-3ef6ksr2> 攻略 </a> </li><li data-nav-item="百科" data-astro-cid-3ef6ksr2> <a href="/wiki" data-active="false" data-astro-cid-3ef6ksr2> 百科 </a> </li><li data-nav-item="最新更新" data-astro-cid-3ef6ksr2> <a href="/updates" data-active="false" data-astro-cid-3ef6ksr2> 最新更新 </a> </li> </ul> </nav> </div>  </div>  </header>  <div class="container container--default" data-astro-cid-d6puh33w> <nav class="breadcrumb" aria-label="面包屑" data-astro-cid-qaanghzh><ol data-astro-cid-qaanghzh><li data-astro-cid-qaanghzh><a href="/" data-astro-cid-qaanghzh>首页</a></li><li data-astro-cid-qaanghzh><a href="/tools" data-astro-cid-qaanghzh>工具</a></li><li data-astro-cid-qaanghzh><span aria-current="page" data-astro-cid-qaanghzh>女儿村固伤计算器</span></li></ol></nav> </div>  <main id="content">  <div class="container container--default" data-astro-cid-d6puh33w>  <section class="section section--default section--no-top-margin" data-astro-cid-sh445jdo>   <article class="tool-page flow" data-astro-cid-hof4g4vy> <header data-astro-cid-hof4g4vy> <h1 data-astro-cid-hof4g4vy>女儿村固伤计算器</h1> <p data-astro-cid-hof4g4vy>女儿村固伤模拟器, 计算公式收集自网络, 模拟结果仅供参考, 实际伤害可能因游戏内各种因素而有所不同。</p> </header> <section class="tool-page__main" aria-label="工具主体" data-astro-cid-hof4g4vy> <div class="gsne-tool" data-gsne-tool data-defaults="{&#34;level&#34;:175,&#34;skillLevel&#34;:180,&#34;darkWeaponSkill&#34;:180,&#34;agilityPoints&#34;:1000,&#34;weaponDamage&#34;:0,&#34;jewelryDamage&#34;:0,&#34;jewelryFixedDamage&#34;:0,&#34;dragonDamage&#34;:0,&#34;spiritWoodCharm&#34;:0,&#34;runeFixedDamage&#34;:0,&#34;magicTraining&#34;:0,&#34;targetCount&#34;:&#34;3&#34;,&#34;formationBonus&#34;:&#34;1&#34;,&#34;qianYuanDan&#34;:&#34;0&#34;,&#34;npcResistance&#34;:0,&#34;helmetSun&#34;:&#34;0&#34;,&#34;testStone&#34;:&#34;0&#34;,&#34;holeBonus&#34;:&#34;0&#34;}" data-formation-options="[{&#34;label&#34;:&#34;无&#34;,&#34;value&#34;:&#34;1&#34;},{&#34;label&#34;:&#34;天覆阵&#34;,&#34;value&#34;:&#34;1.25&#34;},{&#34;label&#34;:&#34;雷绝阵 1 号位&#34;,&#34;value&#34;:&#34;1.15&#34;}]" data-qyd-options="[{&#34;label&#34;:&#34;无&#34;,&#34;value&#34;:&#34;0&#34;},{&#34;label&#34;:&#34;暗伤&#34;,&#34;value&#34;:&#34;0.18&#34;}]" data-target-options="[{&#34;label&#34;:&#34;1 个&#34;,&#34;value&#34;:&#34;1&#34;},{&#34;label&#34;:&#34;2 个&#34;,&#34;value&#34;:&#34;2&#34;},{&#34;label&#34;:&#34;3 个&#34;,&#34;value&#34;:&#34;3&#34;},{&#34;label&#34;:&#34;4 个&#34;,&#34;value&#34;:&#34;4&#34;},{&#34;label&#34;:&#34;5 个&#34;,&#34;value&#34;:&#34;5&#34;},{&#34;label&#34;:&#34;6 个&#34;,&#34;value&#34;:&#34;6&#34;},{&#34;label&#34;:&#34;7 个&#34;,&#34;value&#34;:&#34;7&#34;}]" data-helmet-options="[{&#34;label&#34;:&#34;0 段&#34;,&#34;value&#34;:&#34;0&#34;},{&#34;label&#34;:&#34;1 段&#34;,&#34;value&#34;:&#34;8&#34;},{&#34;label&#34;:&#34;2 段&#34;,&#34;value&#34;:&#34;16&#34;},{&#34;label&#34;:&#34;3 段&#34;,&#34;value&#34;:&#34;24&#34;},{&#34;label&#34;:&#34;4 段&#34;,&#34;value&#34;:&#34;32&#34;},{&#34;label&#34;:&#34;5 段&#34;,&#34;value&#34;:&#34;40&#34;},{&#34;label&#34;:&#34;6 段&#34;,&#34;value&#34;:&#34;48&#34;},{&#34;label&#34;:&#34;7 段&#34;,&#34;value&#34;:&#34;56&#34;},{&#34;label&#34;:&#34;8 段&#34;,&#34;value&#34;:&#34;64&#34;},{&#34;label&#34;:&#34;9 段&#34;,&#34;value&#34;:&#34;72&#34;},{&#34;label&#34;:&#34;10 段&#34;,&#34;value&#34;:&#34;80&#34;},{&#34;label&#34;:&#34;11 段&#34;,&#34;value&#34;:&#34;88&#34;},{&#34;label&#34;:&#34;12 段&#34;,&#34;value&#34;:&#34;96&#34;},{&#34;label&#34;:&#34;13 段&#34;,&#34;value&#34;:&#34;104&#34;},{&#34;label&#34;:&#34;14 段&#34;,&#34;value&#34;:&#34;112&#34;},{&#34;label&#34;:&#34;15 段&#34;,&#34;value&#34;:&#34;120&#34;},{&#34;label&#34;:&#34;16 段&#34;,&#34;value&#34;:&#34;128&#34;}]" data-test-stone-options="[{&#34;label&#34;:&#34;0 个&#34;,&#34;value&#34;:&#34;0&#34;}]" data-hole-options="[{&#34;label&#34;:&#34;无&#34;,&#34;value&#34;:&#34;0&#34;},{&#34;label&#34;:&#34;2 孔 x 1&#34;,&#34;value&#34;:&#34;0.2&#34;},{&#34;label&#34;:&#34;3 孔 x 1&#34;,&#34;value&#34;:&#34;0.3&#34;},{&#34;label&#34;:&#34;4 孔 x 1&#34;,&#34;value&#34;:&#34;0.4&#34;},{&#34;label&#34;:&#34;2 孔 x 2&#34;,&#34;value&#34;:&#34;0.4&#34;},{&#34;label&#34;:&#34;3 孔 x 2&#34;,&#34;value&#34;:&#34;0.6&#34;},{&#34;label&#34;:&#34;4 孔 x 2&#34;,&#34;value&#34;:&#34;0.8&#34;},{&#34;label&#34;:&#34;2 孔 + 3 孔&#34;,&#34;value&#34;:&#34;0.5&#34;},{&#34;label&#34;:&#34;2 孔 + 4 孔&#34;,&#34;value&#34;:&#34;0.6&#34;},{&#34;label&#34;:&#34;3 孔 + 4 孔&#34;,&#34;value&#34;:&#34;0.7&#34;}]" data-astro-cid-nxz6evt4> <section class="gsne-card" aria-label="女儿村固伤计算器" data-astro-cid-nxz6evt4> <div class="gsne-card__header" data-astro-cid-nxz6evt4> <div data-astro-cid-nxz6evt4> <h2 data-astro-cid-nxz6evt4>女儿村固伤计算器</h2> </div> <button type="button" class="gsne-reset-button" data-action="reset" data-astro-cid-nxz6evt4>恢复默认</button> </div> <div class="gsne-card__body" data-astro-cid-nxz6evt4> <div class="gsne-form" data-astro-cid-nxz6evt4> <section class="gsne-field-card gsne-field-card--full" aria-label="基础参数" data-astro-cid-nxz6evt4> <div class="gsne-field-grid gsne-field-grid--compact" data-astro-cid-nxz6evt4> <label class="gsne-field gsne-field--stacked" data-astro-cid-nxz6evt4> <span class="gsne-field__heading" data-astro-cid-nxz6evt4> <span class="gsne-field__label" data-astro-cid-nxz6evt4>人物等级</span> <span class="gsne-presets" aria-label="常用角色等级" data-astro-cid-nxz6evt4> <a href="#" class="gsne-preset-link" data-preset-target="level" data-value="69" data-astro-cid-nxz6evt4>69</a> <span class="gsne-presets__sep" data-astro-cid-nxz6evt4>|</span> <a href="#" class="gsne-preset-link" data-preset-target="level" data-value="89" data-astro-cid-nxz6evt4>89</a> <span class="gsne-presets__sep" data-astro-cid-nxz6evt4>|</span> <a href="#" class="gsne-preset-link" data-preset-target="level" data-value="109" data-astro-cid-nxz6evt4>109</a> <span class="gsne-presets__sep" data-astro-cid-nxz6evt4>|</span> <a href="#" class="gsne-preset-link" data-preset-target="level" data-value="129" data-astro-cid-nxz6evt4>129</a> <span class="gsne-presets__sep" data-astro-cid-nxz6evt4>|</span> <a href="#" class="gsne-preset-link" data-preset-target="level" data-value="159" data-astro-cid-nxz6evt4>159</a> <span class="gsne-presets__sep" data-astro-cid-nxz6evt4>|</span> <a href="#" class="gsne-preset-link" data-preset-target="level" data-value="175" data-astro-cid-nxz6evt4>175</a> </span> </span> <span class="gsne-input" data-astro-cid-nxz6evt4> <input type="number" min="1" max="175" step="1" inputmode="numeric" data-field="level" data-min="1" data-max="175" data-fallback="1" data-astro-cid-nxz6evt4> <span class="gsne-input__unit" data-astro-cid-nxz6evt4>级</span> </span> </label> <label class="gsne-field gsne-field--stacked" data-astro-cid-nxz6evt4> <span class="gsne-field__heading" data-astro-cid-nxz6evt4> <span class="gsne-field__label" data-astro-cid-nxz6evt4>雨落寒沙</span> <span class="gsne-presets" aria-label="常用技能等级" data-astro-cid-nxz6evt4> <a href="#" class="gsne-preset-link" data-preset-target="skillLevel" data-value="79" data-astro-cid-nxz6evt4>79</a> <span class="gsne-presets__sep" data-astro-cid-nxz6evt4>|</span> <a href="#" class="gsne-preset-link" data-preset-target="skillLevel" data-value="99" data-astro-cid-nxz6evt4>99</a> <span class="gsne-presets__sep" data-astro-cid-nxz6evt4>|</span> <a href="#" class="gsne-preset-link" data-preset-target="skillLevel" data-value="119" data-astro-cid-nxz6evt4>119</a> <span class="gsne-presets__sep" data-astro-cid-nxz6evt4>|</span> <a href="#" class="gsne-preset-link" data-preset-target="skillLevel" data-value="139" data-astro-cid-nxz6evt4>139</a> <span class="gsne-presets__sep" data-astro-cid-nxz6evt4>|</span> <a href="#" class="gsne-preset-link" data-preset-target="skillLevel" data-value="150" data-astro-cid-nxz6evt4>150</a> <span class="gsne-presets__sep" data-astro-cid-nxz6evt4>|</span> <a href="#" class="gsne-preset-link" data-preset-target="skillLevel" data-value="169" data-astro-cid-nxz6evt4>169</a> <span class="gsne-presets__sep" data-astro-cid-nxz6evt4>|</span> <a href="#" class="gsne-preset-link" data-preset-target="skillLevel" data-value="180" data-astro-cid-nxz6evt4>180</a> </span> </span> <span class="gsne-input" data-astro-cid-nxz6evt4> <input type="number" min="0" max="300" step="1" inputmode="numeric" data-field="skillLevel" data-min="0" data-max="300" data-fallback="0" data-astro-cid-nxz6evt4> <span class="gsne-input__unit" data-astro-cid-nxz6evt4>级</span> </span> </label> </div> <div class="gsne-field-grid gsne-field-grid--compact" data-astro-cid-nxz6evt4> <label class="gsne-field gsne-field--stacked" data-astro-cid-nxz6evt4> <span class="gsne-field__heading" data-astro-cid-nxz6evt4> <span class="gsne-field__label" data-astro-cid-nxz6evt4>暗器技能</span> <span class="gsne-presets" aria-label="常用暗器技能等级" data-astro-cid-nxz6evt4> <a href="#" class="gsne-preset-link" data-preset-target="darkWeaponSkill" data-value="100" data-astro-cid-nxz6evt4>100</a> <span class="gsne-presets__sep" data-astro-cid-nxz6evt4>|</span> <a href="#" class="gsne-preset-link" data-preset-target="darkWeaponSkill" data-value="140" data-astro-cid-nxz6evt4>140</a> <span class="gsne-presets__sep" data-astro-cid-nxz6evt4>|</span> <a href="#" class="gsne-preset-link" data-preset-target="darkWeaponSkill" data-value="160" data-astro-cid-nxz6evt4>160</a> </span> </span> <span class="gsne-input" data-astro-cid-nxz6evt4> <input type="number" min="0" max="300" step="1" inputmode="numeric" data-field="darkWeaponSkill" data-min="0" data-max="300" data-fallback="0" data-astro-cid-nxz6evt4> <span class="gsne-input__unit" data-astro-cid-nxz6evt4>级</span> </span> </label> <label class="gsne-field gsne-field--stacked" data-astro-cid-nxz6evt4> <span class="gsne-field__label" data-astro-cid-nxz6evt4>敏捷点数</span> <span class="gsne-input" data-astro-cid-nxz6evt4> <input type="number" min="0" max="9999" step="1" inputmode="numeric" data-field="agilityPoints" data-min="0" data-max="9999" data-fallback="0" data-astro-cid-nxz6evt4> <span class="gsne-input__unit" data-astro-cid-nxz6evt4>点</span> </span> </label> </div> <div class="gsne-field-grid gsne-field-grid--compact" data-astro-cid-nxz6evt4> <label class="gsne-field gsne-field--stacked" data-astro-cid-nxz6evt4> <span class="gsne-field__heading" data-astro-cid-nxz6evt4> <span class="gsne-field__label" data-astro-cid-nxz6evt4>法术修炼</span> <span class="gsne-presets" aria-label="常用法术修炼等级" data-astro-cid-nxz6evt4> <a href="#" class="gsne-preset-link" data-preset-target="magicTraining" data-value="0" data-astro-cid-nxz6evt4>0</a> <span class="gsne-presets__sep" data-astro-cid-nxz6evt4>|</span> <a href="#" class="gsne-preset-link" data-preset-target="magicTraining" data-value="5" data-astro-cid-nxz6evt4>5</a> <span class="gsne-presets__sep" data-astro-cid-nxz6evt4>|</span> <a href="#" class="gsne-preset-link" data-preset-target="magicTraining" data-value="9" data-astro-cid-nxz6evt4>9</a> <span class="gsne-presets__sep" data-astro-cid-nxz6evt4>|</span> <a href="#" class="gsne-preset-link" data-preset-target="magicTraining" data-value="10" data-astro-cid-nxz6evt4>10</a> <span class="gsne-presets__sep" data-astro-cid-nxz6evt4>|</span> <a href="#" class="gsne-preset-link" data-preset-target="magicTraining" data-value="17" data-astro-cid-nxz6evt4>17</a> <span class="gsne-presets__sep" data-astro-cid-nxz6evt4>|</span> <a href="#" class="gsne-preset-link" data-preset-target="magicTraining" data-value="20" data-astro-cid-nxz6evt4>20</a> <span class="gsne-presets__sep" data-astro-cid-nxz6evt4>|</span> <a href="#" class="gsne-preset-link" data-preset-target="magicTraining" data-value="21" data-astro-cid-nxz6evt4>21</a> <span class="gsne-presets__sep" data-astro-cid-nxz6evt4>|</span> <a href="#" class="gsne-preset-link" data-preset-target="magicTraining" data-value="25" data-astro-cid-nxz6evt4>25</a> </span> </span> <span class="gsne-input" data-astro-cid-nxz6evt4> <input type="number" min="0" max="25" step="1" inputmode="numeric" data-field="magicTraining" data-min="0" data-max="25" data-fallback="0" data-astro-cid-nxz6evt4> <span class="gsne-input__unit" data-astro-cid-nxz6evt4>级</span> </span> </label> <label class="gsne-field gsne-field--stacked" data-astro-cid-nxz6evt4> <span class="gsne-field__label" data-astro-cid-nxz6evt4>怪物抗性</span> <span class="gsne-input" data-astro-cid-nxz6evt4> <input type="number" min="0" max="25" step="1" inputmode="numeric" data-field="npcResistance" data-min="0" data-max="25" data-fallback="0" data-astro-cid-nxz6evt4> <span class="gsne-input__unit" data-astro-cid-nxz6evt4>级</span> </span> </label> </div> </section> <section class="gsne-field-card gsne-field-card--full" aria-label="伤害与加成参数" data-astro-cid-nxz6evt4> <div class="gsne-field-grid gsne-field-grid--triple" data-astro-cid-nxz6evt4> <label class="gsne-field gsne-field--stacked" data-astro-cid-nxz6evt4> <span class="gsne-field__label" data-astro-cid-nxz6evt4>武器伤害</span> <span class="gsne-input" data-astro-cid-nxz6evt4> <input type="number" min="0" max="9999" step="1" inputmode="numeric" data-field="weaponDamage" data-min="0" data-max="9999" data-fallback="0" data-astro-cid-nxz6evt4> <span class="gsne-input__unit" data-astro-cid-nxz6evt4>点</span> </span> </label> <label class="gsne-field gsne-field--stacked" data-astro-cid-nxz6evt4> <span class="gsne-field__label" data-astro-cid-nxz6evt4>灵饰伤害</span> <span class="gsne-input" data-astro-cid-nxz6evt4> <input type="number" min="0" max="9999" step="1" inputmode="numeric" data-field="jewelryDamage" data-min="0" data-max="9999" data-fallback="0" data-astro-cid-nxz6evt4> <span class="gsne-input__unit" data-astro-cid-nxz6evt4>点</span> </span> </label> <label class="gsne-field gsne-field--stacked" data-astro-cid-nxz6evt4> <span class="gsne-field__label" data-astro-cid-nxz6evt4>灵饰固伤</span> <span class="gsne-input" data-astro-cid-nxz6evt4> <input type="number" min="0" max="9999" step="1" inputmode="numeric" data-field="jewelryFixedDamage" data-min="0" data-max="9999" data-fallback="0" data-astro-cid-nxz6evt4> <span class="gsne-input__unit" data-astro-cid-nxz6evt4>点</span> </span> </label> <label class="gsne-field gsne-field--stacked" data-astro-cid-nxz6evt4> <span class="gsne-field__label" data-astro-cid-nxz6evt4>龙附伤害</span> <span class="gsne-input" data-astro-cid-nxz6evt4> <input type="number" min="0" max="9999" step="1" inputmode="numeric" data-field="dragonDamage" data-min="0" data-max="9999" data-fallback="0" data-astro-cid-nxz6evt4> <span class="gsne-input__unit" data-astro-cid-nxz6evt4>点</span> </span> </label> <label class="gsne-field gsne-field--stacked" data-astro-cid-nxz6evt4> <span class="gsne-field__label" data-astro-cid-nxz6evt4>神木符</span> <span class="gsne-input" data-astro-cid-nxz6evt4> <input type="number" min="0" max="9999" step="1" inputmode="numeric" data-field="spiritWoodCharm" data-min="0" data-max="9999" data-fallback="0" data-astro-cid-nxz6evt4> <span class="gsne-input__unit" data-astro-cid-nxz6evt4>点</span> </span> </label> <label class="gsne-field gsne-field--stacked" data-astro-cid-nxz6evt4> <span class="gsne-field__label" data-astro-cid-nxz6evt4>符石固伤</span> <span class="gsne-input" data-astro-cid-nxz6evt4> <input type="number" min="0" max="9999" step="1" inputmode="numeric" data-field="runeFixedDamage" data-min="0" data-max="9999" data-fallback="0" data-astro-cid-nxz6evt4> <span class="gsne-input__unit" data-astro-cid-nxz6evt4>点</span> </span> </label> </div> </section> <section class="gsne-field-card gsne-field-card--full" aria-label="附加设置" data-astro-cid-nxz6evt4> <div class="gsne-field-grid gsne-field-grid--triple" data-astro-cid-nxz6evt4> <label class="gsne-field gsne-field--stacked" data-astro-cid-nxz6evt4> <span class="gsne-field__label" data-astro-cid-nxz6evt4>秒怪数目</span> <span class="gsne-select" data-astro-cid-nxz6evt4> <select data-field="targetCount" data-astro-cid-nxz6evt4> <option value="1" data-astro-cid-nxz6evt4>1 个</option><option value="2" data-astro-cid-nxz6evt4>2 个</option><option value="3" data-astro-cid-nxz6evt4>3 个</option><option value="4" data-astro-cid-nxz6evt4>4 个</option><option value="5" data-astro-cid-nxz6evt4>5 个</option><option value="6" data-astro-cid-nxz6evt4>6 个</option><option value="7" data-astro-cid-nxz6evt4>7 个</option> </select> </span> </label> <label class="gsne-field gsne-field--stacked" data-astro-cid-nxz6evt4> <span class="gsne-field__label" data-astro-cid-nxz6evt4>阵法加成</span> <span class="gsne-select" data-astro-cid-nxz6evt4> <select data-field="formationBonus" data-astro-cid-nxz6evt4> <option value="1" data-astro-cid-nxz6evt4>无</option><option value="1.25" data-astro-cid-nxz6evt4>天覆阵</option><option value="1.15" data-astro-cid-nxz6evt4>雷绝阵 1 号位</option> </select> </span> </label> <label class="gsne-field gsne-field--stacked" data-astro-cid-nxz6evt4> <span class="gsne-field__label" data-astro-cid-nxz6evt4>乾元丹</span> <span class="gsne-select" data-astro-cid-nxz6evt4> <select data-field="qianYuanDan" data-astro-cid-nxz6evt4> <option value="0" data-astro-cid-nxz6evt4>无</option><option value="0.18" data-astro-cid-nxz6evt4>暗伤</option> </select> </span> </label> <label class="gsne-field gsne-field--stacked" data-astro-cid-nxz6evt4> <span class="gsne-field__label" data-astro-cid-nxz6evt4>头盔太阳石</span> <span class="gsne-select" data-astro-cid-nxz6evt4> <select data-field="helmetSun" data-astro-cid-nxz6evt4> <option value="0" data-astro-cid-nxz6evt4>0 段</option><option value="8" data-astro-cid-nxz6evt4>1 段</option><option value="16" data-astro-cid-nxz6evt4>2 段</option><option value="24" data-astro-cid-nxz6evt4>3 段</option><option value="32" data-astro-cid-nxz6evt4>4 段</option><option value="40" data-astro-cid-nxz6evt4>5 段</option><option value="48" data-astro-cid-nxz6evt4>6 段</option><option value="56" data-astro-cid-nxz6evt4>7 段</option><option value="64" data-astro-cid-nxz6evt4>8 段</option><option value="72" data-astro-cid-nxz6evt4>9 段</option><option value="80" data-astro-cid-nxz6evt4>10 段</option><option value="88" data-astro-cid-nxz6evt4>11 段</option><option value="96" data-astro-cid-nxz6evt4>12 段</option><option value="104" data-astro-cid-nxz6evt4>13 段</option><option value="112" data-astro-cid-nxz6evt4>14 段</option><option value="120" data-astro-cid-nxz6evt4>15 段</option><option value="128" data-astro-cid-nxz6evt4>16 段</option> </select> </span> </label> <label class="gsne-field gsne-field--stacked" data-astro-cid-nxz6evt4> <span class="gsne-field__label" data-astro-cid-nxz6evt4>孔装加成</span> <span class="gsne-select" data-astro-cid-nxz6evt4> <select data-field="holeBonus" data-astro-cid-nxz6evt4> <option value="0" data-astro-cid-nxz6evt4>无</option><option value="0.2" data-astro-cid-nxz6evt4>2 孔 x 1</option><option value="0.3" data-astro-cid-nxz6evt4>3 孔 x 1</option><option value="0.4" data-astro-cid-nxz6evt4>4 孔 x 1</option><option value="0.4" data-astro-cid-nxz6evt4>2 孔 x 2</option><option value="0.6" data-astro-cid-nxz6evt4>3 孔 x 2</option><option value="0.8" data-astro-cid-nxz6evt4>4 孔 x 2</option><option value="0.5" data-astro-cid-nxz6evt4>2 孔 + 3 孔</option><option value="0.6" data-astro-cid-nxz6evt4>2 孔 + 4 孔</option><option value="0.7" data-astro-cid-nxz6evt4>3 孔 + 4 孔</option> </select> </span> </label> <label class="gsne-field gsne-field--stacked" data-astro-cid-nxz6evt4> <span class="gsne-field__label" data-astro-cid-nxz6evt4>试剑石</span> <span class="gsne-select" data-astro-cid-nxz6evt4> <select data-field="testStone" data-astro-cid-nxz6evt4> <option value="0" data-astro-cid-nxz6evt4>0 个</option> </select> </span> </label> </div> </section> </div> <div class="gsne-results" data-astro-cid-nxz6evt4> <section class="gsne-result-panel" aria-label="秒伤结果" data-astro-cid-nxz6evt4> <div class="gsne-result-panel__header" data-astro-cid-nxz6evt4> <h3 data-astro-cid-nxz6evt4>实时秒伤</h3> </div> <div class="gsne-result-grid" data-astro-cid-nxz6evt4> <article class="gsne-stat-card" data-astro-cid-nxz6evt4> <span class="gsne-stat-card__label" data-astro-cid-nxz6evt4>点秒伤害</span> <strong class="gsne-stat-card__value" data-result="mainDamage" data-astro-cid-nxz6evt4>0</strong> </article> <article class="gsne-stat-card" data-astro-cid-nxz6evt4> <span class="gsne-stat-card__label" data-astro-cid-nxz6evt4>副秒伤害</span> <strong class="gsne-stat-card__value" data-result="secondaryDamage" data-astro-cid-nxz6evt4>0</strong> </article> <article class="gsne-stat-card gsne-stat-card--accent" data-astro-cid-nxz6evt4> <span class="gsne-stat-card__label" data-astro-cid-nxz6evt4>总秒伤</span> <strong class="gsne-stat-card__value" data-result="totalDamage" data-astro-cid-nxz6evt4>0</strong> </article> </div> </section> </div> </div> </section> </div> <script>
+  (() => {
+    const root = document.querySelector('[data-gsne-tool]');
+    if (!root) return;
+
+    const STORAGE_KEY = 'mhxy_gsne_calculator';
+    const defaults = JSON.parse(root.dataset.defaults || '{}');
+    const optionSets = {
+      formationBonus: new Set((JSON.parse(root.dataset.formationOptions || '[]')).map((item) => item.value)),
+      qianYuanDan: new Set((JSON.parse(root.dataset.qydOptions || '[]')).map((item) => item.value)),
+      targetCount: new Set((JSON.parse(root.dataset.targetOptions || '[]')).map((item) => item.value)),
+      helmetSun: new Set((JSON.parse(root.dataset.helmetOptions || '[]')).map((item) => item.value)),
+      testStone: new Set((JSON.parse(root.dataset.testStoneOptions || '[]')).map((item) => item.value)),
+      holeBonus: new Set((JSON.parse(root.dataset.holeOptions || '[]')).map((item) => item.value)),
+    };
+
+    const inputs = {
+      level: root.querySelector('[data-field="level"]'),
+      skillLevel: root.querySelector('[data-field="skillLevel"]'),
+      darkWeaponSkill: root.querySelector('[data-field="darkWeaponSkill"]'),
+      agilityPoints: root.querySelector('[data-field="agilityPoints"]'),
+      weaponDamage: root.querySelector('[data-field="weaponDamage"]'),
+      jewelryDamage: root.querySelector('[data-field="jewelryDamage"]'),
+      jewelryFixedDamage: root.querySelector('[data-field="jewelryFixedDamage"]'),
+      dragonDamage: root.querySelector('[data-field="dragonDamage"]'),
+      spiritWoodCharm: root.querySelector('[data-field="spiritWoodCharm"]'),
+      runeFixedDamage: root.querySelector('[data-field="runeFixedDamage"]'),
+      magicTraining: root.querySelector('[data-field="magicTraining"]'),
+      targetCount: root.querySelector('[data-field="targetCount"]'),
+      formationBonus: root.querySelector('[data-field="formationBonus"]'),
+      qianYuanDan: root.querySelector('[data-field="qianYuanDan"]'),
+      npcResistance: root.querySelector('[data-field="npcResistance"]'),
+      helmetSun: root.querySelector('[data-field="helmetSun"]'),
+      testStone: root.querySelector('[data-field="testStone"]'),
+      holeBonus: root.querySelector('[data-field="holeBonus"]'),
+    };
+
+    const presetButtons = Array.from(root.querySelectorAll('[data-preset-target]'));
+    const resetButton = root.querySelector('[data-action="reset"]');
+    const results = {
+      mainDamage: root.querySelector('[data-result="mainDamage"]'),
+      secondaryDamage: root.querySelector('[data-result="secondaryDamage"]'),
+      totalDamage: root.querySelector('[data-result="totalDamage"]'),
+    };
+
+    const integerFields = [
+      'level',
+      'skillLevel',
+      'darkWeaponSkill',
+      'agilityPoints',
+      'weaponDamage',
+      'jewelryDamage',
+      'jewelryFixedDamage',
+      'dragonDamage',
+      'spiritWoodCharm',
+      'runeFixedDamage',
+      'magicTraining',
+      'npcResistance',
+    ];
+
+    function floorNumber(value) {
+      return Math.floor(value);
+    }
+
+    function clampInt(value, min, max, fallback) {
+      if (value === '' || value == null) return fallback;
+      const numeric = Number(value);
+      if (!Number.isFinite(numeric)) return fallback;
+      return Math.min(max, Math.max(min, Math.floor(numeric)));
+    }
+
+    function pickOption(field, value) {
+      const fallback = String(defaults[field]);
+      if (optionSets[field]?.has(String(value))) {
+        return String(value);
+      }
+      return fallback;
+    }
+
+    function normalizeState(raw) {
+      return {
+        level: clampInt(raw?.level, 1, 175, 1),
+        skillLevel: clampInt(raw?.skillLevel, 0, 300, 0),
+        darkWeaponSkill: clampInt(raw?.darkWeaponSkill, 0, 300, 0),
+        agilityPoints: clampInt(raw?.agilityPoints, 0, 9999, 0),
+        weaponDamage: clampInt(raw?.weaponDamage, 0, 9999, 0),
+        jewelryDamage: clampInt(raw?.jewelryDamage, 0, 9999, 0),
+        jewelryFixedDamage: clampInt(raw?.jewelryFixedDamage, 0, 9999, 0),
+        dragonDamage: clampInt(raw?.dragonDamage, 0, 9999, 0),
+        spiritWoodCharm: clampInt(raw?.spiritWoodCharm, 0, 9999, 0),
+        runeFixedDamage: clampInt(raw?.runeFixedDamage, 0, 9999, 0),
+        magicTraining: clampInt(raw?.magicTraining, 0, 25, 0),
+        targetCount: pickOption('targetCount', raw?.targetCount),
+        formationBonus: pickOption('formationBonus', raw?.formationBonus),
+        qianYuanDan: pickOption('qianYuanDan', raw?.qianYuanDan),
+        npcResistance: clampInt(raw?.npcResistance, 0, 25, 0),
+        helmetSun: pickOption('helmetSun', raw?.helmetSun),
+        testStone: pickOption('testStone', raw?.testStone),
+        holeBonus: pickOption('holeBonus', raw?.holeBonus),
+      };
+    }
+
+    function loadState() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return normalizeState(defaults);
+        return normalizeState(JSON.parse(raw));
+      } catch {
+        return normalizeState(defaults);
+      }
+    }
+
+    function saveState(state) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function bindWheelLock(input) {
+      if (!input) return;
+      input.addEventListener('wheel', () => {
+        if (document.activeElement === input) {
+          input.blur();
+        }
+      });
+    }
+
+    function validateNumericInput(input) {
+      if (!input) return 0;
+
+      const min = Number(input.dataset.min || '0');
+      const max = Number(input.dataset.max || '9999');
+      const fallback = Number(input.dataset.fallback || '0');
+      const raw = input.value.trim();
+      const treatZeroAsOne = input.dataset.field === 'level';
+
+      if (raw === '' || (treatZeroAsOne && raw === '0')) {
+        input.value = String(treatZeroAsOne ? 1 : fallback);
+        input.setCustomValidity('');
+        return treatZeroAsOne ? 1 : fallback;
+      }
+
+      const numeric = Number(raw);
+      if (!Number.isFinite(numeric) || numeric < min || numeric > max) {
+        input.setCustomValidity(`请输入 ${min} - ${max} 之间的整数`);
+        input.reportValidity();
+      } else {
+        input.setCustomValidity('');
+      }
+
+      const normalized = clampInt(raw, min, max, fallback);
+      const finalValue = treatZeroAsOne && normalized === 0 ? 1 : normalized;
+      input.value = String(finalValue);
+      input.setCustomValidity('');
+      return finalValue;
+    }
+
+    function readDraftState() {
+      return normalizeState({
+        level: inputs.level?.value,
+        skillLevel: inputs.skillLevel?.value,
+        darkWeaponSkill: inputs.darkWeaponSkill?.value,
+        agilityPoints: inputs.agilityPoints?.value,
+        weaponDamage: inputs.weaponDamage?.value,
+        jewelryDamage: inputs.jewelryDamage?.value,
+        jewelryFixedDamage: inputs.jewelryFixedDamage?.value,
+        dragonDamage: inputs.dragonDamage?.value,
+        spiritWoodCharm: inputs.spiritWoodCharm?.value,
+        runeFixedDamage: inputs.runeFixedDamage?.value,
+        magicTraining: inputs.magicTraining?.value,
+        targetCount: inputs.targetCount?.value,
+        formationBonus: inputs.formationBonus?.value,
+        qianYuanDan: inputs.qianYuanDan?.value,
+        npcResistance: inputs.npcResistance?.value,
+        helmetSun: inputs.helmetSun?.value,
+        testStone: inputs.testStone?.value,
+        holeBonus: inputs.holeBonus?.value,
+      });
+    }
+
+    function calculate(state) {
+      const level = state.level;
+      const skillLevel = state.skillLevel;
+      const darkWeaponSkill = state.darkWeaponSkill;
+      const agilityPoints = state.agilityPoints;
+      const weaponDamage = state.weaponDamage;
+      const jewelryDamage = state.jewelryDamage;
+      const jewelryFixedDamage = state.jewelryFixedDamage;
+      const dragonDamage = state.dragonDamage;
+      const spiritWoodCharm = state.spiritWoodCharm;
+      const runeFixedDamage = state.runeFixedDamage;
+      const magicTraining = Number(state.magicTraining);
+      const targetCount = Number(state.targetCount);
+      const formationBonus = Number(state.formationBonus);
+      const qianYuanDan = Number(state.qianYuanDan);
+      const npcResistance = Number(state.npcResistance);
+      const helmetSun = Number(state.helmetSun);
+      const testStone = Number(state.testStone);
+      const holeBonus = Number(state.holeBonus);
+
+      const effectiveTraining = magicTraining - npcResistance;
+      const cappedTargetCount = Math.min(targetCount, 5);
+      const formationFactor = (effectiveTraining * 0.02 + 1) * formationBonus * (11 - cappedTargetCount) * 0.1;
+      const damageStack = weaponDamage + jewelryDamage + helmetSun + dragonDamage + 50 * testStone;
+      const trainingBonus = effectiveTraining * 5;
+      const baseValue =
+        floorNumber(skillLevel * skillLevel / 400 + skillLevel / 2) +
+        floorNumber(darkWeaponSkill * darkWeaponSkill / 150) +
+        darkWeaponSkill +
+        floorNumber(jewelryFixedDamage * 0.8) +
+        floorNumber(runeFixedDamage * 0.8) +
+        floorNumber(level * holeBonus / 2) +
+        floorNumber(level * holeBonus / 2) +
+        floorNumber(agilityPoints * 0.5);
+      const mainDamage =
+        floorNumber(baseValue * formationFactor) +
+        floorNumber(damageStack * 0.5) +
+        floorNumber(damageStack * qianYuanDan) +
+        trainingBonus +
+        spiritWoodCharm;
+      const secondaryDamage =
+        floorNumber(baseValue * formationFactor) +
+        trainingBonus +
+        floorNumber(damageStack * qianYuanDan) +
+        spiritWoodCharm;
+      const totalDamage = mainDamage + (targetCount - 1) * secondaryDamage;
+
+      return {
+        mainDamage,
+        secondaryDamage,
+        totalDamage,
+        baseValue,
+        formationFactor,
+        effectiveTraining,
+      };
+    }
+
+    function render(state) {
+      Object.entries(inputs).forEach(([field, input]) => {
+        if (!input) return;
+        input.value = String(state[field]);
+      });
+
+      const output = calculate(state);
+
+      if (results.mainDamage) results.mainDamage.textContent = String(output.mainDamage);
+      if (results.secondaryDamage) results.secondaryDamage.textContent = String(output.secondaryDamage);
+      if (results.totalDamage) results.totalDamage.textContent = String(output.totalDamage);
+    }
+
+    let state = loadState();
+    render(state);
+
+    integerFields.forEach((field) => bindWheelLock(inputs[field]));
+
+    presetButtons.forEach((button) => {
+      button.addEventListener('click', (event) => {
+        event.preventDefault();
+        const target = button.dataset.presetTarget;
+        const value = button.dataset.value;
+        if (!target || !value || !inputs[target]) return;
+
+        inputs[target].value = value;
+        state = readDraftState();
+        saveState(state);
+        render(state);
+      });
+    });
+
+    integerFields.forEach((field) => {
+      const input = inputs[field];
+      if (!input) return;
+
+      input.addEventListener('input', () => {
+        render(readDraftState());
+      });
+
+      input.addEventListener('blur', () => {
+        validateNumericInput(input);
+        state = readDraftState();
+        saveState(state);
+        render(state);
+      });
+    });
+
+    ['targetCount', 'formationBonus', 'qianYuanDan', 'helmetSun', 'testStone', 'holeBonus'].forEach((field) => {
+      const input = inputs[field];
+      if (!input) return;
+
+      input.addEventListener('change', () => {
+        state = readDraftState();
+        saveState(state);
+        render(state);
+      });
+    });
+
+    resetButton?.addEventListener('click', () => {
+      state = normalizeState(defaults);
+      saveState(state);
+      render(state);
+    });
+  })();
+</script>  </section> <section class="tool-guide content" aria-label="使用说明" data-astro-cid-hof4g4vy> <div class="tool-guide__card markdown-content" data-astro-cid-hof4g4vy> <h2 id="工具说明">工具说明</h2>
+<p>女儿村固伤计算器用于模拟女儿村固伤伤害。输入人物等级、雨落寒沙、暗器技能、敏捷、法修和各类附加伤害后，可实时查看点秒、副秒和当前目标数下的总秒伤，结果仅供配装和养成时参考。</p>
+<h2 id="参数说明">参数说明</h2>
+<h3 id="基础参数">基础参数</h3>
+<ul>
+<li>人物等级：角色等级，参与部分加成折算</li>
+<li>师门技能：雨落寒沙技能等级</li>
+<li>暗器技能：暗器技巧等级</li>
+<li>敏捷点数：敏捷属性总点数</li>
+<li>法术修炼：提升固伤表现</li>
+<li>NPC 抗性：用于模拟不同目标抗性环境</li>
+</ul>
+<h3 id="伤害与加成参数">伤害与加成参数</h3>
+<ul>
+<li>武器伤害、灵饰伤害、头盔太阳石、龙附伤害：都会影响最终秒伤</li>
+<li>灵饰固伤：稳定提高固伤表现</li>
+<li>符石固伤：和灵饰固伤一样属于稳定增伤项</li>
+<li>神木符：直接提高最终结果</li>
+</ul>
+<h3 id="附加设置">附加设置</h3>
+<ul>
+<li>秒怪数目：影响当前总秒伤</li>
+<li>阵法加成：天阵 <code>20%</code> 加成、雷阵 <code>15%</code> 加成但是要考虑被普通阵法克制 <code>5%</code></li>
+<li>乾元丹：<code>暗伤</code> 增加 <code>武器伤害 * 18%</code> 固伤伤害</li>
+<li>孔装加成：主要是 <code>凤舞九天</code> 符石组合加成</li>
+<li>试剑石：试剑石能够提高一定的伤害, 间接提高固伤伤害</li>
+</ul>
+<h2 id="如何提高伤害">如何提高伤害</h2>
+<ul>
+<li>提高雨落寒沙等级：这是女儿村固伤最核心的技能等级，通常也是最直接的增伤来源</li>
+<li>提高暗器技能：暗器技能越高，整体伤害越稳定，差距通常比较明显</li>
+<li>提高敏捷点数：敏捷对女儿村固伤有稳定帮助，适合和装备、坐骑、经脉一起统筹</li>
+<li>提高法术修炼：法修越高，固伤提升越直接，面对高抗目标时更重要</li>
+<li>提高武器和灵饰伤害：武器伤害、灵饰伤害、头盔太阳石、龙附伤害都会一起抬高最终结果</li>
+<li>灵饰固伤和符石固伤：这两项都是稳定增伤来源，适合和基础伤害一起看</li>
+<li>阵法和乾元丹：天阵、雷阵位和暗伤乾元丹都会带来比较明显的差异</li>
+<li>孔装加成和神木符：单项提升不一定最高，但整体补满后秒伤差距会逐步拉开</li>
+</ul>
+<h2 id="使用说明">使用说明</h2>
+<ol>
+<li>先输入人物等级、雨落寒沙、暗器技能和敏捷点数</li>
+<li>再补充法修、阵法、孔装和各类附加伤害</li>
+<li>页面会实时输出点秒、副秒和总秒伤</li>
+<li>所有输入会保存在浏览器本地，下次打开页面会自动回显</li>
+</ol>
+<h2 id="注意事项">注意事项</h2>
+<ul>
+<li>结果适合用于不同配置之间的对比参考</li>
+<li>人物等级留空或输入 <code>0</code> 时，按 <code>1</code> 级处理并回显为 <code>1</code></li>
+<li>原始脚本中的试剑石下拉只有 <code>0 个</code>，因此本工具不额外扩展其它选项</li>
+</ul> </div> </section> </article>  </section>   </div>   </main> <footer class="site-footer" data-astro-cid-sz7xmlte> <div class="container container--default" data-astro-cid-d6puh33w>  <div class="site-footer__grid" data-astro-cid-sz7xmlte> <section data-astro-cid-sz7xmlte> <h2 data-astro-cid-sz7xmlte>三界工具箱</h2> <p data-astro-cid-sz7xmlte>面向梦幻西游玩家的内容驱动工具站。</p> </section> <section data-astro-cid-sz7xmlte> <h2 data-astro-cid-sz7xmlte>分类导航</h2> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="/tools" data-astro-cid-sz7xmlte>工具</a></li> <li class="is-hidden" data-astro-cid-sz7xmlte><a href="/articles" data-astro-cid-sz7xmlte>攻略</a></li> <li class="is-hidden" data-astro-cid-sz7xmlte><a href="/wiki" data-astro-cid-sz7xmlte>百科</a></li> </ul> </section> <section data-astro-cid-sz7xmlte> <h2 data-astro-cid-sz7xmlte>站点信息</h2> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="/privacy" data-astro-cid-sz7xmlte>隐私政策</a></li> <li data-astro-cid-sz7xmlte><a href="/terms" data-astro-cid-sz7xmlte>服务协议</a></li> </ul> </section> <section class="site-footer__contact" data-astro-cid-sz7xmlte> <h2 data-astro-cid-sz7xmlte>联系我们</h2> <a class="site-footer__contact-link" href="mailto:support@sanjiebox.com" data-astro-cid-sz7xmlte> <span class="site-footer__contact-icon" aria-hidden="true" data-astro-cid-sz7xmlte><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></span> <span data-astro-cid-sz7xmlte>support@sanjiebox.com</span> </a> </section> </div> <p class="site-footer__copyright" data-astro-cid-sz7xmlte>Copyright © 三界工具箱</p>  </div>  </footer>  </body></html> 

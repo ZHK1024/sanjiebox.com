@@ -1,0 +1,526 @@
+<!DOCTYPE html><html lang="zh-CN"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>梦幻西游时辰计时器 - 三界工具箱</title><meta name="description" content="梦幻西游时辰计时器，白天倒计时，夜晚倒计时，妖怪亲信倒计时，实时显示白天夜晚切换倒计时和十二时辰开始或结束剩余时间，并支持本地保存常用倒计时选择。"><link rel="canonical" href="https://sanjiebox.com/tools/shichen-counter"><meta property="og:title" content="梦幻西游时辰计时器 - 三界工具箱"><meta property="og:description" content="梦幻西游时辰计时器，白天倒计时，夜晚倒计时，妖怪亲信倒计时，实时显示白天夜晚切换倒计时和十二时辰开始或结束剩余时间，并支持本地保存常用倒计时选择。"><meta property="og:url" content="https://sanjiebox.com/tools/shichen-counter"><meta property="og:type" content="website"><script async src="https://www.googletagmanager.com/gtag/js?id=G-RRVFJXD5E5"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RRVFJXD5E5');
+    </script><script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebPage","name":"梦幻西游时辰计时器 - 三界工具箱","description":"梦幻西游时辰计时器，白天倒计时，夜晚倒计时，妖怪亲信倒计时，实时显示白天夜晚切换倒计时和十二时辰开始或结束剩余时间，并支持本地保存常用倒计时选择。","url":"https://sanjiebox.com/tools/shichen-counter"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://sanjiebox.com/"},{"@type":"ListItem","position":2,"name":"工具","item":"https://sanjiebox.com/tools"},{"@type":"ListItem","position":3,"name":"梦幻西游时辰计时器","item":"https://sanjiebox.com/tools/shichen-counter"}]}]</script><link rel="stylesheet" href="/_astro/_slug_.CZ-fjp7m.css">
+<style>.section[data-astro-cid-sh445jdo]{margin-block:var(--space-10)}.section--no-top-margin[data-astro-cid-sh445jdo]{margin-top:0}.section--content[data-astro-cid-sh445jdo]{max-width:var(--content-max)}.section__header[data-astro-cid-sh445jdo]{margin-bottom:var(--space-6)}.section__header[data-astro-cid-sh445jdo] p[data-astro-cid-sh445jdo]{color:var(--color-text-secondary);margin:var(--space-0)}
+.card[data-astro-cid-dohjnao5]{display:block;padding:var(--space-5);color:var(--color-text);background:var(--color-surface);border:var(--border-width) solid var(--color-border);border-radius:var(--radius-card);box-shadow:0 4px 14px #2f34410a;transition:border-color var(--transition-fast),box-shadow var(--transition-fast)}.card[data-astro-cid-dohjnao5]:hover{border-color:#dde2eb;text-decoration:none;box-shadow:0 8px 18px #2f34410f}
+.article-card[data-astro-cid-di2nlc57] h3[data-astro-cid-di2nlc57]{margin-bottom:var(--space-2)}.article-card[data-astro-cid-di2nlc57] p[data-astro-cid-di2nlc57]{color:var(--color-text-secondary);font-size:var(--text-sm)}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.D6q9sTbI.css">
+<style>.tool-card[data-astro-cid-g5sewvjw]{display:grid;grid-template-columns:60px minmax(0,1fr);gap:var(--space-4);align-items:center}.tool-card[data-astro-cid-g5sewvjw] h3[data-astro-cid-g5sewvjw]{margin:0;overflow:hidden;font-size:var(--text-base);font-weight:700;line-height:1.5;text-overflow:ellipsis;white-space:nowrap}.tool-card[data-astro-cid-g5sewvjw] p[data-astro-cid-g5sewvjw]{margin:0;color:var(--color-text-secondary);font-size:var(--text-sm);line-height:1.6;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.tool-card__media[data-astro-cid-g5sewvjw]{display:flex;align-items:center;justify-content:center;width:60px;height:60px;overflow:hidden;background:var(--color-surface-muted);border:var(--border-width) solid var(--color-border);border-radius:var(--radius-card)}.tool-card__media[data-astro-cid-g5sewvjw] img[data-astro-cid-g5sewvjw]{display:block;width:60px;height:60px;object-fit:cover}.tool-card__media--placeholder[data-astro-cid-g5sewvjw] span[data-astro-cid-g5sewvjw]{color:var(--color-text-secondary);font-size:18px;font-weight:700;letter-spacing:.08em}.tool-card__body[data-astro-cid-g5sewvjw]{display:grid;gap:var(--space-2);min-width:0}@media(max-width:720px){.tool-card[data-astro-cid-g5sewvjw]{grid-template-columns:60px minmax(0,1fr)}}
+</style></head> <body> <header class="site-header" data-astro-cid-3ef6ksr2> <div class="container container--default" data-astro-cid-d6puh33w>  <div class="site-header__inner" data-astro-cid-3ef6ksr2> <a class="site-header__logo" href="/" aria-label="三界工具箱首页" data-astro-cid-3ef6ksr2> <img src="/_astro/logo.5anzccCg.png" alt="三界工具箱" width="220" height="54" data-astro-cid-3ef6ksr2> </a> <nav aria-label="主导航" data-astro-cid-3ef6ksr2> <ul data-astro-cid-3ef6ksr2> <li data-nav-item="首页" data-astro-cid-3ef6ksr2> <a href="/" data-active="false" data-astro-cid-3ef6ksr2> 首页 </a> </li><li data-nav-item="工具" data-astro-cid-3ef6ksr2> <a href="/tools" aria-current="page" data-active="true" data-astro-cid-3ef6ksr2> 工具 </a> </li><li data-nav-item="攻略" data-astro-cid-3ef6ksr2> <a href="/articles" data-active="false" data-astro-cid-3ef6ksr2> 攻略 </a> </li><li data-nav-item="百科" data-astro-cid-3ef6ksr2> <a href="/wiki" data-active="false" data-astro-cid-3ef6ksr2> 百科 </a> </li><li data-nav-item="最新更新" data-astro-cid-3ef6ksr2> <a href="/updates" data-active="false" data-astro-cid-3ef6ksr2> 最新更新 </a> </li> </ul> </nav> </div>  </div>  </header>  <div class="container container--default" data-astro-cid-d6puh33w> <nav class="breadcrumb" aria-label="面包屑" data-astro-cid-qaanghzh><ol data-astro-cid-qaanghzh><li data-astro-cid-qaanghzh><a href="/" data-astro-cid-qaanghzh>首页</a></li><li data-astro-cid-qaanghzh><a href="/tools" data-astro-cid-qaanghzh>工具</a></li><li data-astro-cid-qaanghzh><span aria-current="page" data-astro-cid-qaanghzh>梦幻西游时辰计时器</span></li></ol></nav> </div>  <main id="content">  <div class="container container--default" data-astro-cid-d6puh33w>  <section class="section section--default section--no-top-margin" data-astro-cid-sh445jdo>   <article class="tool-page flow" data-astro-cid-hof4g4vy> <header data-astro-cid-hof4g4vy> <h1 data-astro-cid-hof4g4vy>梦幻西游时辰计时器</h1> <p data-astro-cid-hof4g4vy>方便玩家获取时辰信息以及白天和夜晚倒计时, 方便时辰相关的游戏内容, 比如坐骑任务的妖怪亲信等等，支持将常用时辰加入我的倒计时并用小窗口单独查看。</p> </header> <section class="tool-page__main" aria-label="工具主体" data-astro-cid-hof4g4vy> <div data-shichen-counter> <script type="application/json" data-defs>[{"name":"基础倒计时","timers":[{"id":"day-night","name":"白天夜晚倒计时","description":"显示当前白天或黑夜，并计算距离下一次切换的时间。","group":"base"}]},{"name":"时辰倒计时","timers":[{"id":"shichen-子时","name":"子时","description":"显示距离子时开始的剩余时间，当前时辰显示现在状态。","group":"shichen"},{"id":"shichen-丑时","name":"丑时","description":"显示距离丑时开始的剩余时间，当前时辰显示现在状态。","group":"shichen"},{"id":"shichen-寅时","name":"寅时","description":"显示距离寅时开始的剩余时间，当前时辰显示现在状态。","group":"shichen"},{"id":"shichen-卯时","name":"卯时","description":"显示距离卯时开始的剩余时间，当前时辰显示现在状态。","group":"shichen"},{"id":"shichen-辰时","name":"辰时","description":"显示距离辰时开始的剩余时间，当前时辰显示现在状态。","group":"shichen"},{"id":"shichen-巳时","name":"巳时","description":"显示距离巳时开始的剩余时间，当前时辰显示现在状态。","group":"shichen"},{"id":"shichen-午时","name":"午时","description":"显示距离午时开始的剩余时间，当前时辰显示现在状态。","group":"shichen"},{"id":"shichen-未时","name":"未时","description":"显示距离未时开始的剩余时间，当前时辰显示现在状态。","group":"shichen"},{"id":"shichen-申时","name":"申时","description":"显示距离申时开始的剩余时间，当前时辰显示现在状态。","group":"shichen"},{"id":"shichen-酉时","name":"酉时","description":"显示距离酉时开始的剩余时间，当前时辰显示现在状态。","group":"shichen"},{"id":"shichen-戌时","name":"戌时","description":"显示距离戌时开始的剩余时间，当前时辰显示现在状态。","group":"shichen"},{"id":"shichen-亥时","name":"亥时","description":"显示距离亥时开始的剩余时间，当前时辰显示现在状态。","group":"shichen"}]}]</script> <script type="application/json" data-shichen-names>["子时","丑时","寅时","卯时","辰时","巳时","午时","未时","申时","酉时","戌时","亥时"]</script> <div hidden data-day-icon="/_astro/shichen-baitian.BGK5Eb1P.png" data-night-icon="/_astro/shichen-yewan.CF8W1iRv.png"></div> <div class="time-counter__panels"> <div class="time-counter__panel"> <section class="time-counter__active" data-active-section aria-label="我的倒计时"> <div class="time-counter__active-header"> <h2>我的倒计时</h2> <button type="button" class="tc-btn tc-btn--sm" data-open-mini hidden>小窗口显示</button> </div> <div class="time-counter__grid" data-active-list></div> <p class="time-counter__empty" data-empty-state>点击下方倒计时卡片后，会显示在这里</p> </section> </div> <div class="time-counter__panel"> <section class="time-counter__categories" aria-label="时辰计时器分类"> <div class="tc-category"> <h3>基础倒计时</h3> <div class="time-counter__grid" data-category="基础倒计时"> <button type="button" class="tc-cat-card" data-timer-id="day-night" aria-label="添加白天夜晚倒计时"> <span class="tc-cat-card__icon" aria-hidden="true"> <span class="tc-cat-card__icon-placeholder" data-placeholder="白"></span> </span> <span class="tc-cat-card__info"> <span class="tc-cat-card__name">白天夜晚倒计时</span> <span class="tc-cat-card__time" data-category-time>00:00:00</span> </span> </button> </div> </div><div class="tc-category"> <h3>时辰倒计时</h3> <div class="time-counter__grid" data-category="时辰倒计时"> <button type="button" class="tc-cat-card" data-timer-id="shichen-子时" aria-label="添加子时"> <span class="tc-cat-card__icon" aria-hidden="true"> <span class="tc-cat-card__icon-placeholder" data-placeholder="子"></span> </span> <span class="tc-cat-card__info"> <span class="tc-cat-card__name">子时</span> <span class="tc-cat-card__time" data-category-time>00:00:00</span> </span> </button><button type="button" class="tc-cat-card" data-timer-id="shichen-丑时" aria-label="添加丑时"> <span class="tc-cat-card__icon" aria-hidden="true"> <span class="tc-cat-card__icon-placeholder" data-placeholder="丑"></span> </span> <span class="tc-cat-card__info"> <span class="tc-cat-card__name">丑时</span> <span class="tc-cat-card__time" data-category-time>00:00:00</span> </span> </button><button type="button" class="tc-cat-card" data-timer-id="shichen-寅时" aria-label="添加寅时"> <span class="tc-cat-card__icon" aria-hidden="true"> <span class="tc-cat-card__icon-placeholder" data-placeholder="寅"></span> </span> <span class="tc-cat-card__info"> <span class="tc-cat-card__name">寅时</span> <span class="tc-cat-card__time" data-category-time>00:00:00</span> </span> </button><button type="button" class="tc-cat-card" data-timer-id="shichen-卯时" aria-label="添加卯时"> <span class="tc-cat-card__icon" aria-hidden="true"> <span class="tc-cat-card__icon-placeholder" data-placeholder="卯"></span> </span> <span class="tc-cat-card__info"> <span class="tc-cat-card__name">卯时</span> <span class="tc-cat-card__time" data-category-time>00:00:00</span> </span> </button><button type="button" class="tc-cat-card" data-timer-id="shichen-辰时" aria-label="添加辰时"> <span class="tc-cat-card__icon" aria-hidden="true"> <span class="tc-cat-card__icon-placeholder" data-placeholder="辰"></span> </span> <span class="tc-cat-card__info"> <span class="tc-cat-card__name">辰时</span> <span class="tc-cat-card__time" data-category-time>00:00:00</span> </span> </button><button type="button" class="tc-cat-card" data-timer-id="shichen-巳时" aria-label="添加巳时"> <span class="tc-cat-card__icon" aria-hidden="true"> <span class="tc-cat-card__icon-placeholder" data-placeholder="巳"></span> </span> <span class="tc-cat-card__info"> <span class="tc-cat-card__name">巳时</span> <span class="tc-cat-card__time" data-category-time>00:00:00</span> </span> </button><button type="button" class="tc-cat-card" data-timer-id="shichen-午时" aria-label="添加午时"> <span class="tc-cat-card__icon" aria-hidden="true"> <span class="tc-cat-card__icon-placeholder" data-placeholder="午"></span> </span> <span class="tc-cat-card__info"> <span class="tc-cat-card__name">午时</span> <span class="tc-cat-card__time" data-category-time>00:00:00</span> </span> </button><button type="button" class="tc-cat-card" data-timer-id="shichen-未时" aria-label="添加未时"> <span class="tc-cat-card__icon" aria-hidden="true"> <span class="tc-cat-card__icon-placeholder" data-placeholder="未"></span> </span> <span class="tc-cat-card__info"> <span class="tc-cat-card__name">未时</span> <span class="tc-cat-card__time" data-category-time>00:00:00</span> </span> </button><button type="button" class="tc-cat-card" data-timer-id="shichen-申时" aria-label="添加申时"> <span class="tc-cat-card__icon" aria-hidden="true"> <span class="tc-cat-card__icon-placeholder" data-placeholder="申"></span> </span> <span class="tc-cat-card__info"> <span class="tc-cat-card__name">申时</span> <span class="tc-cat-card__time" data-category-time>00:00:00</span> </span> </button><button type="button" class="tc-cat-card" data-timer-id="shichen-酉时" aria-label="添加酉时"> <span class="tc-cat-card__icon" aria-hidden="true"> <span class="tc-cat-card__icon-placeholder" data-placeholder="酉"></span> </span> <span class="tc-cat-card__info"> <span class="tc-cat-card__name">酉时</span> <span class="tc-cat-card__time" data-category-time>00:00:00</span> </span> </button><button type="button" class="tc-cat-card" data-timer-id="shichen-戌时" aria-label="添加戌时"> <span class="tc-cat-card__icon" aria-hidden="true"> <span class="tc-cat-card__icon-placeholder" data-placeholder="戌"></span> </span> <span class="tc-cat-card__info"> <span class="tc-cat-card__name">戌时</span> <span class="tc-cat-card__time" data-category-time>00:00:00</span> </span> </button><button type="button" class="tc-cat-card" data-timer-id="shichen-亥时" aria-label="添加亥时"> <span class="tc-cat-card__icon" aria-hidden="true"> <span class="tc-cat-card__icon-placeholder" data-placeholder="亥"></span> </span> <span class="tc-cat-card__info"> <span class="tc-cat-card__name">亥时</span> <span class="tc-cat-card__time" data-category-time>00:00:00</span> </span> </button> </div> </div> </section> </div> </div> </div> <script>
+  (() => {
+    const root = document.querySelector("[data-shichen-counter]");
+    if (!root) return;
+
+    const defsEl = root.querySelector("[data-defs]");
+    const shichenEl = root.querySelector("[data-shichen-names]");
+    const definitions = JSON.parse(defsEl?.textContent || "[]");
+    const shichenNames = JSON.parse(shichenEl?.textContent || "[]");
+    const allTimers = definitions.flatMap((category) => category.timers);
+    const dayIconUrl = root.querySelector("[data-day-icon]")?.dataset.dayIcon || "";
+    const nightIconUrl = root.querySelector("[data-night-icon]")?.dataset.nightIcon || "";
+
+    const activeList = root.querySelector("[data-active-list]");
+    const emptyState = root.querySelector("[data-empty-state]");
+    const openMiniBtn = root.querySelector("[data-open-mini]");
+    const categoryButtons = Array.from(root.querySelectorAll("[data-timer-id]"));
+
+    const STORAGE_KEY = "mhxy_shichen_counter";
+    const SLOT_MS = 150000;
+    const EIGHT_HOURS_MS = 8 * 60 * 60 * 1000;
+    const DAY_START_INDEX = 4;
+    const NIGHT_START_INDEX = 10;
+    const DAY_INDEXES = new Set([4, 5, 6, 7, 8, 9]);
+    const READY_COLOR = "#81c784";
+    let activeTimerIds = [];
+    let miniWindow = null;
+
+    function pad(value) {
+      return String(value).padStart(2, "0");
+    }
+
+    function formatTime(ms) {
+      const totalSeconds = Math.max(0, Math.ceil(ms / 1000));
+      const hours = Math.floor(totalSeconds / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+      return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+    }
+
+    function getBeijingClock(nowMs) {
+      const beijing = new Date(nowMs + EIGHT_HOURS_MS);
+      const hour = beijing.getUTCHours();
+      const minute = beijing.getUTCMinutes();
+      const second = beijing.getUTCSeconds();
+      const millisecond = beijing.getUTCMilliseconds();
+      const msIntoHour = ((minute * 60) + second) * 1000 + millisecond;
+      const elapsedInSlot = msIntoHour % SLOT_MS;
+      const currentIndex = Math.floor(msIntoHour / SLOT_MS) % shichenNames.length;
+
+      return {
+        hour,
+        minute,
+        second,
+        currentIndex,
+        elapsedInSlot,
+      };
+    }
+
+    function getRemainingToIndex(clock, targetIndex) {
+      const diffSlots = (targetIndex - clock.currentIndex + shichenNames.length) % shichenNames.length;
+      if (diffSlots === 0) {
+        return SLOT_MS - clock.elapsedInSlot;
+      }
+
+      return diffSlots * SLOT_MS - clock.elapsedInSlot;
+    }
+
+    function getTimerState(timerId, nowMs) {
+      const clock = getBeijingClock(nowMs);
+
+      if (timerId === "day-night") {
+        const isDay = DAY_INDEXES.has(clock.currentIndex);
+        const targetIndex = isDay ? NIGHT_START_INDEX : DAY_START_INDEX;
+
+        return {
+          title: isDay ? "白天" : "夜晚",
+          countdown: getRemainingToIndex(clock, targetIndex),
+          accent: "default",
+        };
+      }
+
+      const targetIndex = shichenNames.findIndex((name) => `shichen-${name}` === timerId);
+      if (targetIndex === -1) {
+        return {
+          title: "",
+          countdown: 0,
+          accent: "default",
+        };
+      }
+
+      const isCurrent = targetIndex === clock.currentIndex;
+      return {
+        title: shichenNames[targetIndex],
+        countdown: getRemainingToIndex(clock, targetIndex),
+        accent: isCurrent ? "current" : "default",
+      };
+    }
+
+    function loadTimers() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        const parsed = raw ? JSON.parse(raw) : [];
+        if (!Array.isArray(parsed)) return [];
+
+        return parsed.filter((id) => allTimers.some((timer) => timer.id === id));
+      } catch {
+        return [];
+      }
+    }
+
+    function saveTimers() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(activeTimerIds));
+    }
+
+    function escapeHtml(value) {
+      const node = document.createElement("div");
+      node.textContent = value;
+      return node.innerHTML;
+    }
+
+    function getTimerName(timerId) {
+      const definition = allTimers.find((timer) => timer.id === timerId);
+      return definition?.name || "";
+    }
+
+    function getTimerIconUrl(timerId, nowMs) {
+      if (timerId !== "day-night") return "";
+
+      const clock = getBeijingClock(nowMs);
+      return DAY_INDEXES.has(clock.currentIndex) ? dayIconUrl : nightIconUrl;
+    }
+
+    function getIconConfig(variant) {
+      return variant === "category"
+        ? {
+            imgClass: "tc-cat-card__icon-img",
+            placeholderClass: "tc-cat-card__icon-placeholder",
+            placeholderAttr: "data-placeholder",
+          }
+        : variant === "mini"
+          ? {
+              imgClass: "mw-icon__img",
+              placeholderClass: "mw-icon__placeholder",
+              placeholderAttr: "data-fallback",
+            }
+          : {
+              imgClass: "tc-icon__img",
+              placeholderClass: "tc-icon__placeholder",
+              placeholderAttr: "data-fallback",
+            };
+    }
+
+    function getTimerIconMarkup(timerId, nowMs, variant, fallbackText) {
+      const iconUrl = getTimerIconUrl(timerId, nowMs);
+      const config = getIconConfig(variant);
+
+      if (iconUrl) {
+        return `<img class="${config.imgClass}" src="${escapeHtml(iconUrl)}" alt="" width="50" height="50" loading="lazy" />`;
+      }
+
+      return `<span class="${config.placeholderClass}" ${config.placeholderAttr}="${escapeHtml(fallbackText)}"></span>`;
+    }
+
+    function createTimerIconNode(timerId, nowMs, variant) {
+      const iconUrl = getTimerIconUrl(timerId, nowMs);
+      const fallbackText = getTimerName(timerId).slice(0, 1) || "?";
+      const config = getIconConfig(variant);
+
+      if (iconUrl) {
+        const image = document.createElement("img");
+        image.className = config.imgClass;
+        image.src = iconUrl;
+        image.alt = "";
+        image.width = 50;
+        image.height = 50;
+        image.loading = "lazy";
+        return image;
+      }
+
+      const placeholder = document.createElement("span");
+      placeholder.className = config.placeholderClass;
+      placeholder.setAttribute(config.placeholderAttr, fallbackText);
+      return placeholder;
+    }
+
+    function syncIconElement(icon, timerId, nowMs, variant) {
+      if (!icon) return;
+
+      const iconUrl = getTimerIconUrl(timerId, nowMs);
+      const fallbackText = getTimerName(timerId).slice(0, 1) || "?";
+      const config = getIconConfig(variant);
+      const current = icon.firstElementChild;
+
+      if (iconUrl) {
+        if (!(current instanceof HTMLImageElement) || !current.classList.contains(config.imgClass)) {
+          icon.replaceChildren(createTimerIconNode(timerId, nowMs, variant));
+          return;
+        }
+
+        if (current.src !== new URL(iconUrl, window.location.href).href) {
+          current.src = iconUrl;
+        }
+        return;
+      }
+
+      if (!(current instanceof HTMLSpanElement) || !current.classList.contains(config.placeholderClass)) {
+        icon.replaceChildren(createTimerIconNode(timerId, nowMs, variant));
+        return;
+      }
+
+      if (current.getAttribute(config.placeholderAttr) !== fallbackText) {
+        current.setAttribute(config.placeholderAttr, fallbackText);
+      }
+    }
+
+    function applyReadyCardStyles(card, isReady) {
+      if (!card) return;
+
+      const time = card.querySelector(".tc-card__time, .tc-cat-card__time");
+
+      if (isReady) {
+        card.style.background = "";
+        card.style.borderColor = READY_COLOR;
+        card.style.boxShadow = "var(--shadow-sm)";
+        if (time) time.style.color = READY_COLOR;
+        return;
+      }
+
+      card.style.background = "";
+      card.style.borderColor = "";
+      card.style.boxShadow = "";
+      if (time) time.style.color = "";
+    }
+
+    function renderCategorySelection() {
+      categoryButtons.forEach((button) => {
+        const selected = activeTimerIds.includes(button.dataset.timerId || "");
+        button.classList.toggle("tc-cat-card--selected", selected);
+      });
+    }
+
+    function updateCategoryDisplays() {
+      const nowMs = Date.now();
+
+      categoryButtons.forEach((button) => {
+        const timerId = button.dataset.timerId;
+        if (!timerId) return;
+
+        const state = getTimerState(timerId, nowMs);
+        const time = button.querySelector("[data-category-time]");
+        const icon = button.querySelector(".tc-cat-card__icon");
+        if (!time) return;
+
+        syncIconElement(icon, timerId, nowMs, "category");
+        button.classList.toggle("tc-cat-card--ready", state.accent === "current");
+        time.textContent = formatTime(state.countdown);
+        time.className = "tc-cat-card__time";
+        if (state.accent === "current") {
+          time.classList.add("tc-cat-card__time--ready");
+        }
+        applyReadyCardStyles(button, state.accent === "current");
+      });
+    }
+
+    function renderActiveTimers() {
+      if (!activeList) return;
+
+      if (activeTimerIds.length === 0) {
+        activeList.innerHTML = "";
+        emptyState.hidden = false;
+        openMiniBtn.hidden = true;
+        renderCategorySelection();
+        updateCategoryDisplays();
+        return;
+      }
+
+      emptyState.hidden = true;
+      openMiniBtn.hidden = false;
+      renderCategorySelection();
+      updateCategoryDisplays();
+
+      const nowMs = Date.now();
+      activeList.innerHTML = activeTimerIds.map((timerId) => {
+        const state = getTimerState(timerId, nowMs);
+        const accentClass = state.accent === "current" ? "tc-card__time--ready" : "";
+        const readyClass = state.accent === "current" ? "tc-card--ready" : "";
+
+        return `
+          <article class="tc-card ${readyClass}" data-active-id="${escapeHtml(timerId)}">
+            <div class="tc-card__icon" aria-hidden="true">
+              ${getTimerIconMarkup(timerId, nowMs, "card", getTimerName(timerId).slice(0, 1) || "?")}
+            </div>
+            <div class="tc-card__body">
+              <div class="tc-card__title" data-title>${escapeHtml(state.title)}</div>
+              <div class="tc-card__time ${accentClass}" data-time>${formatTime(state.countdown)}</div>
+            </div>
+          </article>
+        `;
+      }).join("");
+    }
+
+    function updateTimerDisplays() {
+      if (!activeList || activeTimerIds.length === 0) return;
+
+      const nowMs = Date.now();
+      activeTimerIds.forEach((timerId) => {
+        const state = getTimerState(timerId, nowMs);
+        const card = activeList.querySelector(`[data-active-id="${timerId}"]`);
+        if (!card) return;
+
+        const icon = card.querySelector(".tc-card__icon");
+        const title = card.querySelector("[data-title]");
+        const time = card.querySelector("[data-time]");
+        syncIconElement(icon, timerId, nowMs, "card");
+        card.classList.toggle("tc-card--ready", state.accent === "current");
+        if (title) {
+          title.textContent = state.title;
+        }
+        if (time) {
+          time.textContent = formatTime(state.countdown);
+          time.className = "tc-card__time";
+          if (state.accent === "current") {
+            time.classList.add("tc-card__time--ready");
+          }
+        }
+        applyReadyCardStyles(card, state.accent === "current");
+      });
+    }
+
+    function getMiniWindowMarkup(timerId) {
+      const state = getTimerState(timerId, Date.now());
+      const accentClass = state.accent === "current" ? "mw-time mw-ready" : "mw-time";
+      const fallback = escapeHtml(getTimerName(timerId).slice(0, 1) || "?");
+
+      return `
+        <article class="mw-item ${state.accent === "current" ? "mw-item--ready" : ""}" data-mw-id="${escapeHtml(timerId)}">
+          <span class="mw-icon" aria-hidden="true">
+            ${getTimerIconMarkup(timerId, Date.now(), "mini", fallback)}
+          </span>
+          <span class="mw-content">
+            <span class="mw-name" data-mw-name>${escapeHtml(state.title)}</span>
+            <span class="${accentClass}" data-mw-time>${formatTime(state.countdown)}</span>
+          </span>
+        </article>
+      `;
+    }
+
+    function updateMiniWindowDisplay(doc) {
+      if (!doc || activeTimerIds.length === 0) return;
+
+      const nowMs = Date.now();
+      activeTimerIds.forEach((timerId) => {
+        const state = getTimerState(timerId, nowMs);
+        const item = doc.querySelector(`[data-mw-id="${timerId}"]`);
+        if (!item) return;
+
+        const icon = item.querySelector(".mw-icon");
+        const name = item.querySelector("[data-mw-name]");
+        const time = item.querySelector("[data-mw-time]");
+        syncIconElement(icon, timerId, nowMs, "mini");
+        if (name) {
+          name.textContent = state.title;
+        }
+        if (time) {
+          time.textContent = formatTime(state.countdown);
+          time.className = state.accent === "current" ? "mw-time mw-ready" : "mw-time";
+        }
+        item.className = state.accent === "current" ? "mw-item mw-item--ready" : "mw-item";
+      });
+    }
+
+    function removeTimer(timerId) {
+      activeTimerIds = activeTimerIds.filter((id) => id !== timerId);
+      saveTimers();
+      renderActiveTimers();
+      if (miniWindow && !miniWindow.closed) {
+        miniWindow.close();
+        miniWindow = null;
+      }
+    }
+
+    function openMiniWindow() {
+      if (activeTimerIds.length === 0) return;
+
+      if (miniWindow && !miniWindow.closed) {
+        miniWindow.focus();
+        updateMiniWindowDisplay(miniWindow.document);
+        return;
+      }
+
+      const cardsMarkup = activeTimerIds.map((timerId) => getMiniWindowMarkup(timerId)).join("");
+      const style = `
+        * { box-sizing: border-box; }
+        body { margin: 0; padding: 12px; font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: #111; color: #eee; }
+        .mw-list { display: grid; gap: 8px; }
+        .mw-item { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: center; min-height: 72px; padding: 12px; background: #1e1e1e; border-radius: 8px; cursor: pointer; }
+        .mw-item--ready { box-shadow: inset 0 0 0 1px rgba(129, 199, 132, 0.35); }
+        .mw-icon { display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: rgba(255,255,255,0.08); overflow: hidden; border-radius: 6px; }
+        .mw-icon__placeholder { position: relative; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: rgba(255,255,255,0.08); color: #eee; font-size: 18px; font-weight: 700; border-radius: 6px; }
+        .mw-icon__placeholder::before { content: attr(data-fallback); line-height: 1; }
+        .mw-content { display: grid; gap: 4px; min-width: 0; }
+        .mw-name { color: #eee; font-size: 14px; line-height: 1.2; }
+        .mw-time { color: #4fc3f7; font-size: 16px; font-weight: 700; font-variant-numeric: tabular-nums; }
+        .mw-ready { color: #81c784; }
+      `;
+
+      if ("documentPictureInPicture" in window) {
+        window.documentPictureInPicture.requestWindow({ width: 220, height: 520 }).then((pip) => {
+          miniWindow = pip;
+          pip.document.write(`<!DOCTYPE html><html><head><meta charset="utf-8"><style>${style}</style></head><body><div class="mw-list">${cardsMarkup}</div></body></html>`);
+          pip.document.close();
+          updateMiniWindowDisplay(pip.document);
+
+          const pipTimer = pip.setInterval(() => {
+            updateMiniWindowDisplay(pip.document);
+          }, 1000);
+
+          pip.addEventListener("pagehide", () => {
+            pip.clearInterval(pipTimer);
+            miniWindow = null;
+          });
+        }).catch(() => {});
+        return;
+      }
+
+      miniWindow = window.open("", "", "width=360,height=540,scrollbars=yes");
+      if (!miniWindow) return;
+
+      miniWindow.document.write(`<!DOCTYPE html><html><head><meta charset="utf-8"><style>${style}</style></head><body><div class="mw-list">${cardsMarkup}</div></body></html>`);
+      miniWindow.document.close();
+      updateMiniWindowDisplay(miniWindow.document);
+
+      const popupTimer = miniWindow.setInterval(() => {
+        updateMiniWindowDisplay(miniWindow.document);
+      }, 1000);
+
+      const closeChecker = miniWindow.setInterval(() => {
+        if (miniWindow.closed) {
+          miniWindow.clearInterval(popupTimer);
+          miniWindow.clearInterval(closeChecker);
+          miniWindow = null;
+        }
+      }, 1000);
+    }
+
+    root.addEventListener("click", (event) => {
+      const activeCard = event.target.closest("[data-active-id]");
+      if (activeCard && activeList?.contains(activeCard)) {
+        removeTimer(activeCard.dataset.activeId || "");
+        return;
+      }
+
+      const button = event.target.closest("[data-timer-id]");
+      if (!button) return;
+
+      const timerId = button.dataset.timerId;
+      if (!timerId) return;
+
+      if (activeTimerIds.includes(timerId)) {
+        activeTimerIds = activeTimerIds.filter((id) => id !== timerId);
+      } else {
+        activeTimerIds = [...activeTimerIds, timerId];
+      }
+
+      saveTimers();
+      renderActiveTimers();
+      if (miniWindow && !miniWindow.closed) {
+        miniWindow.close();
+        miniWindow = null;
+      }
+    });
+
+    openMiniBtn?.addEventListener("click", openMiniWindow);
+
+    activeTimerIds = loadTimers();
+    renderActiveTimers();
+    updateCategoryDisplays();
+    window.setInterval(() => {
+      updateCategoryDisplays();
+      updateTimerDisplays();
+      if (miniWindow && !miniWindow.closed) {
+        updateMiniWindowDisplay(miniWindow.document);
+      }
+    }, 1000);
+  })();
+</script>  </section> <section class="tool-guide content" aria-label="使用说明" data-astro-cid-hof4g4vy> <div class="tool-guide__card markdown-content" data-astro-cid-hof4g4vy> <h1 id="梦幻西游时辰计时器">梦幻西游时辰计时器</h1>
+<p><strong>梦幻西游时辰计时器</strong> 主要用于帮助玩家快速查看置顶时辰, 白天黑夜还有多长时间的倒计时工具.</p>
+<h2 id="梦幻西游中时辰规则">梦幻西游中时辰规则</h2>
+<ol>
+<li>游戏中时辰是以服务器时间为基准计算的</li>
+<li>从整点开始刷新时辰：子时→丑时→寅时→卯时→辰时→巳时→午时→未时→申时→酉时→戌时→亥时，如此重复交替</li>
+<li>游戏中每个时辰相当于现实时间 <code>2分30秒</code></li>
+<li>辰时，巳时，午时，未时，申时，酉时的时间段为白天，戌时，亥时，子时，丑时，寅时，卯时的时间段为黑夜</li>
+<li>黑夜时辰玩家、召唤兽和怪物的普通物理攻击和法术驱动的物理攻击能力削弱20%，有夜战和高级夜战技能不受此影响</li>
+</ol>
+<h2 id="工具说明">工具说明</h2>
+<ol>
+<li>工具中采用用户本地计算机时间为基准时间进行计算, 实际时辰要以以服务器时间为准.</li>
+<li>基础倒计时包含一个 <code>白天夜晚倒计时</code></li>
+<li><code>白天夜晚倒计时</code> 进行下一次切换白天或者夜晚的倒计时
+<ul>
+<li>当前为 <code>白天</code> 的时候显示 <code>白天</code>, 倒计时为距离夜晚还有多久</li>
+<li>当前为 <code>夜晚</code> 的时候显示 <code>夜晚</code>, 倒计时为距离白天还有多久</li>
+</ul>
+</li>
+<li><code>时辰倒计时</code> 包含 12 个时辰的倒计时, 分别显示距离该时辰还有多长时间.</li>
+<li><code>时辰倒计时</code> 为当前时辰的时候显示的倒计时为 <code>时辰结束倒计时</code>.</li>
+<li>玩家点击 <code>倒计时</code> 可以把计时器加入收藏, 显示在 <code>我的计时器</code> 中.</li>
+<li>玩家点击 <code>在小窗口显示</code> 可以弹起置顶的小窗口显示倒计时, 方便游戏时候进行查看.</li>
+</ol>
+<h2 id="工具使用">工具使用</h2>
+<h3 id="坐骑任务">坐骑任务</h3>
+<p>坐骑任务中 <strong>妖怪亲信</strong> 只有 <code>夜晚</code> 才会出现, 可以使用 <code>白天夜晚倒计时</code> 来辅助进行.</p> </div> </section> </article>  </section>  <section class="section section--default" data-astro-cid-sh445jdo> <header class="section__header" data-astro-cid-sh445jdo> <h2 data-astro-cid-sh445jdo>相关推荐</h2>  </header>  <div class="grid" data-astro-cid-hof4g4vy> <a class="card" href="/tools/time-counter" data-astro-cid-dohjnao5="true">  <article class="tool-card" data-astro-cid-g5sewvjw> <div class="tool-card__media" data-astro-cid-g5sewvjw> <img src="/_astro/time-counter.DlvYFjs6.png" alt="游戏计时器" width="60" height="60" loading="lazy" data-astro-cid-g5sewvjw> </div> <div class="tool-card__body" data-astro-cid-g5sewvjw> <h3 data-astro-cid-g5sewvjw>游戏计时器</h3> <p data-astro-cid-g5sewvjw>统一管理游戏中各类冷却、刷新和周期性事件的倒计时工具，支持冷却、间隔、每日和每周四种计时类型。</p> </div> </article>  </a>   </div>  </section>  </div>   </main> <footer class="site-footer" data-astro-cid-sz7xmlte> <div class="container container--default" data-astro-cid-d6puh33w>  <div class="site-footer__grid" data-astro-cid-sz7xmlte> <section data-astro-cid-sz7xmlte> <h2 data-astro-cid-sz7xmlte>三界工具箱</h2> <p data-astro-cid-sz7xmlte>面向梦幻西游玩家的内容驱动工具站。</p> </section> <section data-astro-cid-sz7xmlte> <h2 data-astro-cid-sz7xmlte>分类导航</h2> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="/tools" data-astro-cid-sz7xmlte>工具</a></li> <li class="is-hidden" data-astro-cid-sz7xmlte><a href="/articles" data-astro-cid-sz7xmlte>攻略</a></li> <li class="is-hidden" data-astro-cid-sz7xmlte><a href="/wiki" data-astro-cid-sz7xmlte>百科</a></li> </ul> </section> <section data-astro-cid-sz7xmlte> <h2 data-astro-cid-sz7xmlte>站点信息</h2> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="/privacy" data-astro-cid-sz7xmlte>隐私政策</a></li> <li data-astro-cid-sz7xmlte><a href="/terms" data-astro-cid-sz7xmlte>服务协议</a></li> </ul> </section> <section class="site-footer__contact" data-astro-cid-sz7xmlte> <h2 data-astro-cid-sz7xmlte>联系我们</h2> <a class="site-footer__contact-link" href="mailto:support@sanjiebox.com" data-astro-cid-sz7xmlte> <span class="site-footer__contact-icon" aria-hidden="true" data-astro-cid-sz7xmlte><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></span> <span data-astro-cid-sz7xmlte>support@sanjiebox.com</span> </a> </section> </div> <p class="site-footer__copyright" data-astro-cid-sz7xmlte>Copyright © 三界工具箱</p>  </div>  </footer>  </body></html> 
