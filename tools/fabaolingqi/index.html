@@ -1,0 +1,299 @@
+<!DOCTYPE html><html lang="zh-CN"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>法宝场景补灵气计算工具 - 三界工具箱</title><meta name="description" content="梦幻西游法宝灵气场景查询工具，按一级、二级、三级、四级法宝和当前层数查看可吸收灵气的地图场景，适合多个法宝一起补灵气、刷灵气地点规划。"><link rel="canonical" href="https://sanjiebox.com/tools/fabaolingqi"><meta property="og:title" content="法宝场景补灵气计算工具 - 三界工具箱"><meta property="og:description" content="梦幻西游法宝灵气场景查询工具，按一级、二级、三级、四级法宝和当前层数查看可吸收灵气的地图场景，适合多个法宝一起补灵气、刷灵气地点规划。"><meta property="og:url" content="https://sanjiebox.com/tools/fabaolingqi"><meta property="og:type" content="website"><script async src="https://www.googletagmanager.com/gtag/js?id=G-RRVFJXD5E5"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RRVFJXD5E5');
+    </script><script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebPage","name":"法宝场景补灵气计算工具 - 三界工具箱","description":"梦幻西游法宝灵气场景查询工具，按一级、二级、三级、四级法宝和当前层数查看可吸收灵气的地图场景，适合多个法宝一起补灵气、刷灵气地点规划。","url":"https://sanjiebox.com/tools/fabaolingqi"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://sanjiebox.com/"},{"@type":"ListItem","position":2,"name":"工具","item":"https://sanjiebox.com/tools"},{"@type":"ListItem","position":3,"name":"法宝场景补灵气计算工具","item":"https://sanjiebox.com/tools/fabaolingqi"}]}]</script><link rel="stylesheet" href="/_astro/_slug_.CZ-fjp7m.css">
+<style>.section[data-astro-cid-sh445jdo]{margin-block:var(--space-10)}.section--no-top-margin[data-astro-cid-sh445jdo]{margin-top:0}.section--content[data-astro-cid-sh445jdo]{max-width:var(--content-max)}.section__header[data-astro-cid-sh445jdo]{margin-bottom:var(--space-6)}.section__header[data-astro-cid-sh445jdo] p[data-astro-cid-sh445jdo]{color:var(--color-text-secondary);margin:var(--space-0)}
+.card[data-astro-cid-dohjnao5]{display:block;padding:var(--space-5);color:var(--color-text);background:var(--color-surface);border:var(--border-width) solid var(--color-border);border-radius:var(--radius-card);box-shadow:0 4px 14px #2f34410a;transition:border-color var(--transition-fast),box-shadow var(--transition-fast)}.card[data-astro-cid-dohjnao5]:hover{border-color:#dde2eb;text-decoration:none;box-shadow:0 8px 18px #2f34410f}
+.article-card[data-astro-cid-di2nlc57] h3[data-astro-cid-di2nlc57]{margin-bottom:var(--space-2)}.article-card[data-astro-cid-di2nlc57] p[data-astro-cid-di2nlc57]{color:var(--color-text-secondary);font-size:var(--text-sm)}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.B7ehxlkT.css">
+<style>.tool-card[data-astro-cid-g5sewvjw]{display:grid;grid-template-columns:60px minmax(0,1fr);gap:var(--space-4);align-items:center}.tool-card[data-astro-cid-g5sewvjw] h3[data-astro-cid-g5sewvjw]{margin:0;overflow:hidden;font-size:var(--text-base);font-weight:700;line-height:1.5;text-overflow:ellipsis;white-space:nowrap}.tool-card[data-astro-cid-g5sewvjw] p[data-astro-cid-g5sewvjw]{margin:0;color:var(--color-text-secondary);font-size:var(--text-sm);line-height:1.6;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.tool-card__media[data-astro-cid-g5sewvjw]{display:flex;align-items:center;justify-content:center;width:60px;height:60px;overflow:hidden;background:var(--color-surface-muted);border:var(--border-width) solid var(--color-border);border-radius:var(--radius-card)}.tool-card__media[data-astro-cid-g5sewvjw] img[data-astro-cid-g5sewvjw]{display:block;width:60px;height:60px;object-fit:cover}.tool-card__media--placeholder[data-astro-cid-g5sewvjw] span[data-astro-cid-g5sewvjw]{color:var(--color-text-secondary);font-size:18px;font-weight:700;letter-spacing:.08em}.tool-card__body[data-astro-cid-g5sewvjw]{display:grid;gap:var(--space-2);min-width:0}@media(max-width:720px){.tool-card[data-astro-cid-g5sewvjw]{grid-template-columns:60px minmax(0,1fr)}}
+</style></head> <body> <header class="site-header" data-astro-cid-3ef6ksr2> <div class="container container--default" data-astro-cid-d6puh33w>  <div class="site-header__inner" data-astro-cid-3ef6ksr2> <a class="site-header__logo" href="/" aria-label="三界工具箱首页" data-astro-cid-3ef6ksr2> <img src="/_astro/logo.5anzccCg.png" alt="三界工具箱" width="220" height="54" data-astro-cid-3ef6ksr2> </a> <nav aria-label="主导航" data-astro-cid-3ef6ksr2> <ul data-astro-cid-3ef6ksr2> <li data-nav-item="首页" data-astro-cid-3ef6ksr2> <a href="/" data-active="false" data-astro-cid-3ef6ksr2> 首页 </a> </li><li data-nav-item="工具" data-astro-cid-3ef6ksr2> <a href="/tools" aria-current="page" data-active="true" data-astro-cid-3ef6ksr2> 工具 </a> </li><li data-nav-item="攻略" data-astro-cid-3ef6ksr2> <a href="/articles" data-active="false" data-astro-cid-3ef6ksr2> 攻略 </a> </li><li data-nav-item="百科" data-astro-cid-3ef6ksr2> <a href="/wiki" data-active="false" data-astro-cid-3ef6ksr2> 百科 </a> </li><li data-nav-item="最新更新" data-astro-cid-3ef6ksr2> <a href="/updates" data-active="false" data-astro-cid-3ef6ksr2> 最新更新 </a> </li> </ul> </nav> </div>  </div>  </header>  <div class="container container--default" data-astro-cid-d6puh33w> <nav class="breadcrumb" aria-label="面包屑" data-astro-cid-qaanghzh><ol data-astro-cid-qaanghzh><li data-astro-cid-qaanghzh><a href="/" data-astro-cid-qaanghzh>首页</a></li><li data-astro-cid-qaanghzh><a href="/tools" data-astro-cid-qaanghzh>工具</a></li><li data-astro-cid-qaanghzh><span aria-current="page" data-astro-cid-qaanghzh>法宝场景补灵气计算工具</span></li></ol></nav> </div>  <main id="content">  <div class="container container--default" data-astro-cid-d6puh33w>  <section class="section section--default section--no-top-margin" data-astro-cid-sh445jdo>   <article class="tool-page flow" data-astro-cid-hof4g4vy> <header data-astro-cid-hof4g4vy> <h1 data-astro-cid-hof4g4vy>法宝场景补灵气计算工具</h1> <p data-astro-cid-hof4g4vy>梦幻西游法宝灵气场景查询工具，适合同时给多个法宝补灵气时使用。选择法宝等级和当前层数区间后，可查看适合一起刷灵气的地图场景，减少来回换地图的时间。</p> </header> <section class="tool-page__main" aria-label="工具主体" data-astro-cid-hof4g4vy> <div class="flq" data-fabao-lingqi data-astro-cid-s2ix2dzb> <script type="application/json" data-fabao-data>{"info":[{"level":1,"label":"一级法宝","name":"普通法宝","maxLayer":9,"reqLevel":60,"spiritCap":200,"tiers":["0~3","4~6","7~9"]},{"level":2,"label":"二级法宝","name":"高级法宝","maxLayer":12,"reqLevel":80,"spiritCap":300,"tiers":["0~4","5~8","9~12"]},{"level":3,"label":"三级法宝","name":"特级法宝","maxLayer":15,"reqLevel":100,"spiritCap":500,"tiers":["0~5","6~11","12~15"]},{"level":4,"label":"四级法宝","name":"4级法宝","maxLayer":18,"reqLevel":120,"spiritCap":500,"tiers":["0~5","6~11","12~18"]}],"scenes":[{"id":1,"name":"东海湾"},{"id":2,"name":"东海沉船"},{"id":3,"name":"江南野外"},{"id":4,"name":"大唐国境"},{"id":5,"name":"大雁塔1-6层"},{"id":6,"name":"大唐境外"},{"id":7,"name":"长寿郊外"},{"id":8,"name":"海底迷宫1-4层"},{"id":9,"name":"地府迷宫1-4层"},{"id":10,"name":"盘丝岭"},{"id":11,"name":"花果山"},{"id":12,"name":"魔王寨"},{"id":13,"name":"普陀山"},{"id":14,"name":"月宫"},{"id":15,"name":"狮驼岭"},{"id":16,"name":"北俱芦洲"},{"id":17,"name":"麒麟山"},{"id":18,"name":"小西天"},{"id":19,"name":"龙窟1-3层"},{"id":20,"name":"凤巢1-3层"},{"id":21,"name":"无名鬼城"},{"id":22,"name":"解阳山"},{"id":23,"name":"女娲神迹"},{"id":24,"name":"小雷音寺"},{"id":25,"name":"蓬莱仙岛"},{"id":26,"name":"子母河底"},{"id":27,"name":"碗子山"},{"id":28,"name":"波月洞"},{"id":29,"name":"蟠桃园"},{"id":30,"name":"比丘国"},{"id":31,"name":"柳林坡"},{"id":32,"name":"凌云渡"},{"id":33,"name":"须弥东界"},{"id":34,"name":"青丘"},{"id":35,"name":"鬼市"},{"id":36,"name":"芙蓉园"},{"id":37,"name":"依阙龙门"},{"id":38,"name":"五行山"},{"id":39,"name":"弥勒山"},{"id":40,"name":"弥勒山幻境"},{"id":41,"name":"海底沉船"},{"id":42,"name":"大雁塔"},{"id":43,"name":"丝绸之路"},{"id":44,"name":"龙窟1-7层"},{"id":45,"name":"凤巢1-7层"},{"id":46,"name":"海底迷宫"},{"id":47,"name":"地府迷宫"},{"id":48,"name":"小雷音"},{"id":49,"name":"子母河"},{"id":50,"name":"墨家禁地"}],"maps":{"1":{"0~3":[1,2,3,4,5,6,7],"4~6":[8,9,10,11,12,13],"7~9":[14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]},"2":{"0~4":[1,41,3,4,42,6,7,43],"5~8":[8,9,10,11,12,13,16],"9~12":[44,45,23,17,21,26,24,25,18,22,27,28,29,30,31,33,32,35,34,36,37,38,39,40]},"3":{"0~5":[1,41,3,4,42,6,7],"6~11":[46,47,10,11,12,13,16,17],"12~15":[44,45,23,21,18,48,25,50,49,22,27,28,29,31,30,33,32,34,35,36,37,38,39,40]},"4":{"0~5":[1,41,3,4,42,6,7],"6~11":[46,47,10,11,12,13,16,17],"12~18":[44,45,23,21,18,48,25,50,49,22,27,28,29,31,30,33,32,34,35,36,37,38,39,40]}}}</script> <div class="flq__panels" data-astro-cid-s2ix2dzb> <section class="flq__panel flq__choices" aria-label="法宝层数选择" data-astro-cid-s2ix2dzb> <div class="flq__category" data-astro-cid-s2ix2dzb> <div class="flq__category-header" data-astro-cid-s2ix2dzb> <h3 data-astro-cid-s2ix2dzb>一级法宝：</h3> </div> <div class="flq__grid" data-astro-cid-s2ix2dzb> <button type="button" class="flq__tier-card" data-tier-card data-toggle-tier data-key="1:0~3" data-level="1" data-tier="0~3" aria-pressed="false" aria-label="选择1级法宝0~3层" data-astro-cid-s2ix2dzb> <span class="flq__tier-name" data-astro-cid-s2ix2dzb>0~3 层</span> </button><button type="button" class="flq__tier-card" data-tier-card data-toggle-tier data-key="1:4~6" data-level="1" data-tier="4~6" aria-pressed="false" aria-label="选择1级法宝4~6层" data-astro-cid-s2ix2dzb> <span class="flq__tier-name" data-astro-cid-s2ix2dzb>4~6 层</span> </button><button type="button" class="flq__tier-card" data-tier-card data-toggle-tier data-key="1:7~9" data-level="1" data-tier="7~9" aria-pressed="false" aria-label="选择1级法宝7~9层" data-astro-cid-s2ix2dzb> <span class="flq__tier-name" data-astro-cid-s2ix2dzb>7~9 层</span> </button> </div> </div><div class="flq__category" data-astro-cid-s2ix2dzb> <div class="flq__category-header" data-astro-cid-s2ix2dzb> <h3 data-astro-cid-s2ix2dzb>二级法宝：</h3> </div> <div class="flq__grid" data-astro-cid-s2ix2dzb> <button type="button" class="flq__tier-card" data-tier-card data-toggle-tier data-key="2:0~4" data-level="2" data-tier="0~4" aria-pressed="false" aria-label="选择2级法宝0~4层" data-astro-cid-s2ix2dzb> <span class="flq__tier-name" data-astro-cid-s2ix2dzb>0~4 层</span> </button><button type="button" class="flq__tier-card" data-tier-card data-toggle-tier data-key="2:5~8" data-level="2" data-tier="5~8" aria-pressed="false" aria-label="选择2级法宝5~8层" data-astro-cid-s2ix2dzb> <span class="flq__tier-name" data-astro-cid-s2ix2dzb>5~8 层</span> </button><button type="button" class="flq__tier-card" data-tier-card data-toggle-tier data-key="2:9~12" data-level="2" data-tier="9~12" aria-pressed="false" aria-label="选择2级法宝9~12层" data-astro-cid-s2ix2dzb> <span class="flq__tier-name" data-astro-cid-s2ix2dzb>9~12 层</span> </button> </div> </div><div class="flq__category" data-astro-cid-s2ix2dzb> <div class="flq__category-header" data-astro-cid-s2ix2dzb> <h3 data-astro-cid-s2ix2dzb>三级法宝：</h3> </div> <div class="flq__grid" data-astro-cid-s2ix2dzb> <button type="button" class="flq__tier-card" data-tier-card data-toggle-tier data-key="3:0~5" data-level="3" data-tier="0~5" aria-pressed="false" aria-label="选择3级法宝0~5层" data-astro-cid-s2ix2dzb> <span class="flq__tier-name" data-astro-cid-s2ix2dzb>0~5 层</span> </button><button type="button" class="flq__tier-card" data-tier-card data-toggle-tier data-key="3:6~11" data-level="3" data-tier="6~11" aria-pressed="false" aria-label="选择3级法宝6~11层" data-astro-cid-s2ix2dzb> <span class="flq__tier-name" data-astro-cid-s2ix2dzb>6~11 层</span> </button><button type="button" class="flq__tier-card" data-tier-card data-toggle-tier data-key="3:12~15" data-level="3" data-tier="12~15" aria-pressed="false" aria-label="选择3级法宝12~15层" data-astro-cid-s2ix2dzb> <span class="flq__tier-name" data-astro-cid-s2ix2dzb>12~15 层</span> </button> </div> </div><div class="flq__category" data-astro-cid-s2ix2dzb> <div class="flq__category-header" data-astro-cid-s2ix2dzb> <h3 data-astro-cid-s2ix2dzb>四级法宝：</h3> </div> <div class="flq__grid" data-astro-cid-s2ix2dzb> <button type="button" class="flq__tier-card" data-tier-card data-toggle-tier data-key="4:0~5" data-level="4" data-tier="0~5" aria-pressed="false" aria-label="选择4级法宝0~5层" data-astro-cid-s2ix2dzb> <span class="flq__tier-name" data-astro-cid-s2ix2dzb>0~5 层</span> </button><button type="button" class="flq__tier-card" data-tier-card data-toggle-tier data-key="4:6~11" data-level="4" data-tier="6~11" aria-pressed="false" aria-label="选择4级法宝6~11层" data-astro-cid-s2ix2dzb> <span class="flq__tier-name" data-astro-cid-s2ix2dzb>6~11 层</span> </button><button type="button" class="flq__tier-card" data-tier-card data-toggle-tier data-key="4:12~18" data-level="4" data-tier="12~18" aria-pressed="false" aria-label="选择4级法宝12~18层" data-astro-cid-s2ix2dzb> <span class="flq__tier-name" data-astro-cid-s2ix2dzb>12~18 层</span> </button> </div> </div> </section> <section class="flq__panel flq__results" aria-label="匹配结果" data-astro-cid-s2ix2dzb> <div class="flq__result-header" data-astro-cid-s2ix2dzb> <h2 data-astro-cid-s2ix2dzb>共同场景</h2> <button type="button" class="flq__btn flq__btn--sm" data-clear hidden data-astro-cid-s2ix2dzb>清空选择</button> </div> <div class="flq__result-list" data-result-list data-astro-cid-s2ix2dzb></div> <p class="flq__empty" data-empty-state data-astro-cid-s2ix2dzb>选择上方法宝层数区间后，结果会显示可共同吸收灵气的场景。</p> </section> </div> </div> <script>
+  (() => {
+    const root = document.querySelector('[data-fabao-lingqi]');
+    if (!root) return;
+
+    const dataEl = root.querySelector('[data-fabao-data]');
+    const data = JSON.parse(dataEl.textContent || '{}');
+    const sceneNameById = new Map((data.scenes || []).map((scene) => [scene.id, scene.name]));
+    const resultList = root.querySelector('[data-result-list]');
+    const emptyState = root.querySelector('[data-empty-state]');
+    const clearButton = root.querySelector('[data-clear]');
+    const STORAGE_KEY = 'mhxy_fabaolingqi';
+    const defaults = { selections: [] };
+    let state = loadState();
+    let selections = state.selections;
+
+    function escapeHtml(value) {
+      const div = document.createElement('div');
+      div.textContent = String(value);
+      return div.innerHTML;
+    }
+
+    function getTierScenes(level, tier) {
+      return data.maps?.[level]?.[tier] || [];
+    }
+
+    function hasTier(level, tier) {
+      return Array.isArray(data.maps?.[level]?.[tier]);
+    }
+
+    function getSelectionLabel(selection) {
+      return selection.level + '级法宝 · ' + selection.tier + ' 层';
+    }
+
+    function normalizeState(raw) {
+      const seen = new Set();
+      const rawSelections = Array.isArray(raw?.selections) ? raw.selections : [];
+      const normalizedSelections = [];
+
+      rawSelections.forEach((item) => {
+        const level = Number(item?.level);
+        const tier = String(item?.tier || '');
+        const key = level + ':' + tier;
+        if (!Number.isInteger(level) || !tier || seen.has(key) || !hasTier(level, tier)) return;
+        seen.add(key);
+        normalizedSelections.push({ key, level, tier });
+      });
+
+      return { selections: normalizedSelections };
+    }
+
+    function loadState() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return normalizeState(defaults);
+        return normalizeState(JSON.parse(raw));
+      } catch {
+        return normalizeState(defaults);
+      }
+    }
+
+    function saveState(nextState) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(nextState));
+    }
+
+    function intersectIds(first, second) {
+      const secondSet = new Set(second);
+      return first.filter((id) => secondSet.has(id));
+    }
+
+    function getMaskIntersection(mask, items) {
+      let ids = null;
+      for (let index = 0; index < items.length; index += 1) {
+        if ((mask & (1 << index)) === 0) continue;
+        ids = ids ? intersectIds(ids, items[index].sceneIds) : items[index].sceneIds.slice();
+        if (ids.length === 0) return [];
+      }
+      return ids || [];
+    }
+
+    function solveExactGroups(items) {
+      const n = items.length;
+      const totalMasks = 1 << n;
+      const validMasks = [];
+      const sceneCache = new Map();
+
+      for (let mask = 1; mask < totalMasks; mask += 1) {
+        const scenes = getMaskIntersection(mask, items);
+        if (scenes.length > 0) {
+          validMasks.push(mask);
+          sceneCache.set(mask, scenes);
+        }
+      }
+
+      validMasks.sort((a, b) => countBits(b) - countBits(a));
+
+      const dp = Array(totalMasks).fill(Infinity);
+      const parent = Array(totalMasks).fill(0);
+      dp[0] = 0;
+
+      for (let mask = 1; mask < totalMasks; mask += 1) {
+        for (const groupMask of validMasks) {
+          if ((groupMask & mask) !== groupMask) continue;
+          const prev = mask ^ groupMask;
+          if (dp[prev] + 1 < dp[mask]) {
+            dp[mask] = dp[prev] + 1;
+            parent[mask] = groupMask;
+          }
+        }
+      }
+
+      const groups = [];
+      let mask = totalMasks - 1;
+      while (mask > 0) {
+        const groupMask = parent[mask] || (mask & -mask);
+        groups.push(maskToGroup(groupMask, items, sceneCache.get(groupMask) || getMaskIntersection(groupMask, items)));
+        mask ^= groupMask;
+      }
+      return groups;
+    }
+
+    function solveGreedyGroups(items) {
+      let remaining = items.map((_, index) => index);
+      const groups = [];
+
+      while (remaining.length > 0) {
+        let bestSceneId = null;
+        let bestIndexes = [];
+
+        for (const scene of data.scenes) {
+          const indexes = remaining.filter((index) => items[index].sceneIds.includes(scene.id));
+          if (indexes.length > bestIndexes.length) {
+            bestSceneId = scene.id;
+            bestIndexes = indexes;
+          }
+        }
+
+        if (bestIndexes.length === 0) {
+          bestIndexes = [remaining[0]];
+          bestSceneId = items[remaining[0]].sceneIds[0];
+        }
+
+        let commonScenes = items[bestIndexes[0]].sceneIds.slice();
+        bestIndexes.slice(1).forEach((index) => {
+          commonScenes = intersectIds(commonScenes, items[index].sceneIds);
+        });
+
+        groups.push({
+          scenes: commonScenes.length > 0 ? commonScenes : [bestSceneId],
+          items: bestIndexes.map((index) => items[index]),
+        });
+        remaining = remaining.filter((index) => !bestIndexes.includes(index));
+      }
+
+      return groups;
+    }
+
+    function maskToGroup(mask, items, scenes) {
+      const groupItems = [];
+      for (let index = 0; index < items.length; index += 1) {
+        if ((mask & (1 << index)) !== 0) {
+          groupItems.push(items[index]);
+        }
+      }
+      return { scenes, items: groupItems };
+    }
+
+    function countBits(value) {
+      let count = 0;
+      while (value) {
+        value &= value - 1;
+        count += 1;
+      }
+      return count;
+    }
+
+    function buildGroups() {
+      const items = selections.map((selection) => ({
+        ...selection,
+        sceneIds: getTierScenes(selection.level, selection.tier),
+      }));
+
+      if (items.length === 0) return [];
+      return items.length <= 16 ? solveExactGroups(items) : solveGreedyGroups(items);
+    }
+
+    function renderResults() {
+      const groups = buildGroups();
+
+      if (selections.length === 0) {
+        emptyState.hidden = false;
+        clearButton.hidden = true;
+        resultList.innerHTML = '';
+        return;
+      }
+
+      emptyState.hidden = true;
+      clearButton.hidden = false;
+      resultList.innerHTML = groups.map((group) => {
+        const sceneNames = group.scenes.map((id) => sceneNameById.get(id)).filter(Boolean);
+        const title = sceneNames.length ? sceneNames.join('、') : '暂无共同场景';
+        const itemsHtml = group.items.map((item) => `
+          <li>
+            <span>${escapeHtml(getSelectionLabel(item))}</span>
+          </li>
+        `).join('');
+
+        return `
+          <article class="flq__result-card">
+            <div class="flq__result-title">
+              <strong>${escapeHtml(title)}</strong>
+            </div>
+            <ul class="flq__result-items">${itemsHtml}</ul>
+          </article>
+        `;
+      }).join('');
+    }
+
+    function renderChoiceState() {
+      root.querySelectorAll('[data-tier-card]').forEach((card) => {
+        const selected = selections.some((item) => item.key === card.dataset.key);
+        card.classList.toggle('flq__tier-card--selected', selected);
+        card.setAttribute('aria-pressed', selected ? 'true' : 'false');
+      });
+    }
+
+    function render() {
+      renderChoiceState();
+      renderResults();
+    }
+
+    root.addEventListener('click', (event) => {
+      const toggleButton = event.target.closest('[data-toggle-tier]');
+      if (!toggleButton) return;
+
+      const level = Number(toggleButton.dataset.level);
+      const tier = toggleButton.dataset.tier;
+      const key = level + ':' + tier;
+      const index = selections.findIndex((item) => item.key === key);
+
+      if (index >= 0) {
+        selections.splice(index, 1);
+      } else {
+        selections.push({
+          key,
+          level,
+          tier,
+        });
+      }
+      state = normalizeState({ selections });
+      selections = state.selections;
+      saveState(state);
+      render();
+    });
+
+    clearButton.addEventListener('click', () => {
+      state = normalizeState(defaults);
+      selections = state.selections;
+      saveState(state);
+      render();
+    });
+
+    render();
+  })();
+</script>  </section> <section class="tool-guide content" aria-label="使用说明" data-astro-cid-hof4g4vy> <div class="tool-guide__card markdown-content" data-astro-cid-hof4g4vy> <h2 id="工具说明">工具说明</h2>
+<p>法宝场景补灵气匹配工具用于查询梦幻西游法宝在不同等级、不同层数下可吸收灵气的地图场景。玩家同时携带多个法宝补灵气时，可以用它快速找到更适合一起刷灵气的地点，减少频繁更换地图的时间。</p>
+<h2 id="适用场景">适用场景</h2>
+<ul>
+<li>角色身上有多个法宝需要补灵气</li>
+<li>不同法宝等级、层数不同，不确定该去哪个地图刷灵气</li>
+<li>想优先选择能让多个法宝同时吸收灵气的场景</li>
+<li>需要提前规划一级、二级、三级、四级法宝的刷灵气地点</li>
+</ul>
+<h2 id="使用方法">使用方法</h2>
+<ol>
+<li>在法宝等级列表中选择当前法宝所在的层数区间。</li>
+<li>已选择的区间会以边框高亮显示，再次点击同一区间即可取消选择。</li>
+<li>查看结果中推荐的共同场景，优先前往能同时满足多个法宝的地图。</li>
+<li>需要重新选择时，可在结果区点击“清空选择”。</li>
+</ol>
+<h2 id="注意事项">注意事项</h2>
+<ul>
+<li>数据来源于梦幻精灵法宝补灵气场景资料。</li>
+<li>工具按法宝等级和当前层数区间查询，不区分具体法宝名称。</li>
+<li>若结果中出现多个场景名称，表示这些地图都适合对应法宝补灵气。</li>
+<li>结果用于规划补灵气地点，实际战斗与灵气获取仍以游戏内当前规则为准。</li>
+</ul> </div> </section> </article>  </section>  <section class="section section--default" data-astro-cid-sh445jdo> <header class="section__header" data-astro-cid-sh445jdo> <h2 data-astro-cid-sh445jdo>相关推荐</h2>  </header>  <div class="grid" data-astro-cid-hof4g4vy> <a class="card" href="/tools/time-counter" data-astro-cid-dohjnao5="true">  <article class="tool-card" data-astro-cid-g5sewvjw> <div class="tool-card__media" data-astro-cid-g5sewvjw> <img src="/_astro/time-counter.DlvYFjs6.png" alt="游戏计时器" width="60" height="60" loading="lazy" data-astro-cid-g5sewvjw> </div> <div class="tool-card__body" data-astro-cid-g5sewvjw> <h3 data-astro-cid-g5sewvjw>游戏计时器</h3> <p data-astro-cid-g5sewvjw>统一管理游戏中各类冷却、刷新和周期性事件的倒计时工具，支持冷却、间隔、每日和每周四种计时类型。</p> </div> </article>  </a>   </div>  </section>  </div>   </main> <footer class="site-footer" data-astro-cid-sz7xmlte> <div class="container container--default" data-astro-cid-d6puh33w>  <div class="site-footer__grid" data-astro-cid-sz7xmlte> <section data-astro-cid-sz7xmlte> <h2 data-astro-cid-sz7xmlte>三界工具箱</h2> <p data-astro-cid-sz7xmlte>面向梦幻西游玩家的内容驱动工具站。</p> </section> <section data-astro-cid-sz7xmlte> <h2 data-astro-cid-sz7xmlte>分类导航</h2> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="/tools" data-astro-cid-sz7xmlte>工具</a></li> <li class="is-hidden" data-astro-cid-sz7xmlte><a href="/articles" data-astro-cid-sz7xmlte>攻略</a></li> <li class="is-hidden" data-astro-cid-sz7xmlte><a href="/wiki" data-astro-cid-sz7xmlte>百科</a></li> </ul> </section> <section data-astro-cid-sz7xmlte> <h2 data-astro-cid-sz7xmlte>站点信息</h2> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="/privacy" data-astro-cid-sz7xmlte>隐私政策</a></li> <li data-astro-cid-sz7xmlte><a href="/terms" data-astro-cid-sz7xmlte>服务协议</a></li> </ul> </section> <section class="site-footer__contact" data-astro-cid-sz7xmlte> <h2 data-astro-cid-sz7xmlte>联系我们</h2> <a class="site-footer__contact-link" href="mailto:support@sanjiebox.com" data-astro-cid-sz7xmlte> <span class="site-footer__contact-icon" aria-hidden="true" data-astro-cid-sz7xmlte><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></span> <span data-astro-cid-sz7xmlte>support@sanjiebox.com</span> </a> </section> </div> <p class="site-footer__copyright" data-astro-cid-sz7xmlte>Copyright © 三界工具箱</p>  </div>  </footer>  </body></html> 
