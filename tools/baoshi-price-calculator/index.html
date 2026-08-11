@@ -1,0 +1,206 @@
+<!DOCTYPE html><html lang="zh-CN"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>宝石价格逆算器 - 三界工具箱</title><meta name="description" content="梦幻西游高等级宝石价格评估工具，支持宝石、星辉石和五色灵尘，根据当前等级与总价反推 1 级价格，帮助将高级宝石折算后与市场价格对比，判断购买价格是否合适。"><link rel="canonical" href="https://sanjiebox.com/tools/baoshi-price-calculator"><meta property="og:title" content="宝石价格逆算器 - 三界工具箱"><meta property="og:description" content="梦幻西游高等级宝石价格评估工具，支持宝石、星辉石和五色灵尘，根据当前等级与总价反推 1 级价格，帮助将高级宝石折算后与市场价格对比，判断购买价格是否合适。"><meta property="og:url" content="https://sanjiebox.com/tools/baoshi-price-calculator"><meta property="og:type" content="website"><script async src="https://www.googletagmanager.com/gtag/js?id=G-RRVFJXD5E5"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RRVFJXD5E5');
+    </script><script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebPage","name":"宝石价格逆算器 - 三界工具箱","description":"梦幻西游高等级宝石价格评估工具，支持宝石、星辉石和五色灵尘，根据当前等级与总价反推 1 级价格，帮助将高级宝石折算后与市场价格对比，判断购买价格是否合适。","url":"https://sanjiebox.com/tools/baoshi-price-calculator"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://sanjiebox.com/"},{"@type":"ListItem","position":2,"name":"工具","item":"https://sanjiebox.com/tools"},{"@type":"ListItem","position":3,"name":"宝石价格逆算器","item":"https://sanjiebox.com/tools/baoshi-price-calculator"}]}]</script><link rel="stylesheet" href="/_astro/_slug_.CZ-fjp7m.css">
+<style>.section[data-astro-cid-sh445jdo]{margin-block:var(--space-10)}.section--no-top-margin[data-astro-cid-sh445jdo]{margin-top:0}.section--content[data-astro-cid-sh445jdo]{max-width:var(--content-max)}.section__header[data-astro-cid-sh445jdo]{margin-bottom:var(--space-6)}.section__header[data-astro-cid-sh445jdo] p[data-astro-cid-sh445jdo]{color:var(--color-text-secondary);margin:var(--space-0)}
+.card[data-astro-cid-dohjnao5]{display:block;padding:var(--space-5);color:var(--color-text);background:var(--color-surface);border:var(--border-width) solid var(--color-border);border-radius:var(--radius-card);box-shadow:0 4px 14px #2f34410a;transition:border-color var(--transition-fast),box-shadow var(--transition-fast)}.card[data-astro-cid-dohjnao5]:hover{border-color:#dde2eb;text-decoration:none;box-shadow:0 8px 18px #2f34410f}
+.article-card[data-astro-cid-di2nlc57] h3[data-astro-cid-di2nlc57]{margin-bottom:var(--space-2)}.article-card[data-astro-cid-di2nlc57] p[data-astro-cid-di2nlc57]{color:var(--color-text-secondary);font-size:var(--text-sm)}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.CNKLq0Td.css">
+<style>.tool-card[data-astro-cid-g5sewvjw]{display:grid;grid-template-columns:60px minmax(0,1fr);gap:var(--space-4);align-items:center}.tool-card[data-astro-cid-g5sewvjw] h3[data-astro-cid-g5sewvjw]{margin:0;overflow:hidden;font-size:var(--text-base);font-weight:700;line-height:1.5;text-overflow:ellipsis;white-space:nowrap}.tool-card[data-astro-cid-g5sewvjw] p[data-astro-cid-g5sewvjw]{margin:0;color:var(--color-text-secondary);font-size:var(--text-sm);line-height:1.6;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.tool-card__media[data-astro-cid-g5sewvjw]{display:flex;align-items:center;justify-content:center;width:60px;height:60px;overflow:hidden;background:var(--color-surface-muted);border:var(--border-width) solid var(--color-border);border-radius:var(--radius-card)}.tool-card__media[data-astro-cid-g5sewvjw] img[data-astro-cid-g5sewvjw]{display:block;width:60px;height:60px;object-fit:cover}.tool-card__media--placeholder[data-astro-cid-g5sewvjw] span[data-astro-cid-g5sewvjw]{color:var(--color-text-secondary);font-size:18px;font-weight:700;letter-spacing:.08em}.tool-card__body[data-astro-cid-g5sewvjw]{display:grid;gap:var(--space-2);min-width:0}@media(max-width:720px){.tool-card[data-astro-cid-g5sewvjw]{grid-template-columns:60px minmax(0,1fr)}}
+</style></head> <body> <header class="site-header" data-astro-cid-3ef6ksr2> <div class="container container--default" data-astro-cid-d6puh33w>  <div class="site-header__inner" data-astro-cid-3ef6ksr2> <a class="site-header__logo" href="/" aria-label="三界工具箱首页" data-astro-cid-3ef6ksr2> <img src="/_astro/logo.5anzccCg.png" alt="三界工具箱" width="220" height="54" data-astro-cid-3ef6ksr2> </a> <nav aria-label="主导航" data-astro-cid-3ef6ksr2> <ul data-astro-cid-3ef6ksr2> <li data-nav-item="首页" data-astro-cid-3ef6ksr2> <a href="/" data-active="false" data-astro-cid-3ef6ksr2> 首页 </a> </li><li data-nav-item="工具" data-astro-cid-3ef6ksr2> <a href="/tools" aria-current="page" data-active="true" data-astro-cid-3ef6ksr2> 工具 </a> </li><li data-nav-item="攻略" data-astro-cid-3ef6ksr2> <a href="/articles" data-active="false" data-astro-cid-3ef6ksr2> 攻略 </a> </li><li data-nav-item="百科" data-astro-cid-3ef6ksr2> <a href="/wiki" data-active="false" data-astro-cid-3ef6ksr2> 百科 </a> </li><li data-nav-item="最新更新" data-astro-cid-3ef6ksr2> <a href="/updates" data-active="false" data-astro-cid-3ef6ksr2> 最新更新 </a> </li> </ul> </nav> </div>  </div>  </header>  <div class="container container--default" data-astro-cid-d6puh33w> <nav class="breadcrumb" aria-label="面包屑" data-astro-cid-qaanghzh><ol data-astro-cid-qaanghzh><li data-astro-cid-qaanghzh><a href="/" data-astro-cid-qaanghzh>首页</a></li><li data-astro-cid-qaanghzh><a href="/tools" data-astro-cid-qaanghzh>工具</a></li><li data-astro-cid-qaanghzh><span aria-current="page" data-astro-cid-qaanghzh>宝石价格逆算器</span></li></ol></nav> </div>  <main id="content">  <div class="container container--default" data-astro-cid-d6puh33w>  <section class="section section--default section--no-top-margin" data-astro-cid-sh445jdo>   <article class="tool-page flow" data-astro-cid-hof4g4vy> <header data-astro-cid-hof4g4vy> <h1 data-astro-cid-hof4g4vy>宝石价格逆算器</h1> <p data-astro-cid-hof4g4vy>评估梦幻西游高等级宝石价格是否合适，输入宝石类型、等级和总价，反推 1 级价格后与市场价格对比，快速判断是否值得购买。</p> </header> <section class="tool-page__main" aria-label="工具主体" data-astro-cid-hof4g4vy> <div class="baoshi-price-tool" data-baoshi-price-tool data-defaults="{&#34;stoneType&#34;:&#34;baoshi&#34;,&#34;level&#34;:8,&#34;price&#34;:10240000}" data-astro-cid-d3apb6ev> <div class="baoshi-price-tool__layout" data-astro-cid-d3apb6ev> <div class="baoshi-price-tool__aside" data-astro-cid-d3apb6ev> <section class="baoshi-price-card baoshi-price-card--form" aria-label="参数设置" data-astro-cid-d3apb6ev> <div class="baoshi-price-card__header" data-astro-cid-d3apb6ev> <p class="baoshi-price-card__eyebrow" data-astro-cid-d3apb6ev>价格逆算</p> </div> <div class="baoshi-price-form" data-astro-cid-d3apb6ev> <div class="baoshi-price-segment" role="tablist" aria-label="石头类型" data-astro-cid-d3apb6ev> <button type="button" class="baoshi-price-segment__item is-active" data-type-option="baoshi" aria-pressed="true" data-astro-cid-d3apb6ev>宝石</button> <button type="button" class="baoshi-price-segment__item" data-type-option="xinghuishi" aria-pressed="false" data-astro-cid-d3apb6ev>星辉石</button> <button type="button" class="baoshi-price-segment__item" data-type-option="wuse-lingchen" aria-pressed="false" data-astro-cid-d3apb6ev>五色灵尘</button> </div> <label class="baoshi-price-field" data-astro-cid-d3apb6ev> <span class="baoshi-price-field__heading" data-astro-cid-d3apb6ev> <span class="baoshi-price-field__label" data-astro-cid-d3apb6ev>等级</span> <span class="baoshi-price-presets" aria-label="快速输入等级" data-astro-cid-d3apb6ev> <a href="#" class="baoshi-price-preset-link" data-preset-target="level" data-value="1" data-astro-cid-d3apb6ev>1</a> <span class="baoshi-price-presets__sep" data-astro-cid-d3apb6ev>|</span> <a href="#" class="baoshi-price-preset-link" data-preset-target="level" data-value="2" data-astro-cid-d3apb6ev>2</a> <span class="baoshi-price-presets__sep" data-astro-cid-d3apb6ev>|</span> <a href="#" class="baoshi-price-preset-link" data-preset-target="level" data-value="3" data-astro-cid-d3apb6ev>3</a> <span class="baoshi-price-presets__sep" data-astro-cid-d3apb6ev>|</span> <a href="#" class="baoshi-price-preset-link" data-preset-target="level" data-value="4" data-astro-cid-d3apb6ev>4</a> <span class="baoshi-price-presets__sep" data-astro-cid-d3apb6ev>|</span> <a href="#" class="baoshi-price-preset-link" data-preset-target="level" data-value="5" data-astro-cid-d3apb6ev>5</a> <span class="baoshi-price-presets__sep" data-astro-cid-d3apb6ev>|</span> <a href="#" class="baoshi-price-preset-link" data-preset-target="level" data-value="6" data-astro-cid-d3apb6ev>6</a> <span class="baoshi-price-presets__sep" data-astro-cid-d3apb6ev>|</span> <a href="#" class="baoshi-price-preset-link" data-preset-target="level" data-value="7" data-astro-cid-d3apb6ev>7</a> <span class="baoshi-price-presets__sep" data-astro-cid-d3apb6ev>|</span> <a href="#" class="baoshi-price-preset-link" data-preset-target="level" data-value="8" data-astro-cid-d3apb6ev>8</a> <span class="baoshi-price-presets__sep" data-astro-cid-d3apb6ev>|</span> <a href="#" class="baoshi-price-preset-link" data-preset-target="level" data-value="9" data-astro-cid-d3apb6ev>9</a> <span class="baoshi-price-presets__sep" data-astro-cid-d3apb6ev>|</span> <a href="#" class="baoshi-price-preset-link" data-preset-target="level" data-value="10" data-astro-cid-d3apb6ev>10</a> <span class="baoshi-price-presets__sep" data-astro-cid-d3apb6ev>|</span> <a href="#" class="baoshi-price-preset-link" data-preset-target="level" data-value="11" data-astro-cid-d3apb6ev>11</a> <span class="baoshi-price-presets__sep" data-astro-cid-d3apb6ev>|</span> <a href="#" class="baoshi-price-preset-link" data-preset-target="level" data-value="12" data-astro-cid-d3apb6ev>12</a> <span class="baoshi-price-presets__sep" data-astro-cid-d3apb6ev>|</span> <a href="#" class="baoshi-price-preset-link" data-preset-target="level" data-value="13" data-astro-cid-d3apb6ev>13</a> <span class="baoshi-price-presets__sep" data-astro-cid-d3apb6ev>|</span> <a href="#" class="baoshi-price-preset-link" data-preset-target="level" data-value="14" data-astro-cid-d3apb6ev>14</a> <span class="baoshi-price-presets__sep" data-astro-cid-d3apb6ev>|</span> <a href="#" class="baoshi-price-preset-link" data-preset-target="level" data-value="15" data-astro-cid-d3apb6ev>15</a> </span> </span> <span class="baoshi-price-input" data-astro-cid-d3apb6ev> <input type="number" min="1" max="20" step="1" inputmode="numeric" data-field="level" data-astro-cid-d3apb6ev> <span class="baoshi-price-input__unit" data-astro-cid-d3apb6ev>级</span> </span> </label> <label class="baoshi-price-field" data-astro-cid-d3apb6ev> <span class="baoshi-price-field__label" data-astro-cid-d3apb6ev>总价</span> <span class="baoshi-price-input" data-price-input-wrap="price" data-astro-cid-d3apb6ev> <input type="number" min="0" step="0.01" inputmode="decimal" data-field="price" data-astro-cid-d3apb6ev> <span class="baoshi-price-input__unit" data-astro-cid-d3apb6ev>梦幻币</span> </span> </label> </div> <section class="baoshi-price-result" aria-label="计算结果" data-astro-cid-d3apb6ev> <p class="baoshi-price-result__title" data-astro-cid-d3apb6ev>计算结果</p> <span class="baoshi-price-input" data-price-input-wrap="base-price" data-astro-cid-d3apb6ev> <input type="number" step="0.01" inputmode="decimal" readonly aria-readonly="true" data-base-price data-astro-cid-d3apb6ev> <span class="baoshi-price-input__unit" data-astro-cid-d3apb6ev>梦幻币</span> </span> </section> </section> </div> <section class="baoshi-price-card baoshi-price-card--table" aria-label="价格明细" data-astro-cid-d3apb6ev> <div class="baoshi-price-card__header baoshi-price-card__header--table" data-astro-cid-d3apb6ev> <p class="baoshi-price-card__eyebrow" data-astro-cid-d3apb6ev>价格明细</p> </div> <div class="baoshi-price-table-wrap" data-astro-cid-d3apb6ev> <table class="baoshi-price-table" data-astro-cid-d3apb6ev> <thead data-astro-cid-d3apb6ev> <tr data-astro-cid-d3apb6ev> <th scope="col" data-astro-cid-d3apb6ev>等级</th> <th scope="col" data-astro-cid-d3apb6ev>单颗价格（梦幻币）</th> </tr> </thead> <tbody data-price-list data-astro-cid-d3apb6ev></tbody> </table> </div> </section> </div> </div> <script>
+  (() => {
+    const root = document.querySelector("[data-baoshi-price-tool]");
+    if (!root) return;
+
+    const STORAGE_KEY = "mhxy_baoshi_price_calculator";
+    const defaults = JSON.parse(root.dataset.defaults || "{}");
+    const tableBody = root.querySelector("[data-price-list]");
+    const basePriceEl = root.querySelector("[data-base-price]");
+    const priceInputWrap = root.querySelector('[data-price-input-wrap="price"]');
+    const basePriceInputWrap = root.querySelector('[data-price-input-wrap="base-price"]');
+    const typeButtons = Array.from(root.querySelectorAll("[data-type-option]"));
+    const presetButtons = Array.from(root.querySelectorAll("[data-preset-target]"));
+    const inputMap = {
+      level: root.querySelector('[data-field="level"]'),
+      price: root.querySelector('[data-field="price"]'),
+    };
+
+    const typeConfig = {
+      baoshi: {
+        label: "宝石",
+      },
+      xinghuishi: {
+        label: "星辉石",
+      },
+      "wuse-lingchen": {
+        label: "五色灵尘",
+      },
+    };
+
+    function clampNumber(value, fallback, min, decimals, max = Infinity) {
+      const numeric = Number(value);
+      if (!Number.isFinite(numeric)) return fallback;
+      const fixed = decimals > 0 ? Number(numeric.toFixed(decimals)) : Math.round(numeric);
+      return Math.min(max, Math.max(min, fixed));
+    }
+
+    function normalizeState(raw) {
+      const stoneType = Object.prototype.hasOwnProperty.call(typeConfig, raw?.stoneType)
+        ? raw.stoneType
+        : defaults.stoneType;
+
+      return {
+        stoneType,
+        level: clampNumber(raw?.level, defaults.level, 1, 0, 20),
+        price: clampNumber(raw?.price, defaults.price, 0, 2),
+      };
+    }
+
+    function loadState() {
+      try {
+        const stored = localStorage.getItem(STORAGE_KEY);
+        return stored ? normalizeState(JSON.parse(stored)) : normalizeState(defaults);
+      } catch {
+        return normalizeState(defaults);
+      }
+    }
+
+    function saveState(state) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function getCoefficients(stoneType, maxLevel) {
+      const coefficients = [0, 1];
+
+      for (let level = 2; level <= maxLevel; level += 1) {
+        if (stoneType === "baoshi") {
+          coefficients[level] = coefficients[level - 1] * 2;
+        } else if (stoneType === "xinghuishi") {
+          coefficients[level] = coefficients[level - 1] * 3;
+        } else if (level === 2) {
+          coefficients[level] = 2;
+        } else {
+          coefficients[level] = coefficients[level - 1] * 2 + coefficients[level - 2];
+        }
+      }
+
+      return coefficients;
+    }
+
+    function formatPrice(value) {
+      return Number(value).toFixed(2);
+    }
+
+    function getPriceToneClass(value) {
+      const price = Math.round(value);
+      if (price <= 9999) return "baoshi-amount--black";
+      if (price <= 99999) return "baoshi-amount--blue";
+      if (price <= 999999) return "baoshi-amount--green";
+      if (price <= 9999999) return "baoshi-amount--red";
+      if (price <= 99999999) return "baoshi-amount--purple";
+      return "baoshi-amount--pink";
+    }
+
+    function bindWheelLock(input) {
+      if (!input) return;
+      input.addEventListener("wheel", () => {
+        if (document.activeElement === input) input.blur();
+      });
+    }
+
+    function render(state) {
+      const coefficients = getCoefficients(state.stoneType, state.level);
+      const basePrice = state.price / coefficients[state.level];
+      const rows = Array.from({ length: state.level }, (_, index) => {
+        const level = index + 1;
+        return {
+          level,
+          price: basePrice * coefficients[level],
+        };
+      });
+
+      typeButtons.forEach((button) => {
+        const active = button.dataset.typeOption === state.stoneType;
+        button.classList.toggle("is-active", active);
+        button.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+
+      inputMap.level.value = String(state.level);
+      inputMap.price.value = String(state.price);
+      basePriceEl.value = formatPrice(basePrice);
+      priceInputWrap.className = `baoshi-price-input ${getPriceToneClass(state.price)}`;
+      basePriceInputWrap.className = `baoshi-price-input ${getPriceToneClass(basePrice)}`;
+      tableBody.innerHTML = rows.map((row) => `
+        <tr>
+          <td>${row.level}</td>
+          <td class="${getPriceToneClass(row.price)}">${formatPrice(row.price)}</td>
+        </tr>
+      `).join("");
+    }
+
+    let state = loadState();
+    render(state);
+
+    typeButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        state = normalizeState({ ...state, stoneType: button.dataset.typeOption });
+        saveState(state);
+        render(state);
+      });
+    });
+
+    presetButtons.forEach((button) => {
+      button.addEventListener("click", (event) => {
+        event.preventDefault();
+        const target = button.dataset.presetTarget;
+        const value = button.dataset.value;
+        if (!target || !value || !inputMap[target]) return;
+
+        state = normalizeState({ ...state, [target]: value });
+        saveState(state);
+        render(state);
+      });
+    });
+
+    Object.entries(inputMap).forEach(([key, input]) => {
+      bindWheelLock(input);
+      input.addEventListener("input", () => {
+        state = normalizeState({ ...state, [key]: input.value });
+        saveState(state);
+        render(state);
+      });
+      input.addEventListener("blur", () => render(state));
+    });
+  })();
+</script>  </section> <section class="tool-guide content" aria-label="使用说明" data-astro-cid-hof4g4vy> <div class="tool-guide__card markdown-content" data-astro-cid-hof4g4vy> <h2 id="工具说明">工具说明</h2>
+<p>购买高等级宝石前，可以用本工具将当前总价折算为 1 级价格，再与市场上的 1 级宝石价格对比，快速判断高级宝石是否值得购买。输入宝石类型、等级和总价后，工具会按照对应合成规则反推 1 级价格，并生成完整价格链。</p>
+<h2 id="合成规则">合成规则</h2>
+<ul>
+<li>宝石：2 个同等级宝石合成 1 个高一级宝石。</li>
+<li>星辉石：3 个同等级星辉石合成 1 个高一级星辉石。</li>
+<li>五色灵尘：通常由 2 个低一级灵尘和 1 个低 2 级灵尘合成；2 级需要 2 个 1 级灵尘，3 级需要 2 个 2 级灵尘和 1 个 1 级灵尘。</li>
+</ul>
+<h2 id="参数说明">参数说明</h2>
+<h3 id="石头类型">石头类型</h3>
+<p>选择当前价格对应的石头类型。不同类型使用不同的合成倍率，五色灵尘还会同时参考低 2 级价格。</p>
+<h3 id="宝石等级">宝石等级</h3>
+<p>填写当前价格对应的等级，支持 1 至 20 级整数，也可以点击标题右侧的 1 至 15 级快速填充。输入 1 级时，当前价格就是 1 级价格，不需要继续逆算。</p>
+<h3 id="宝石价格">宝石价格</h3>
+<p>填写当前等级单颗石头的价格，单位为梦幻币。价格可以填写小数，结果统一保留 2 位小数显示。</p>
+<h2 id="计算方式">计算方式</h2>
+<p>工具先为每种石头建立相对于 1 级的价格系数，再用当前等级价格除以对应系数得到 1 级价格，最后按系数生成 1 级至当前等级的价格链。</p>
+<ul>
+<li>宝石的第 N 级系数为 <code>2^(N-1)</code>。</li>
+<li>星辉石的第 N 级系数为 <code>3^(N-1)</code>。</li>
+<li>五色灵尘的系数为：1 级为 1，2 级为 2；从 3 级开始，第 N 级系数等于 <code>2 × 第 N-1 级系数 + 第 N-2 级系数</code>。</li>
+</ul>
+<p>例如，4 级五色灵尘的系数为 12。如果 4 级价格为 1200 梦幻币，则 1 级价格为 100 梦幻币，2 级、3 级和 4 级价格分别为 200、500 和 1200 梦幻币。</p>
+<h2 id="注意事项">注意事项</h2>
+<ul>
+<li>结果是根据输入价格和合成规则反推的理论价格，不包含摆摊税费、损耗和市场供需变化。</li>
+<li>价格显示保留 2 位小数，中间计算不会按显示结果提前舍入。</li>
+<li>工具会在浏览器本地保存最近一次的石头类型、等级和价格，重新打开页面后自动恢复。</li>
+</ul> </div> </section> </article>  </section>  <section class="section section--default" data-astro-cid-sh445jdo> <header class="section__header" data-astro-cid-sh445jdo> <h2 data-astro-cid-sh445jdo>相关推荐</h2>  </header>  <div class="grid" data-astro-cid-hof4g4vy> <a class="card" href="/tools/baoshi-calculator" data-astro-cid-dohjnao5="true">  <article class="tool-card" data-astro-cid-g5sewvjw> <div class="tool-card__media" data-astro-cid-g5sewvjw> <img src="/_astro/baoshi-calculator.CCx3dHmG.png" alt="宝石合成计算器" width="60" height="60" loading="lazy" data-astro-cid-g5sewvjw> </div> <div class="tool-card__body" data-astro-cid-g5sewvjw> <h3 data-astro-cid-g5sewvjw>宝石合成计算器</h3> <p data-astro-cid-g5sewvjw>计算梦幻西游宝石、星辉石与五色灵尘的逐级合成成本，支持输入 1 级价格、目标等级和金价，并自动换算人民币造价。</p> </div> </article>  </a>   </div>  </section>  </div>   </main> <footer class="site-footer" data-astro-cid-sz7xmlte> <div class="container container--default" data-astro-cid-d6puh33w>  <div class="site-footer__grid" data-astro-cid-sz7xmlte> <section data-astro-cid-sz7xmlte> <h2 data-astro-cid-sz7xmlte>三界工具箱</h2> <p data-astro-cid-sz7xmlte>面向梦幻西游玩家的内容驱动工具站。</p> </section> <section data-astro-cid-sz7xmlte> <h2 data-astro-cid-sz7xmlte>分类导航</h2> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="/tools" data-astro-cid-sz7xmlte>工具</a></li> <li class="is-hidden" data-astro-cid-sz7xmlte><a href="/articles" data-astro-cid-sz7xmlte>攻略</a></li> <li class="is-hidden" data-astro-cid-sz7xmlte><a href="/wiki" data-astro-cid-sz7xmlte>百科</a></li> </ul> </section> <section data-astro-cid-sz7xmlte> <h2 data-astro-cid-sz7xmlte>站点信息</h2> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="/privacy" data-astro-cid-sz7xmlte>隐私政策</a></li> <li data-astro-cid-sz7xmlte><a href="/terms" data-astro-cid-sz7xmlte>服务协议</a></li> </ul> </section> <section class="site-footer__contact" data-astro-cid-sz7xmlte> <h2 data-astro-cid-sz7xmlte>联系我们</h2> <a class="site-footer__contact-link" href="mailto:support@sanjiebox.com" data-astro-cid-sz7xmlte> <span class="site-footer__contact-icon" aria-hidden="true" data-astro-cid-sz7xmlte><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></span> <span data-astro-cid-sz7xmlte>support@sanjiebox.com</span> </a> </section> </div> <p class="site-footer__copyright" data-astro-cid-sz7xmlte>Copyright © 三界工具箱</p>  </div>  </footer>  </body></html> 
